@@ -71,6 +71,10 @@ h1,h2,h3,h4,h5 {
 .menu-inner {
     display: table-column;
 }
+.menu-inner a {
+    text-decoration: none;
+    color: #000;
+}
 
 
 /* Header content */
