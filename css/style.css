@@ -731,7 +731,7 @@ img.align-self {
     box-shadow: 1px 1px 3px 0;
     transition:left .7s;
   }
-   .menu-outter:active{
+   .menu-outter:focus{
     right:0px;
    
   } 
@@ -977,7 +977,7 @@ img.align-self {
     box-shadow: 1px 1px 3px 0;
     transition:left .7s;
   }
-   .menu-outter:active{
+   .menu-outter:focus{
     right:0px;
    
   } 
