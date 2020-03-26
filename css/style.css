@@ -511,9 +511,12 @@ img.align-self {
      box-shadow: 1px 1px 3px 0;
      transition:left .7s;
     }
-   .menu-outter:hover{
-    right:0px;
+    .menu-outter:hover{
+     right:0px;
     } 
+    .menu-outter:active{
+        right:0px;
+        } 
     .menu-inner{
      width: 40px;
      height: 40px;
@@ -728,7 +731,7 @@ img.align-self {
     box-shadow: 1px 1px 3px 0;
     transition:left .7s;
   }
-   .menu-outter:hover{
+   .menu-outter:active{
     right:0px;
    
   } 
@@ -974,7 +977,7 @@ img.align-self {
     box-shadow: 1px 1px 3px 0;
     transition:left .7s;
   }
-   .menu-outter:hover{
+   .menu-outter:active{
     right:0px;
    
   } 
