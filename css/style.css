@@ -794,13 +794,6 @@ img.align-self {
         width: 36%;
         padding: 0;
     }
-    .symptom {
-        height: 90%;
-        padding-bottom: 5%;
-    }
-    .symtom_warning p {
-        font-size: 14px;
-    }
     .display-none {
         display: none;
     }
@@ -864,13 +857,16 @@ img.align-self {
     p .values-text {
         width: 100%;
     }
-    .symptom .symptom_values {
-        padding-left: 0;
-
-    }
     .title-symptom {
         font-size: 42px;
 
+    }
+    .symptom {
+        height: 90%;
+        padding-bottom: 5%;
+    }
+    .symptom .symptom_values {
+        padding-left: 0;
     }
     .symptom-warning {
         display: flex;
@@ -879,7 +875,7 @@ img.align-self {
         text-align: left;
     }
     .symptom-warning img {
-        width: 11%;
+        width: 15%;
     }
     .symptom-warning p {
         width: 117%;
@@ -901,6 +897,11 @@ img.align-self {
     .form_action__price {
         justify-content: center;
     }
+    .border::before {
+    
+    top: 0px;
+    
+}
 }
 
 @media (min-width: 0px) and (max-width: 320px) {
@@ -1059,7 +1060,7 @@ img.align-self {
       width: 11%;
   }
   .symptom-warning p {
-      width: 117%;
+      width: 67%;
       font-size: 14px;
   }
   .display-none {
