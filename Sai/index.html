@@ -14,7 +14,7 @@
     <header class="header">
        <div class="wrapper">
            <div class="navigation">
-                <div class="img_links">
+                <div class="header__img_links">
                     <a href="#"><img src="img/header_fb.png" alt="Facebook"></a>
                     <a href="#"><img src="img/header_tw.png" alt="Twitter"></a>
                     <a href="#"><img src="img/header_g+.png" alt="Google"></a>
@@ -47,26 +47,23 @@
       |   БЛОК 1   |
       +------------+  -->
              
-        <div class="block_1">
-            <div class="main_slider">
-                <div class="slider-bg">
-                    <img src="./img/background.png" alt="">
+        <section class="main__slider">
+            <div class="slider__bg">
+                <div class="slider-item">
+                    <img src="./img/background-min.png" alt="">
                 </div>
-    
-                <div class="slider-bg">
+                <div class="slider-item">
                     <img src="./img/slider_bg_2-min.jpg" alt="">
                 </div>
-    
-                <div class="slider-bg">
+                <div class="slider-item">
                     <img src="./img/slider_bg_3-min.jpg" alt="">
                 </div>
-    
-                <div class="slider-bg">
+                <div class="slider-item">
                     <img src="./img/slider_bg_4-min.jpg" alt="">
                 </div>
             </div>
-                <div class="background">
-                    <div class="icons">
+                <div class="main__slider-background">
+                    <div class="main__slider-background-icons">
                         <div class="icon">
                             <p class="icon_text">Good services</p>
                         </div>
@@ -78,14 +75,13 @@
                         </div>
                     </div>
                 </div>
-        </div>
+        </section>
         
 <!--  +------------+    
       |   БЛОК 2   |
       +------------+  -->
               
         <div class="about_us">
-            
             <div class="wrapper">
                 <div class="title_style">
                     <h1 class="title">ABOUT US</h1>
@@ -127,7 +123,7 @@
                 </div>
                 <div class="news-main-container">
                     <div class="news-container">
-                        <img src="img/news_first_img.png" alt="News-1" class="news_img_first">
+                        <img src="img/news_first_img-min.png" alt="News-1" class="news_img_first">
                         <div class="news_content">
                             <h2 class="title">NEWS TITLE</h2>
                             <div class="posted">
@@ -146,9 +142,9 @@
                             <div class="paragraph">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias asperiores assumenda consequatur cum cumque delectus doloremque doloribus ducimus earum laboriosam laudantium nam necessitatibus nostrum praesentium quisquam ratione repellendus rerum sed tempore tenetur vel voluptate voluptatibus. Ab consectetur corporis delectus harum iusto laboriosam maxime molestiae odio quisquam quod quos sit temporibus, totam vel veniam veritatis?[...]</p> 
                             </div>
-                            <a class="button button-animation-left" href="https://www.pornhub.com/">read more</a>
+                            <a class="button button-animation-left" href="">read more</a>
                         </div>
-                        <img src="img/news_second_img.png" alt="News-1" class="news_img_first">
+                        <img src="img/news_second_img-min.png" alt="News-1" class="news_img_first">
                      </div>
                 </div>
             </div>
@@ -221,10 +217,12 @@
             </div>
             <div class="footer__form">
                 <h3 class="footer-title">WRITE US</h3>
-                    <input type="text" placeholder="Name"> 
-                    <input type="text" placeholder="E-mail"> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Massage"></textarea>
-                    <button>submit</button>
+                <form action="#">
+                    <input type="text" placeholder="Name" required> 
+                    <input type="text" placeholder="E-mail" required> 
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Massage" required></textarea>
+                    <button type="submit">submit</button>
+                </form>
             </div>
         </div>
         <div class="footer__copyright">
