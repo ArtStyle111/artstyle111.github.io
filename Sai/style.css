@@ -483,9 +483,6 @@ button#slick-slide-control02 {
 .footer {
     background: url(./img/news_bg.jpg) no-repeat center top / cover;
 }
-.wrapper__content {
-    display: flex;
-}
 .footer-wrap {
     padding-top: 30px;
     display: flex;
