@@ -775,4 +775,7 @@ button#slick-slide-control02 {
     .main__slider-background {
         top: 535px;
     }
+    .footer__btn {
+        width: 100%;
+    }
 }
