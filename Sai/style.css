@@ -552,9 +552,8 @@ input.footer__btn {
     outline: none;
 }
 input.footer__btn:hover {
-	background: rgba(0,0,0,0);
-	color: #3a7999;
-	box-shadow: inset 0 0 0 3px #3a7999;
+	background: #fff;
+    color: #222;
 }
 
 
