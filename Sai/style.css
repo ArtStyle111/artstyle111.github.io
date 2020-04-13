@@ -41,7 +41,6 @@ p {
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
-    
 }
 .wrapper .header__img_links {
     z-index: 3;
@@ -90,10 +89,8 @@ p {
     margin-bottom: 0;
     margin-top: 0;
     position: relative;
-    z-index: 3;
-     
+    z-index: 3;   
 }
-
 .borderXwidth a:before, 
 .borderXwidth a:after {
     position: absolute;
@@ -104,24 +101,19 @@ p {
     background: #FFF;
     transition: all 0.3s;
 }
-
 .borderXwidth a:before{
     left: 0px;
     top: 0px;
 }
-
 .borderXwidth a:after{
     right: 0px;
     bottom: 0px;
 }
-
 .borderXwidth a:hover:before, 
 .borderXwidth a:hover:after{
     opacity: 1;
     width: 100%;
 }
-
-
 .header__list>li {
    padding-left: 22px;
 }
@@ -169,7 +161,6 @@ p {
 .slider__bg .slick-dots li.slick-active button{
     background-color: #80b412;
 }
-
 .main__slider-background {
     margin: 0 auto;
     position: absolute;
@@ -222,8 +213,6 @@ p {
     position: absolute;
     top: 25px;
 }
-
-
 .title {
     font-size: 40px;
 }
@@ -243,8 +232,6 @@ p {
     height: 2px;
     background-color: #222;
     position: relative;
-    
-    
 }
 .title_style h1::after {
     margin-right: -100%;
@@ -283,7 +270,7 @@ iframe {
     font-size: 14px;
     font-weight: 700;
 }
-.num{
+.num {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: white;
@@ -295,9 +282,7 @@ iframe {
     line-height: 18px;
     width: 18px;
     height: 18px;
-  }
-
-
+}
 .news {
     background: url(img/news_bg.jpg) no-repeat center/ cover;
     position:relative;
@@ -433,14 +418,9 @@ iframe {
 .slider {
     margin: 0 auto; 
 }
-
-
-
-
 .slick-list {
     overflow: hidden;
 }
-
 .slick-track {
     display: flex;
     margin: 0 auto;
@@ -475,11 +455,6 @@ button#slick-slide-control01 {
 button#slick-slide-control02 {
     background: url(./img/slider-image-second_man.png) no-repeat center center/ cover;
 }
-
-
-
-
-
 .footer {
     background: url(./img/news_bg.jpg) no-repeat center top / cover;
 }
@@ -538,6 +513,7 @@ button#slick-slide-control02 {
     border: 2px solid #80b412;
     padding-left: 9px;
     outline: none;
+    resize: none;
 }
 input.footer__btn {
     box-sizing: border-box;
@@ -778,8 +754,5 @@ input.footer__btn:hover {
 @media screen and (max-width: 320px) {
     .main__slider-background {
         top: 535px;
-    }
-    .footer__btn {
-        width: 100%;
     }
 }
