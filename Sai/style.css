@@ -327,7 +327,7 @@ iframe {
 .news_content {
     padding-left: 20px;
 }
-.news_content h2 {
+.news_content h3 {
     font-size: 23px;
     line-height: 26px;
 }
@@ -698,7 +698,7 @@ input.footer__btn:hover {
     .news_img_first {
         width: 100%;
     }
-    .news_content h2 {
+    .news_content h3 {
         margin-top: 10px;
     }
     .news_content a {
