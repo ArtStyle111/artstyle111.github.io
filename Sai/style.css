@@ -223,8 +223,8 @@ p {
     padding-left: 20px;
     padding-right: 20px;
 }
-.title_style h1::before,
-.title_style h1::after {
+.title_style h2::before,
+.title_style h2::after {
     content: '';
     display: inline-block;
     vertical-align: middle;
@@ -233,11 +233,11 @@ p {
     background-color: #222;
     position: relative;
 }
-.title_style h1::after {
+.title_style h2::after {
     margin-right: -100%;
     right: -16px;
 }
-.title_style h1::before {
+.title_style h2::before {
     
     margin-left: -100%;
     left: -16px;
@@ -308,10 +308,10 @@ iframe {
     color: #fff;
     padding: 50px 0 43px 0;
 }
-.news .title_style h1::after {
+.news .title_style h2::after {
     background-color: #fff;
 }
-.news .title_style h1::before {
+.news .title_style h2::before {
     background-color: #fff;
 }
 .news-container {
