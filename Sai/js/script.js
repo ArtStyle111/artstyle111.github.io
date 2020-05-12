@@ -1,9 +1,4 @@
 $(document).ready(function(){
-    setTimeout(function(){
-        $('body').addClass('loader');
-    }, 3000);
-})
-$(document).ready(function(){
     $('.slider').slick({
         centerMode: true,
         centerPadding: '25%',
