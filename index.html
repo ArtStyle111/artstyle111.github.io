@@ -1,176 +1,542 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
-    <title>Pantoflex</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Portfolio</title>
+
+	<!-- CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+	<link href="assets/css/animate.css" rel="stylesheet">
+    
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+    
+    <script src="assets/js/modernizr.custom.js"></script>
+       
 </head>
 <body>
-    <header class="header">
-        <div class="conteiner">
-            <div class="navigation">
-                <div class="logo">
-                    <img src="img/logo.png" alt="logo">
-                    <img src="img/logo_text.png" alt="Pantoflex" class="logo_text">
-                </div>    
-                    <div class="menu-outter">
-                        <div class="menu-inner"><a href="#">&#9776;</a></div>
-                        <ul class="nav">
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Состав</a></li>
-                            <li><a href="#">Оплата и доставка</a></li>
-                        </ul>
-                    </div>
-            </div>
-            <div class="main_content media-left">
-                <div class="offer">
-                    <h1 class="title_header">Укрепите<br class="display-none">здоровье ваших<br>суставов</h1>
-                    <p class="title_description" >и верните им эластичность <br class="display-none"> при остеоартрите</p>
-                        <div class="properties_description">
-                            <p>Помогает снять боль</p>
-                            <p>Устраняет скованность суставов</p>
-                            <p>Уменьшает отеки</p>
-                        </div> 
-                </div>
-                <div class="form_action">
-                    <h3 class="title_form">Закажите<br class="display-none">сейчас по акции</h3>
-                    <div class="form_action__price">
-                        <div class="old_price">
-                            <p>Старая цена</p>
-                            <img src="img/old_price.png" alt="old_price">
-                        </div>
-                        <div class="new_price">
-                            <p>Ваша цена</p>
-                            <img src="img/new_price.png" alt="new_price">
-                        </div>
-                    </div>
-                    <form action="#" class="form">
-                        <input type="text" placeholder="Имя" name="fname" class="input" required>
-                        <input type="tel" placeholder="Телефон" name="phone" class="input tel" required>
-                        <button type="submit" class="btn"><span>Заказать</span><br>со скидкой</button>
-                    </form>
-                </div>
-            </div>
-            <div class="package-bg">
-                <img src="img/package.png" alt="" class="package">
-            </div>
-        </div>
-    </header>
-    <section class="symptom">
-        <div class="conteiner symptom-bg media-left">
-        
-                <h1 class="title-symptom">Симптомы остеоартрита <span>не пройдут</span><br> сами по себе</h2>
-            <div class="content">
-                <div class="symptom_values">
-                    <div class="value">
-                        <h4 class="value-title">
-                            Боль
-                        </h4>
-                        <p class="value-text">
-                            Токсины, кристаллы солей и другие продукты воспалительных процессов раздражают нервные окончания суставной капусулы.
-                        </p>
-                    </div>
-                    <div class="value value-lock">
-                        <h4 class="value-title">
-                            Скованность
-                        </h4>
-                        <p class="value-text">
-                            Из-за воспаления синовиальной оболочки сустава, вырабатывается мало синовиальной жикдкости, которая выступает смазкой для элементов сустава.
-                        </p>
-                    </div>
-                    <div class="value value-foot">
-                        <h4 class="value-title">
-                            Отек
-                        </h4>
-                        <p class="value-text">
-                            Из-за воспаления и деформации суставной сумки синовиальная жидкость выходит за ее пределы.    
-                        </p>
-                    </div>
-                    <div class="symptom-warning">
-                        <img src="img/symtom_warning.png" alt="warning" class="align-self">
-                        <p class="border">
-                            Запущенный остеоартрит <br> входит в десятку самых частых<br> причин инвалидности
-                        </p>
-                    </div>
-                </div>
-                <img src="img/symtom_man.png" alt="man" class="bg-man">
-            </div>
-        </div>
-    </section>
-    <section class="order"> 
-        <div class="conteiner media-left">
+
+	<!-- Preloader -->
+
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
+
+	<!-- Home start -->
+
+	<section id="home" class="pfblock-image screen-height">
+        <div class="home-overlay"></div>
+		<div class="intro">
+			<div class="start">Hello, my name is <strong>Vladimir Hupalo</strong> and I am</div>
+			<h1>Full Stack Web Developer</h1>
+			<div class="start">creating modern and responsive Web Application</div>
+		</div>
+
+        <a href="#services">
+		<div class="scroll-down">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+		</div>
+        </a>
+
+	</section>
+
+	<!-- Home end -->
+
+	<!-- Navigation start -->
+
+	<header class="header">
+
+		<nav class="navbar navbar-custom" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Vladimir Hupalo</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Works</a></li>
+                        <li><a href="#skills">Skills</a></li>
+						<li><a href="#testimonials">Testimonials</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+			</div><!-- .container -->
+
+		</nav>
+
+	</header>
+
+	<!-- Navigation end -->
+
+    <!-- Services start -->
+
+	<section id="services" class="pfblock pfblock-gray">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">This is what I do</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							I create cross-browser, valid, responsive web-site.
+						</div>
+						<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" data-mce-href="/apple-touch-icon-57x57.png">
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-3">
+
+					<div class="iconbox wow slideInLeft">
+						<div class="iconbox-icon">
+							<span class="icon-magic-wand"></span>
+						</div>
+						<div class="iconbox-text">
+							<h3 class="iconbox-title">Responsive design</h3>
+							<div class="iconbox-desc">
+								Nowadays, mobile devices have been gradually replacing desktop as the technologies of choice for consumers to access internet. Thus, the web UI must be created so that it is compatible with a wide range of devices of different screen size, including mobile, tablet, and desktop/laptop.
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-3">
+
+					<div class="iconbox wow slideInLeft">
+						<div class="iconbox-icon">
+							<span class="icon-puzzle"></span>
+						</div>
+						<div class="iconbox-text">
+							<h3 class="iconbox-title">Web Programming</h3>
+							<div class="iconbox-desc">
+								Just like any other software development projects, there will be challenges involved, such as bugs and errors occurring, or front-end code does not work when being integrated with the back-end code. Thus, being able to solve problem is a desired trait that should be considered when hiring front-end developers.
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-3">
+
+					<div class="iconbox wow slideInRight">
+						<div class="iconbox-icon">
+							<span class="icon-badge"></span>
+						</div>
+						<div class="iconbox-text">
+							<h3 class="iconbox-title">Branding</h3>
+							<div class="iconbox-desc">
+								In 2020, front-end developers are among the most in-demands profession in the IT industry. For typical web development project, front-end developers will be required to work with a team of designers, project managers, and back-end developers.
+
+								So, in addition to the critical technical skills as listed above, front-end developers also need to possess other soft-skills such as problem solving, time-management and other interpersonal skills.
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-3">
+
+					<div class="iconbox wow slideInRight">
+						<div class="iconbox-icon">
+							<span class="icon-question"></span>
+						</div>
+						<div class="iconbox-text">
+							<h3 class="iconbox-title">Consultation</h3>
+							<div class="iconbox-desc">
+								In 2020, front-end developers are among the most in-demands profession in the IT industry. For typical web development project, front-end developers will be required to work with a team of designers, project managers, and back-end developers.
+
+								So, in addition to the critical technical skills as listed above, front-end developers also need to possess other soft-skills such as problem solving, time-management and other interpersonal skills.
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- Services end -->
+    
+	<!-- Portfolio start -->
+
+	<section id="portfolio" class="pfblock">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">My works</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
             
-                <div class="order-content">
+            
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
                     
-                    <h1 class="order-title">
-                        Крем <span class="order-title_change">Pantoflex</span> 
-                    </h1>
-                    <p class="order-title_description">
-                        поможет избавиться от боли,<br> снять отеки и вернет суставам подвижность
-                    </p>
-                    <div class="btn-order">
-                        <div class="btn">
-                            <a href="#"><span>Заказать</span><br>со скидкой</a>
-                        </div>
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-1.jpg" alt="img01"/>
+                            <figcaption>
+                                <h2>Crazy <span>Shark</span></h2>
+                                <p>Lily likes to play with crayons and pencils</p>
+                            </figcaption>			
+                        </figure>
                     </div>
+                    
                 </div>
-                <div class="package-bg ">
-                    <img src="img/package.png" alt="" class="order-package">
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-2.jpg" alt="img01"/>
+                            <figcaption>
+                                <h2>Funny <span>Tortoise</span></h2>
+                                <p>Lily likes to play with crayons and pencils</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
                 </div>
-        </div>
-    </section>
-    <section class="composition">
-        <div class="conteiner media-left">
-            <div class="content-composition">
-                <div class="composition-description">
-                    <h1 class="composition-title">
-                        Состав <span class="order-title_change">Pantoflex</span>  помогает избавиться  от всех симптомов остеоартрита
-                    </h1>
-                    <img src="img/composition-main.png" alt="components" class="composition-title_img">
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-3.jpg" alt="img01"/>
+                            <figcaption>
+                                <h2>The <span>Hat</span></h2>
+                                <p>Lily likes to play with crayons and pencils</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
                 </div>
-                <div class="consist">
-                    <div class="consist-wrapper">
-                        <h4 class="consist-title">
-                            Облепиха 
-                        </h4>
-                        <img src="img/composition-item1.png" alt="" class="consist-img">
-                        <p class="consist-intro">
-                            Противостоит воспалению суставов, снимает боль, способствует продлению работоспособности суставов.
-                        </p>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-4.jpg" alt="img01"/>
+                            <figcaption>
+                                <h2>Bang <span>Bang</span></h2>
+                                <p>Lily likes to play with crayons and pencils</p>
+                            </figcaption>			
+                        </figure>
                     </div>
-                    <div class="consist-wrapper consist-kalendyla">
-                        <h4 class="consist-title">
-                            Календула  
-                        </h4>
-                        <img src="img/composition-item2.png" alt="" class="consist-img">
-                        <p class="consist-intro">
-                            Стимулирует восстановление тканей, ускоряет процесс восстановления сустава.
-                        </p>
-                    </div>
-                    <div class="consist-wrapper consist-kashtan">
-                        <h4 class="consist-title">
-                            Каштан 
-                        </h4>
-                        <img src="img/composition-item3.png" alt="" class="consist-img">
-                        <p class="consist-intro">
-                            Снимает отеки, обладает антиоксидантными свойствами, улучшает микроциркуляцию крови в суставах.
-                        </p>
-                    </div>
-                    <div class="consist-wrapper consist-sylfat">
-                        <h4 class="consist-title">
-                            Cульфаты  
-                        </h4>
-                        <img src="img/composition-item4.png" alt="" class="consist-img">
-                        <p class="consist-intro">
-                            Укрепляет хрящевые ткани сустава, обеспечивает гладкое скольжение элементов сустава способствует восстановлению хряща.
-                        </p>
-                    </div>
+                    
                 </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-5.jpg" alt="img01"/>
+                            <figcaption>
+                                <h2>Crypton <span>Dude</span></h2>
+                                <p>Lily likes to play with crayons and pencils</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-6.jpg" alt="img01"/>
+                            <figcaption>
+                                <h2>Don't <span>Poke</span></h2>
+                                <p>Lily likes to play with crayons and pencils</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
             </div>
-        </div>
+
+
+		</div><!-- .contaier -->
+
+	</section>
+
+	<!-- Portfolio end -->
+    
+    <!-- Skills start -->
+    
+    <section class="pfblock pfblock-gray" id="skills">
+		
+			<div class="container">
+			
+				<div class="row skills">
+					
+					<div class="row">
+
+                        <div class="col-sm-6 col-sm-offset-3">
+
+                            <div class="pfblock-header wow fadeInUp">
+                                <h2 class="pfblock-title">My Skills</h2>
+                                <div class="pfblock-line"></div>
+                                <div class="pfblock-subtitle">
+                                    No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div><!-- .row -->
+					
+					<div class="col-sm-6 col-md-3 text-center">
+						<span data-percent="95" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
+                            <span class="percent">95</span>
+                        </span>
+						<h3 class="text-center">HTML and CSS/Sass/jquery/Gulp</h3>
+					</div>
+					<div class="col-sm-6 col-md-3 text-center">
+						<span data-percent="90" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
+                            <span class="percent">90</span>
+                        </span>
+						<h3 class="text-center">JavaScript</h3>
+					</div>
+					<div class="col-sm-6 col-md-3 text-center">
+						<span data-percent="85" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
+                            <span class="percent">85</span>
+                        </span>
+						<h3 class="text-center">ReactJS</h3>
+					</div>
+					<div class="col-sm-6 col-md-3 text-center">
+						<span data-percent="95" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
+                            <span class="percent">95</span>
+                        </span>
+						<h3 class="text-center">WordPress</h3>
+					</div>
+					
+				</div><!--End row -->
+			
+			</div>
+		
     </section>
+    
+    <!-- Skills end -->
+
+	<!-- CallToAction start -->
+
+	<section class="calltoaction">
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-12 col-lg-12">
+					<h2 class="wow slideInRight" data-wow-delay=".1s">ARE YOU READY TO START?</h2>
+					<div class="calltoaction-decription wow slideInRight" data-wow-delay=".2s">
+						I'm available for freelance projects.
+					</div>
+				</div>
+
+				<div class="col-md-12 col-lg-12 calltoaction-btn wow slideInRight" data-wow-delay=".3s">
+					<a href="#contact" class="btn btn-lg">Hire Me</a>
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- CallToAction end -->
+
+	<!-- Testimonials start -->
+
+	<section id="testimonials" class="pfblock pfblock-gray">
+
+		<div class="container">
+            
+            <div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">What my clients say</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+
+            <div class="row">
+
+			<div id="cbp-qtrotator" class="cbp-qtrotator">
+                <div class="cbp-qtcontent">
+                    <img src="assets/images/client-1.jpg" alt="client-1" />
+                    <blockquote>
+                      <p>Work with John was a pleasure. He understood exactly what I wanted and created an awesome site for my company.</p>
+                      <footer>Pino Caruso</footer>
+                    </blockquote>
+                </div>
+                <div class="cbp-qtcontent">
+                    <img src="assets/images/client-2.jpg" alt="client-2" />
+                    <blockquote>
+                      <p>I'm really happy with the results. Get 100% satisfaction is difficult but Alex got it without problems.</p>
+                      <footer>Jane Doe</footer>
+                    </blockquote>
+                </div>
+
+            </div>		
+
+            </div><!-- .row -->
+
+					
+		</div><!-- .row -->
+	</section>
+
+	<!-- Testimonial end -->
+
+
+	<!-- Contact start -->
+
+	<section id="contact" class="pfblock">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header">
+						<h2 class="pfblock-title">Drop me a line</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<form id="contact-form" role="form">
+						<div class="ajax-hidden">
+							<div class="form-group wow fadeInUp">
+								<label class="sr-only" for="c_name">Name</label>
+								<input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
+							</div>
+
+							<div class="form-group wow fadeInUp" data-wow-delay=".1s">
+								<label class="sr-only" for="c_email">Email</label>
+								<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+							</div>
+
+							<div class="form-group wow fadeInUp" data-wow-delay=".2s">
+								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
+						</div>
+						<div class="ajax-response"></div>
+					</form>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- Contact end -->
+
+	<!-- Footer start -->
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-12">
+
+					<ul class="social-links">
+						<li><a href="index.html#" class="wow fadeInUp"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".1s"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".2s"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".5s"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+
+					<p class="heart">
+                        Made with <span class="fa fa-heart fa-2x animated pulse"></span> in Ukraine
+                    </p>
+                    <p class="copyright">
+                        © 2020 | Images: <a href="https://unsplash.com/">Unsplash</a> & <a href="http://zoomwalls.com/">Zoomwalls</a>
+					</p>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
+
+	<!-- Footer end -->
+
+	<!-- Scroll to top -->
+
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-up"></i></a>
+	</div>
+    
+    <!-- Scroll to top end-->
+
+	<!-- Javascript files -->
+
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+	<script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.cbpQTRotator.js"></script>
+	<script src="assets/js/custom.js"></script>
+
 </body>
 </html>
