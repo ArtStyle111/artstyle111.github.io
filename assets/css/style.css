@@ -380,7 +380,7 @@ textarea.form-control {
 }
 
 .start {
-	font-family: Raleway, "Times New Roman", Times, sans-serif;
+	font: 300 14px/1.8 'Raleway', sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	text-transform: none;
