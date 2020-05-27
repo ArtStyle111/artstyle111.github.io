@@ -7,14 +7,43 @@
     <title>Document</title>
 </head>
 <body>
-     <div class="files">
-        <div class="t1">Скачать образцы: &nbsp; </div>
-        <div class="t2">
-            <div class="filefield-file">
-                <img alt="PDF" src="https://uristhome.ru/sites/all/modules/filefield/icons/x-office-document.png"> 
-                <a title="Договор" href="Договор.pdf" download>Договор</a>
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
+
+<!-- jsPDF library -->
+<script src="js/jsPDF/dist/jspdf.min.js"></script>
+<script>
+    function convert_HTML_To_PDF(){
+        var doc = new jsPDF();
+        var elementHTML = $('#contnet').html();
+        var specialElementHandlers = {
+            '#elementH': function (element, renderer) {
+                return true;
+            }
+        };
+        doc.fromHTML(elementHTML, 15, 15, {
+            'width': 170,
+            'elementHandlers': specialElementHandlers
+        });
+
+        // Save the PDF
+        doc.save('sample-document.pdf');
+    }
+</script>
+    <div id="contnet">
+            <div class="files">
+                <div class="t1">Скачать образцы: &nbsp; </div>
+                <div class="t2">
+                    <div class="filefield-file">
+                        <img alt="PDF" src="https://uristhome.ru/sites/all/modules/filefield/icons/x-office-document.png"> 
+                        <a title="Договор" href="Договор.pdf" download>Договор</a>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas atque officia modi? Dolores repellat vel deleniti doloribus sit vero repudiandae dolore qui veniam modi accusantium ut consequatur, maxime consectetur harum!</p>
+                <div>&nbsp;(.PDF)</div>
             </div>
-            <div>&nbsp;(.PDF)</div></div>
      </div>
+    </div>
+    <div id="elementH"></div>
+    <button onclick="convert_HTML_To_PDF();">Сохранить в .pdf</button>
 </body>
 </html>
