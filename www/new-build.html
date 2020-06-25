@@ -7,152 +7,142 @@
         <link rel="stylesheet" href="./assets/css/fonts.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/imagehover.min.css" />
-        <link rel="stylesheet" href="./assets/css/animate.css">
+        <link rel="stylesheet" href="./assets/css/animate.css" />
         <title>sdfsd</title>
     </head>
     <body>
-            <header class="header">
-                <div class="conteiner">
-                    <div class="navigation">
-                        <div class="logo">
-                            <a href="#">
-                                <img src="./assets/image/main_page/Logo.png" alt="logo" />
+        <header class="header">
+            <div class="conteiner">
+                <div class="navigation">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./assets/image/main_page/Logo.png" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <nav class="header__menu">
+                        <div class="header__list borderXwidth">
+                            <li><a href="./index.html" class="header__link">HOME</a></li>
+                            <li><a href="./home-improvement.html" class="header__link">HOUSE EXTENSIONS</a></li>
+                            <li><a href="./new-build.html" class="header__link">NEW BUILDS</a></li>
+                            <li><a href="./building_services.html" class="header__link">BUILDING SERVICES</a></li>
+                            <li><a href="./gallery.html" class="header__link">GALLERY</a></li>
+                            <li><a href="./contact.html" class="header__link">CONTACT</a></li>
+                            <li><a href="./blog.html" class="header__link">Blog</a></li>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="new__build">
+            <div class="conteiner">
+                <div class="offers_1 gardenroom__offers_1">
+                    <div class="offres_1__desc offres_1__desc__second bathroom__offers left animated">
+                        <h2 class="title title__offers title__bathroom">
+                            ​New Build
+                        </h2>
+                        <img src="./assets/image/main_page/Line.png" alt="line" class="line bathroom__line" />
+                        <h2 class="title title__offers title__bathroom">
+                            New Build properties with New Approach
+                        </h2>
+                        <p class="title__desc title__desc__offers bathroom__desc">
+                            <span class="bold">All New Build developments with third party backed 10 year warranty and 21st century interiors.</span><br />
+                            At "ScotRuss Builders" New Build Construction Company we excel at delivering the New Build projects, flats and houses, whilst primarily focusing on the high specification residential developments.
+                        </p>
+                    </div>
+                    <img class="blog__like right animated" src="./assets/image/kitchen/kitchen__offer.png" alt="" />
+                </div>
+                <p class="title__desc title__desc__offers bathroom__desc gardenroom__text">
+                    Our expertise track record and and national construction trade body memberships are assuring we will meet and exceed the requirements of new build planners and building control bodies. Our aim is to carry on building on
+                    our track record of the new build properties that are not only meeting the minimum new build standards but also exceeding the client expectations in detail quality and construction process easiness with our inhouse
+                    project management service.
+                    <br />
+                    <br />
+                    We are keen to use the latest construction materials and processes, where fits the surrounding environment, so to produce the stylish and luxurious properties for you to call a home.
+                    <br />
+                    <br />
+                    Our company is a member of the several constructor schemes who monitor our construction processes and impartially verify our high quality construction service delivers to the industry standards at all times.
+                    <br />
+                    <br />
+                    Our main source of new build custom comes from different Glasgow areas, Troon, Air property developments whereby the potential parcels of land on the side or back of the existing properties are turned into the separate
+                    development plots for the new build. However, we have also worked on the redevelopment projects whereby the existing structure had to be knocked down in order to be replaced by the new build property.
+                </p>
+                <div class="offers_1">
+                    <img class="self left animated" src="./assets/image/blog/blog__img.png" alt="" />
+                    <div class="offres_1__desc right animated">
+                        <h2 class="title title__offers">
+                            Architectural services
+                        </h2>
+                        <img src="./assets/image/main_page/Line.png" alt="line" class="line bathroom__line" />
+                        <p class="title__desc title__desc__offers home__improvement__text blog__desc">
+                            If your project requires planning or building warrant advise we would recommend discussing this with a register Architect. We work in partnership with A10 Architects Ltd delivering various projects from new
+                            builds, house extensions, loft conversions and refurbishments where A10 Architects Ltd can provide simple advise to full contract administration to assist in the completion of your project.
+                        </p>
+                        <a class="btn btn__offers" href="#">Our portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact__form" id="contact">
+            <div class="conteiner">
+                <div class="form__decor bounce animated">
+                    <form action="send.php" method="POST">
+                        <legend class="title title__form">Contact us</legend>
+                        <img style="padding-bottom: 40px;" class="line work__line" src="./assets/image/main_page/Line.png" alt="line" />
+                        <input type="text" name="name" placeholder="Name" /><br />
+                        <input type="email" name="email" placeholder="E-mail" /><br />
+                        <input type="tel" name="phone" placeholder="Phone" /><br />
+                        <input type="text" name="address" placeholder="Address" /><br />
+                        <textarea name="msg" id="" placeholder="Type your message here"></textarea>
+                        <button class="btn btn__form btn__border" type="submit" name="btn">Contact us</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="conteiner footer__conteiner">
+                <img class="footer__img" src="./assets/image/main_page/footer_logo.png" alt="" />
+                <div class="footer__content">
+                    <div class="footer__navigation">
+                        <h4 class="footer__title">Navigation:</h4>
+                        <ul class="nav">
+                            <li class="footer__link"><a href="#" class="footer__link">Home</a></li>
+                            <li class="footer__link"><a href="#" class="footer__link">House extensions</a></li>
+                            <li class="footer__link"><a href="#" class="footer__link">New builds</a></li>
+                            <li class="footer__link"><a href="#" class="footer__link">Building services</a></li>
+                            <li class="footer__link"><a href="#" class="footer__link">Gallery</a></li>
+                            <li class="footer__link"><a href="#" class="footer__link">Contact</a></li>
+                            <li class="footer__link"><a href="#" class="footer__link">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact">
+                        <h4 class="footer__title">Contact Us</h4>
+                        <ul class="nav">
+                            <li class="footer__link"><a class="footer__link" href="tel:0141 266 0012">0141 266 0012</a><br /></li>
+                            <li class="footer__link"><a class="footer__link" href="tel:0794 947 2212">0794 947 2212</a><br /></li>
+                            <li class="footer__link"><a class="footer__link" href="mailto:eduard@scotruss.co.uk">eduard@scotruss.co.uk</a></li>
+                        </ul>
+                        <h4 class="footer__title footer__title__social">Our social network:</h4>
+                        <div class="footer__icon">
+                            <a href="">
+                                <img src="./assets/image/main_page/Facebook.png" alt="" />
+                            </a>
+                            <a href="">
+                                <img src="./assets/image/main_page/Instagram.png" alt="" />
+                            </a>
+                            <a href="">
+                                <img src="./assets/image/main_page/Yell.png" alt="" />
                             </a>
                         </div>
-                        <div class="header__burger">
-                            <span></span>
-                        </div>
-                        <nav class="header__menu">
-                            <div class="header__list borderXwidth">
-                                <li><a href="./index.html" class="header__link">HOME</a></li>
-                                <li><a href="./home-improvement.html" class="header__link">HOUSE EXTENSIONS</a></li>
-                                <li><a href="./new-build.html" class="header__link">NEW BUILDS</a></li>
-                                <li><a href="./building_services.html" class="header__link">BUILDING SERVICES</a></li>
-                                <li><a href="./gallery.html" class="header__link">GALLERY</a></li>
-                                <li><a href="./contact.html" class="header__link">CONTACT</a></li>
-                                <li><a href="./blog.html" class="header__link">Blog</a></li>
-                            </div>
-                        </nav>
                     </div>
                 </div>
-            </header>
-            <section class="new__build"> 
-                <div class="conteiner">
-                    <div class="offers_1 gardenroom__offers_1">
-                        <div class="offres_1__desc offres_1__desc__second bathroom__offers left animated">
-                            <h2 class="title title__offers title__bathroom">
-                                ​New Build
-                            </h2>
-                            <img src="./assets/image/main_page/Line.png" alt="line" class="line bathroom__line" />
-                            <h2 class="title title__offers title__bathroom">
-                                New Build properties with New Approach
-                            </h2>
-                            <p class="title__desc title__desc__offers bathroom__desc">
-                                <span class="bold">All New Build developments with third party backed 10 year warranty and 21st century interiors.</span><br>
-                                At "ScotRuss Builders" New Build Construction 
-                                Company we excel at delivering the New Build 
-                                projects, flats and houses, whilst primarily focusing on the high specification residential developments.                                                                  
-                            </p>
-                        </div>
-                        <img class="blog__like right animated" src="./assets/image/kitchen/kitchen__offer.png" alt="" />
-                    </div>
-                    <p class="title__desc title__desc__offers bathroom__desc gardenroom__text">
-                        Our expertise track record and and national   
-                        construction trade body memberships are assuring we will meet and exceed the 
-                        requirements of new build planners and building control bodies. Our aim is to carry on building on our track record of the new build properties that are not only meeting the 
-                        minimum new build standards but also exceeding the client expectations in detail 
-                        quality and construction process easiness with our inhouse project management service.
-                        <br>
-                        <br>
-                        We are keen to use the latest construction materials and processes, where fits the 
-                        surrounding environment, so to produce the stylish and luxurious properties for you
-                        to call a home.
-                        <br>
-                        <br>
-                        Our company is a member of the several constructor schemes who monitor our 
-                        construction processes and impartially verify our high quality construction service 
-                        delivers to the industry standards at all times.
-                        <br>
-                        <br>
-                        Our main source of new build custom comes from different Glasgow areas, Troon, 
-                        Air property developments whereby the potential parcels of land on the side or back 
-                        of the existing properties are turned into the separate development plots for the new build. However, we have also worked on the redevelopment projects whereby the existing 
-                        structure had to be knocked down in order to be replaced by the new build property.
-                    </p>
-                    <div class="offers_1">
-                        <img class="self left animated" src="./assets/image/blog/blog__img.png" alt="" />
-                        <div class="offres_1__desc right animated">
-                            <h2 class="title title__offers">
-                                Architectural services
-                            </h2>
-                            <img src="./assets/image/main_page/Line.png" alt="line" class="line bathroom__line" />
-                            <p class="title__desc title__desc__offers home__improvement__text blog__desc">
-                                If your project requires planning or building warrant advise we would recommend discussing this with a register Architect.  We work in partnership with A10 Architects Ltd delivering various projects from new builds, house extensions, loft conversions and refurbishments where A10 Architects Ltd can provide simple advise to full contract administration to assist in the completion of your project.
-                            </p>
-                                <a class="btn btn__offers" href="#">Our portfolio</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="contact__form" id="contact">
-                <div class="conteiner">
-                    <div class="form__decor bounce animated">
-                        <form action="send.php" method="POST">
-                            <legend class="title title__form">Contact us</legend>
-                            <img style="padding-bottom: 40px;" class="line work__line" src="./assets/image/main_page/Line.png" alt="line" />
-                            <input type="text" name="name" placeholder="Name" /><br />
-                            <input type="email" name="email" placeholder="E-mail" /><br />
-                            <input type="tel" name="phone" placeholder="Phone" /><br />
-                            <input type="text" name="address" placeholder="Address" /><br />
-                            <textarea name="msg" id="" placeholder="Type your message here"></textarea>
-                            <button class="btn btn__form btn__border" type="submit" name="btn">Contact us</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <footer class="footer">
-                <div class="conteiner footer__conteiner">
-                    <img class="footer__img" src="./assets/image/main_page/footer_logo.png" alt="" />
-                    <div class="footer__content">
-                        <div class="footer__navigation">
-                            <h4 class="footer__title">Navigation:</h4>
-                            <ul class="nav">
-                                <li class="footer__link"><a href="#" class="footer__link">Home</a></li>
-                                <li class="footer__link"><a href="#" class="footer__link">House extensions</a></li>
-                                <li class="footer__link"><a href="#" class="footer__link">New builds</a></li>
-                                <li class="footer__link"><a href="#" class="footer__link">Building services</a></li>
-                                <li class="footer__link"><a href="#" class="footer__link">Gallery</a></li>
-                                <li class="footer__link"><a href="#" class="footer__link">Contact</a></li>
-                                <li class="footer__link"><a href="#" class="footer__link">Blog</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__contact">
-                            <h4 class="footer__title">Contact Us</h4>
-                            <ul class="nav">
-                                <li class="footer__link"><a class="footer__link" href="tel:0141 266 0012">0141 266 0012</a><br /></li>
-                                <li class="footer__link"><a class="footer__link" href="tel:0794 947 2212">0794 947 2212</a><br /></li>
-                                <li class="footer__link"><a class="footer__link" href="mailto:eduard@scotruss.co.uk">eduard@scotruss.co.uk</a></li>
-                            </ul>
-                            <h4 class="footer__title footer__title__social">Our social network:</h4>
-                            <div class="footer__icon">
-                                <a href="">
-                                    <img src="./assets/image/main_page/Facebook.png" alt="" />
-                                </a>
-                                <a href="">
-                                    <img src="./assets/image/main_page/Instagram.png" alt="" />
-                                </a>
-                                <a href="">
-                                    <img src="./assets/image/main_page/Yell.png" alt="" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="copyright">© 2004 Glasgow, Scotland</p>
-            </footer>
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script src="./assets/js/slick.min.js"></script>
-            <script src="./assets/js/script.js"></script>
-        </body>
-        </noindex>
+            </div>
+            <p class="copyright">© 2004 Glasgow, Scotland</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>

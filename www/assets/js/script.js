@@ -6,9 +6,10 @@ $(document).ready(function () {
         autoplay: true,
         responsive: [
             {
-                breakpoint: 576,
+                breakpoint: 992,
                 settings: {
                     centerPadding: "0",
+                    arrows: false,
                 },
             },
         ],
