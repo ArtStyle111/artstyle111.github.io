@@ -1316,10 +1316,10 @@ iframe {
         grid-template-rows: 1fr 1fr 1fr;
         justify-content: center;
     }
-    .slider .slick-arrow.slick-prev {
+    button .slider .slick-arrow .slick-prev {
         display: none;
     }
-    .slider .slick-arrow.slick-next {
+    button .slider .slick-arrow .slick-next {
         display: none;
     }
     .conteiner {
@@ -1389,7 +1389,19 @@ ul.bathroom__text {
     list-style: none;
     padding-left: 0px;
 }
+.slider .slick-arrow.slick-prev {
+    display: none;
+}
+.slider .slick-arrow.slick-next {
+    display: none;
+}
 }
 
 @media screen and (max-width: 320px) {
+    .slider .slick-arrow.slick-prev {
+        display: none;
+    }
+    .slider .slick-arrow.slick-next {
+        display: none;
+    }
 }
