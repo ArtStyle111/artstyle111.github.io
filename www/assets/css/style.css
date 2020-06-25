@@ -1189,7 +1189,7 @@ textarea {
 }
 @media screen and (max-width: 576px) {
     body.lock {
-        overflow: hidden;
+        overflow-x: hidden;
     }
     .conteiner {
         width: 100%;
