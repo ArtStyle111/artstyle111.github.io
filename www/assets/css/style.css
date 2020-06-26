@@ -337,6 +337,9 @@ ul.sub-header__list {
     font-weight: 800;
     width: 629px;
 }
+.title__home__improvement {
+    width: 643px;
+}
 .title__desc__offers {
     color: #111;
     width: 520px;
@@ -1101,6 +1104,9 @@ textarea {
 }
 .stretch__collage {
     justify-content: space-between;
+}
+.title__home__improvement {
+    width: 643px;
 }
 /* MEDIA */
 @media screen and (max-width: 1200px) {
