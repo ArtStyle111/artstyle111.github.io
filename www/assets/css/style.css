@@ -33,6 +33,34 @@ p {
 
     align-self: flex-start;
 }
+/*SUB MENU*/
+ul.sub-header__list {
+    padding: 0px;
+    font-size: 12px;
+}
+.sub-header__list li {
+    position: relative;
+    list-style: none;
+    padding: 20px 10px 10px 10px;
+}
+.header__list li:hover .sub-header__list{
+    display: block;
+}
+.sub-header__list {
+    display: none;
+    position: absolute;
+    top: 10px;
+
+    max-width: 174px;
+    padding-top: 20px;
+}
+.sub-header__link {
+    text-decoration: none;
+    color: #111;
+}
+.sub-header__list>li {
+    background-color: transparent;
+}
 /* MAIN SLIDER*/
 .slider-all {
     margin-bottom: 50px;
@@ -661,10 +689,14 @@ textarea {
 .animated {
     opacity: 0;
 }
+.self {
+    width: 100%;
+}
 
 /* Bathroom page */
 .bathroom__offers {
-    width: 670px;
+    width: 100%;
+    padding-right: 30px;
 }
 .bold {
     font-weight: bold;
@@ -685,6 +717,8 @@ textarea {
 .bathroom__img {
     padding-top: 80px;
     padding-bottom: 80px;
+    display: block;
+    text-align: center;
 }
 .bathroom__collage {
     padding-top: 80px;
@@ -885,6 +919,7 @@ textarea {
     -ms-grid-rows: 320px 50px 320px 50px 320px 50px 320px 50px 320px;
     grid-template-rows: 320px 320px 320px 320px 320px;
     gap: 50px 30px;
+    font-size: 22px;
 }
 .building__services__content > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -997,11 +1032,17 @@ textarea {
     margin: 0 auto;
 }
 /* HOME IMPROVEMENT */
+.home__improvement_1 {
+    display: flex;
+}
 .home__improvement__ul {
     padding-top: 0px;
 }
 .home__improvement__text {
     width: 100%;
+}
+.home__improvement__up {
+    padding-top: 40px;
 }
 /* BLOG PAGE*/
 .blog__date {
@@ -1024,7 +1065,7 @@ textarea {
 }
 /* CONTACT */
 .contact {
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 90px;
     height: 1200px;
 }
@@ -1058,12 +1099,22 @@ textarea {
 .contact__map {
     padding-top: 100px;
 }
+.title__page {
+    color: #111;
+    font-size: 80px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+}
 /* KITCHEN */
 /* NEW BUILD PAGE */
 /* stretch page*/
 .title__stretch {
     width: 100%;
     text-align: center;
+}
+.stretch__collage {
+    justify-content: space-between;
 }
 
 /* MEDIA */
@@ -1150,6 +1201,8 @@ textarea {
     }
     .bathroom__img {
         width: 100%;
+        display: block;
+        margin: 0 auto;
     }
     iframe {
         width: 100%;
@@ -1224,6 +1277,32 @@ textarea {
         padding: 0px;
         text-align: center;
     }
+    .slideText {
+        font-size: 27px;
+    }
+    .contact__offer {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    .services__offers__item__desc {
+        font-size: 30px;
+    }
+    .offers_1_left {
+        padding-right: 46px;
+    }
+    .self__bathroom {
+        width: 70%;
+        padding-bottom: 20px;
+    }
+    /*SUB MENU*/
+    ul.sub-header__list {
+        font-size: 12px;
+    }
+    .sub-header__list {
+        max-width: 123px;
+    }
 }
 @media screen and (max-width: 992px) {
     .conteiner {
@@ -1245,7 +1324,7 @@ textarea {
         padding-right: 5px;
     }
     .header__list > li > a {
-        font-size: 11px;
+        font-size: 12px;
     }
     .offers_1 {
         display: block;
@@ -1300,6 +1379,7 @@ textarea {
     }
     .bathroom__offers {
         width: 100%;
+        
     }
     .bathroom__collage {
         display: block;
@@ -1319,6 +1399,9 @@ textarea {
         display: block;
         text-align: center;
         padding-bottom: 20px;
+    }
+    .slideText {
+        font-size: 21px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -1474,12 +1557,25 @@ textarea {
         padding: 0 25px 59px 25px;
     }
     .slideText {
-        font-size: 20px;
+        font-size: 13px;
     }
     .slideText__desc {
         font-size: 15px;
         left: 26.5%;
     }
+    .slider-dots {
+        display: none;
+    }
+    .contact__icon__tel {
+        text-align: initial;
+    }
+    .home__improvement_1 {
+        display: block;
+    }
+    .header__list li:hover .sub-header__list{
+        display: block;
+    }
+    
 }
 @media screen and (max-width: 576px) {
     .building__services__content {
@@ -1565,9 +1661,6 @@ textarea {
         padding-top: 20px;
         width: 100%;
     }
-    .contact__icon__tel {
-        text-align: initial;
-    }
     .bathroom__spec {
         display: block;
         text-align: center;
@@ -1583,7 +1676,7 @@ textarea {
         display: none;
     }
     .slideText {
-        font-size: 15px;
+        font-size: 13px;
     }
     .slideText__desc {
         font-size: 12px;
@@ -1597,6 +1690,12 @@ textarea {
     }
     .phone__call__img {
         width: 125%;
+    }
+    .contact__icon__tel {
+        font-size: 21px;
+    }
+    .self__bathroom {
+        width: 100%;
     }
 }
 
