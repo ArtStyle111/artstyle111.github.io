@@ -1578,6 +1578,9 @@ textarea {
         font-size: 12px;
         left: 28.5%;
     }
+    .slider-dots {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 320px) {
