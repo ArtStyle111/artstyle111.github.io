@@ -1571,6 +1571,13 @@ textarea {
     .slider .slick-arrow.slick-next {
         display: none;
     }
+    .slideText {
+        font-size: 15px;
+    }
+    .slideText__desc {
+        font-size: 12px;
+        left: 28.5%;
+    }
 }
 
 @media screen and (max-width: 320px) {
