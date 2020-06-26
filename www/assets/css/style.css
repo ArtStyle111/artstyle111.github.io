@@ -215,6 +215,12 @@ p {
     position: relative;
     z-index: 3;
 }
+.phone__call {
+    display: none;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+}
 .borderXwidth a:after {
     position: absolute;
     opacity: 0;
@@ -1585,6 +1591,12 @@ textarea {
     }
     .slider-dots {
         display: none;
+    }
+    .phone__call {
+        display: block;
+    }
+    .phone__call__img {
+        width: 125%;
     }
 }
 
