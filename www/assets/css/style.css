@@ -312,9 +312,6 @@ p {
 .offres_1__desc {
     padding-left: 46px;
 }
-.offres_1__desc__second {
-    padding-left: 0;
-}
 .title__offers {
     color: #111;
     font-weight: 800;
@@ -386,6 +383,9 @@ p {
     padding-top: 45px;
 }
 /* WORK */
+.work {
+    padding-top: 50px;
+}
 .title__work {
     color: #111;
     text-align: center;
@@ -1214,6 +1214,10 @@ textarea {
     button .slick-prev .slick-arrow {
         display: none;
     }
+    .slider__content {
+        padding: 0px;
+        text-align: center;
+    }
 }
 @media screen and (max-width: 992px) {
     .conteiner {
@@ -1249,6 +1253,7 @@ textarea {
     }
     .offres_1__desc {
         padding-left: 0px;
+        padding-top: 20px;
     }
     .btn {
         margin: 0 auto;
