@@ -1,0 +1,46 @@
+.header
+    padding-bottom: 51px
+    color: #ffffff
+    background-color: #ffffff
+    &-top
+        display: flex
+        padding-top: 30px
+        padding-bottom: 39px
+        justify-content: space-between
+        align-items: center
+    &-social
+        &__item
+            &:not(:last-child)
+                margin-right: 2px
+    &-hero
+        padding-top: 150px
+        padding-left: 80px
+        padding-bottom: 54px
+        background: url(../images/dest/header/header-bg.jpg) center center no-repeat
+        background-size: cover
+    &__title
+        margin-bottom: 27px
+        font-size: 100px
+        line-height: 60px
+        text-transform: uppercase
+    &__subtitle
+        max-width: 300px
+        margin-bottom: 46px
+        font-weight: 400
+        font-size: 18px
+        line-height: 27px
+
+@media (max-width: 768px)
+    .header
+        &-top
+            display: none
+        &-hero
+            padding-top: 60px
+            padding-left: 35px
+        &__title
+            margin-bottom: 15px
+            font-size: 50px
+            text-transform: none
+        &__subtitle
+            margin-bottom: 23px
+            max-width: 220px

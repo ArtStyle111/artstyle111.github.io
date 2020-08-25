@@ -1,0 +1,36 @@
+.nav
+    padding-top: 9px
+    padding-bottom: 11px
+    background-color: $nav-bg-color
+    font-size: 14px
+    &-wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        display: none
+    &-info
+        display: flex
+        align-items: center
+        &__item
+            display: flex
+            margin-right: 16px
+            align-items: center
+            &:nth-of-type(2)
+                margin-right: 31px
+            img
+                margin-right: 5px
+
+@media (max-width: 768px)
+    .nav
+        padding-top: 21px
+        padding-bottom: 16px
+        background-color: #ffffff
+        &__logo
+            display: block
+        &-info
+            display: none
+        &__language
+            font-weight: 700
+            color: $text-color
+            font-size: 19px
