@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>AlinaPhoto</title>
+	<base target="_blank">
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+
+	<div id="progress"></div>
+
+    <button class="nav-button">
+        <span class="nav-icon"></span>
+    </button>
+
+    <nav class="nav" id="nav">
+        <div class="nav__menu">
+            <span class="nav__item link">О фотографе</span>
+            <span class="nav__item link">Портфолио</span>
+            <span class="nav__item logo">Alina Photo</span>
+            <span class="nav__item link">Цены и услуги</span>
+            <span class="nav__item link">Обратная связь</span>
+        </div>
+    </nav>
+
+    <header class="header" id="header">
+        <div class="header__content animate__animated animate__fadeInLeftBig">
+            <h1 class="header__title">Фотография — это не просто&nbsp;снимок</h1>
+            <p class="header__text">Для меня фотосессия как отдельное кино, с завязкой,  кульминацией и финалом.
+                Фотографии - это история, возможность вспомнить моменты, что стерлись из памяти.
+                Это моё интернет портфолио и я приглашаю вас понзнакомиться с ним!</p>
+        </div>
+        <button class="header__button animate__animated animate__fadeInUpBig">Познакомимся ближе</button>
+    </header>
+
+    <section class="about section" id="about">
+        <div class="about-wrap">
+            <!-- <div class="about__equip">
+                <h3 class="about__title">На что я снимаю?</h3>
+                <span class="about__subtitle">Это аппаратура, которой я пользуюсь во время съемок.</span>
+                <div class="about__camera">
+                    <div class="about__item">
+                        <img src="./images/dest/about/camera.svg" alt="Camera" class="about__image">
+                        <span>Canon 5D</span>
+                    </div>
+                    <div class="about__item">
+                        <img src="./images/dest/about/focus.svg" alt="Focus" class="about__image">
+                        <span>F/3.5</span>
+                    </div>
+                    <div class="about__item">
+                        <img src="./images/dest/about/lince.svg" alt="Lince" class="about__image">
+                        <span>EF 24-70mm</span>
+                    </div>
+                    <div class="about__item">
+                        <img src="./images/dest/about/sunlight.svg" alt="Sunlight" class="about__image">
+                        <span>50 mm</span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="about__info">
+                <h3 class="about__title">Немного о моей деятельности</h3>
+                <p class="about__desc">Привет, меня зовут Алина - семейный фотограф из Казани. 
+                    Я люблю снимать людей и то, что их связывает. 
+                    В фотографии, как и во всем в жизни, мне близка естественность - это читается в моих работах, где я 
+                    стараюсь создать непринужденную атмосферу комфорта на самой съемке.
+                    </p>
+            </div>
+        </div>
+        <div class="section-bg-wrap">
+            <div class="section-bg">
+                <picture>
+                    <source type="image/webp" srcset="./images/dest/about/about-bg.webp">
+                    <img src="./images/dest/about/about-bg.jpg" alt="" class="about-bg">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio">
+        <span class="portfolio-bg">Портфолио</span>
+        <div class="portfolio-wrap">
+            <div class="portfolio__nav">
+                <div class="portfolio__category">
+                    <h3 class="portfolio__title">Семья и любовь</h3>
+                    <div class="portfolio-tabs">
+                        <span class="portfolio__tab tab tab_active">В ожидании малыша</span>
+                        <span class="portfolio__tab tab">Семейная съемка</span>
+                        <span class="portfolio__tab tab">Никах</span>
+                    </div>
+                </div>
+                <div class="portfolio__category">
+                    <h3 class="portfolio__title">Стилизованные съемки</h3>
+                    <div class="portfolio-tabs">
+                        <span class="portfolio__tab tab">Студия</span>
+                        <span class="portfolio__tab tab">Детская</span>
+                        <span class="portfolio__tab tab">Свободная</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-slider swiper-container content content_active">
+                <div class="swiper-wrapper">
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider1/slide1.webp">
+                        <img src="./images/dest/portfolio/slider1/slide1.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider1/slide2.webp">
+                        <img src="./images/dest/portfolio/slider1/slide2.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider1/slide3.webp">
+                        <img src="./images/dest/portfolio/slider1/slide3.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider1/slide4.webp">
+                        <img src="./images/dest/portfolio/slider1/slide4.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider1/slide5.webp">
+                        <img src="./images/dest/portfolio/slider1/slide5.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="portfolio-slider swiper-container content">
+                <div class="swiper-wrapper">
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider2/slide1.webp">
+                        <img src="./images/dest/portfolio/slider2/slide1.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider2/slide2.webp">
+                        <img src="./images/dest/portfolio/slider2/slide2.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider2/slide3.webp">
+                        <img src="./images/dest/portfolio/slider2/slide3.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider2/slide4.webp">
+                        <img src="./images/dest/portfolio/slider2/slide4.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider2/slide5.webp">
+                        <img src="./images/dest/portfolio/slider2/slide5.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="portfolio-slider swiper-container content">
+                <div class="swiper-wrapper">
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider3/slide1.webp">
+                        <img src="./images/dest/portfolio/slider3/slide1.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider3/slide2.webp">
+                        <img src="./images/dest/portfolio/slider3/slide2.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider3/slide3.webp">
+                        <img src="./images/dest/portfolio/slider3/slide3.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider3/slide4.webp">
+                        <img src="./images/dest/portfolio/slider3/slide4.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider3/slide5.webp">
+                        <img src="./images/dest/portfolio/slider3/slide5.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="portfolio-slider swiper-container content">
+                <div class="swiper-wrapper">
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider4/slide1.webp">
+                        <img src="./images/dest/portfolio/slider4/slide1.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider4/slide2.webp">
+                        <img src="./images/dest/portfolio/slider4/slide2.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider4/slide3.webp">
+                        <img src="./images/dest/portfolio/slider4/slide3.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider4/slide4.webp">
+                        <img src="./images/dest/portfolio/slider4/slide4.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider4/slide5.webp">
+                        <img src="./images/dest/portfolio/slider4/slide5.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider4/slide6.webp">
+                        <img src="./images/dest/portfolio/slider4/slide6.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="portfolio-slider swiper-container content">
+                <div class="swiper-wrapper">
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider5/slide1.webp">
+                        <img src="./images/dest/portfolio/slider5/slide1.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider5/slide2.webp">
+                        <img src="./images/dest/portfolio/slider5/slide2.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider5/slide3.webp">
+                        <img src="./images/dest/portfolio/slider5/slide3.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider5/slide4.webp">
+                        <img src="./images/dest/portfolio/slider5/slide4.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider5/slide5.webp">
+                        <img src="./images/dest/portfolio/slider5/slide5.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="portfolio-slider swiper-container content">
+                <div class="swiper-wrapper">
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider6/slide1.webp">
+                        <img src="./images/dest/portfolio/slider6/slide1.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider6/slide2.webp">
+                        <img src="./images/dest/portfolio/slider6/slide2.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider6/slide3.webp">
+                        <img src="./images/dest/portfolio/slider6/slide3.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider6/slide4.webp">
+                        <img src="./images/dest/portfolio/slider6/slide4.jpg" alt="">
+                    </picture>
+                    <picture class="portfolio__slide swiper-slide">
+                        <source type="image/webp" srcset="./images/dest/portfolio/slider6/slide5.webp">
+                        <img src="./images/dest/portfolio/slider6/slide5.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price section" id="price">
+        <div class="section-bg-wrap">
+            <div class="section-bg">
+                <picture>
+                    <source type="image/webp" srcset="./images/dest/price/price-bg.webp">
+                        <img src="./images/dest/price/price-bg.jpg" alt="" class="price-bg">
+                </picture>
+            </div>
+        </div>
+        <div class="price-tabs">
+            <span class="price__tab tab tab_active">Первый ценовой пакет</span>
+            <span class="price__tab tab">Второй ценовой пакет</span>
+            <span class="price__tab tab">Третий ценовой пакет</span>
+        </div>
+        <div class="price-block content content_active">
+            <div class="price__info">
+                <h3 class="price__title">Первый ценовой пакет</h3>
+                <div class="price-item price__item">
+                    <h6 class="price-item__title">Количество фотографий:</h6>
+                    <span>30-40 обработанных</span>
+                </div>
+                <div class="price-item price__item">
+                    <h6 class="price-item__title">Время съемки:</h6>
+                    <span>1 час</span>
+                </div>
+                <div class="price__order">
+                    <span class="price__cost">1 500 Р</span>
+                    <button class="price__button">Оставить заявку</button>
+                </div>
+            </div>
+            <div class="price__desc">
+                <ul class="price__list">
+                    <li>Срок готовности до 2 недель.</li>
+                    <li>Возможна съемка в фотостудии, стоимость оплачивается отдельно.</li>
+                    <li>В команде работает стилист, который поможет создать образ.</li>
+                    <li>Детальное обсуждение концепции съемки, ваших образов.</li>
+                    <li>Выбор локации/студии и помощь  в позировании.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="price-block content">
+            <div class="price__info">
+                <h3 class="price__title">Второй ценовой пакет</h3>
+                <div class="price-item price__item">
+                    <h6 class="price-item__title">Количество фотографий:</h6>
+                    <span>50-60 обработанных</span>
+                </div>
+                <div class="price-item price__item">
+                    <h6 class="price-item__title">Время съемки:</h6>
+                    <span>От 2 до 3 часов</span>
+                </div>
+                <div class="price__order">
+                    <span class="price__cost">3 500 Р</span>
+                    <button class="price__button">Оставить заявку</button>
+                </div>
+            </div>
+            <div class="price__desc">
+                <ul class="price__list">
+                    <li>Срок готовности до 3 недель.</li>
+                    <li>Возможна съемка в фотостудии, стоимость оплачивается отдельно.</li>
+                    <li>В команде работает стилист, который поможет создать образ.</li>
+                    <li>Детальное обсуждение концепции съемки, ваших образов.</li>
+                    <li>Выбор локации/студии и помощь  в позировании.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="price-block content">
+            <div class="price__info">
+                <h3 class="price__title">Третий ценовой пакет</h3>
+                <div class="price-item price__item">
+                    <h6 class="price-item__title">Количество фотографий:</h6>
+                    <span>70-90 обработанных</span>
+                </div>
+                <div class="price-item price__item">
+                    <h6 class="price-item__title">Время съемки:</h6>
+                    <span>От 3 до 4 часов съемки</span>
+                </div>
+                <div class="price__order">
+                    <span class="price__cost">5 500 Р</span>
+                    <button class="price__button">Оставить заявку</button>
+                </div>
+            </div>
+            <div class="price__desc">
+                <ul class="price__list">
+                    <li>Срок готовности до 1 месяца.</li>
+                    <li>Возможна съемка в фотостудии, стоимость оплачивается отдельно.</li>
+                    <li>В команде работает стилист, который поможет создать образ.</li>
+                    <li>Детальное обсуждение концепции съемки, ваших образов.</li>
+                    <li>Выбор локации/студии и помощь  в позировании.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback section" id="feedback">
+        <div class="feedback-block">
+            <div class="feedback-content">
+                <h2 class="feedback__title">Забронируйте дату съемки</h2>
+                <span class="feedback__subtitle">Заполните форму ниже и я свяжусь с вами в&nbsp;ближайшее&nbsp;время</span>
+                <form class="feedback__form" autocomplete="off">
+
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="AlinaPhoto">
+                    <input type="hidden" name="admin_email" value="sar-133@mail.ru">
+                    <input type="hidden" name="form_subject" value="Заявка на фотосессию">
+                    <!-- END Hidden Required Fields -->
+
+                    <div class="feedback-row">
+                        <input type="text" class="feedback__input feedback__input_name" name="Имя" placeholder="Имя">
+                        <input type="email" class="feedback__input feedback__input_email" name="Почта" placeholder="Email">
+                    </div>
+                    <div class="feedback-row">
+                        <input type="tel" class="feedback__input feedback__input_phone" name="Телефон" placeholder="Телефон">
+                        <div class="feedback-select-wrap">
+                            <div class="feedback-select">
+                                <div class="feedback-options">
+                                    <div class="feedback__option">
+                                        <input type="radio" class="feedback__radio" name="Тариф" id="first-tariff">
+                                        <label class="feedback__label" for="first-tariff">Первый ценовой тариф</label>
+                                    </div>
+                                    <div class="feedback__option">
+                                        <input type="radio" class="feedback__radio" name="Тариф" id="second-tariff">
+                                        <label class="feedback__label" for="second-tariff">Второй ценовой тариф</label>
+                                    </div>
+                                    <div class="feedback__option">
+                                        <input type="radio" class="feedback__radio" name="Тариф" id="third-tariff">
+                                        <label class="feedback__label" for="third-tariff">Третий ценовой тариф</label>
+                                    </div>
+                                </div>
+                                <div class="feedback__option_selected">Первый ценовой тариф</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="feedback__button">Отправить</button>
+                </form>
+                <span class="feedback__warning">Все данные конфиденциальны</span>
+            </div>
+        </div>
+        <div class="feedback-message">
+            <img src="./images/dest/feedback/clock.svg" alt="Отправлено" class="feedback__icon">
+            <span class="feedback__text">Спасибо, я свяжусь с вами в ближайшее время!</span>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__contacts">
+            <div class="footer__phone footer-block">
+                <h5 class="footer__title">Телефон</h5>
+                <div class="footer__item">
+                    <img src="./images/dest/footer/phone.svg" alt="Телефон" class="footer__icon">
+                    <a class="footer__text" href="tel:+79053155586">79053155586</a>
+                </div>
+            </div>
+            <div class="footer__adress footer-block">
+                <h5 class="footer__title">Адрес</h5>
+                <div class="footer__item">
+                    <img src="./images/dest/footer/location.svg" alt="Адрес" class="footer__icon">
+                    <span class="footer__text">г. Казань</span>
+                </div>
+            </div>
+            <div class="footer__email footer-block">
+                <h5 class="footer__title">Почтовый адрес</h5>
+                <div class="footer__item">
+                    <img src="./images/dest/footer/email.svg" alt="Почта" class="footer__icon">
+                    <a class="footer__text" href="mailto:sar-133@mail.ru">sar-133@mail.ru</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__social">
+            <h5 class="footer__title">Социальные сети</h5>
+            <a href="https://www.instagram.com/alina_rustemovna/" class="footer__link"><img src="./images/dest/footer/instagram.svg" alt="Инстаграм"></a>
+            <a href="https://vk.com/alina_pix" class="footer__link"><img src="./images/dest/footer/vk.svg" alt="Вконтакте"></a>
+            <a href="https://wa.me/79053155586" class="footer__link"><img src="./images/dest/footer/whatsapp.svg" alt="ВатсАп"></a>
+        </div>
+    </footer>
+
+	<script src="libs/js/jquery-3.5.1.min.js"></script>
+	<script src="libs/js/swiper.min.js"></script>
+	<script src="libs/js/jquery.maskedinput.min.js"></script>
+	<script src="libs/js/form.js"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
