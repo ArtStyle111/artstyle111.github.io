@@ -7,7 +7,7 @@ body {
   font-size: 130px;
   color: #FFD5FF;
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 400;
