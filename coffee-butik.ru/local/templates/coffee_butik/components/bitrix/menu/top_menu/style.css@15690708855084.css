@@ -1,0 +1,206 @@
+/**Top menu**/
+
+#cb_horizontal-multilevel-menu {
+	margin:0;
+	padding: 0; 
+	list-style-type: none;
+	font-size: 20px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	padding-right: 23px;
+}
+
+/*Links*/
+#cb_horizontal-multilevel-menu a
+{
+	display:block;
+	text-decoration:underline;
+	line-height: 1;
+}
+
+#cb_horizontal-multilevel-menu a:hover {
+	text-decoration: none;
+}
+
+#cb_horizontal-multilevel-menu li
+{
+  margin-left: 6.7%;
+  letter-spacing: -1px;
+}
+
+/*Root items*/
+#cb_horizontal-multilevel-menu li a.root-item
+{	
+	color: white;
+	padding: 7px 0;
+	text-shadow: 1px 2px 9px rgba(0, 0, 0, 0.69);
+}
+
+/*Root menu selected*/
+#cb_horizontal-multilevel-menu li a.root-item-selected
+{
+	color:#fd923a;
+}
+
+/*Item-parents*/
+#cb_horizontal-multilevel-menu a.parent
+{
+	background: url(images/arrow.gif) center right no-repeat;
+}
+
+/*Denied items*/
+#cb_horizontal-multilevel-menu a.denied
+{
+	background: url(images/lock.gif) center right no-repeat;
+}
+
+/*Child-items: hover*/
+#cb_horizontal-multilevel-menu li:hover, #cb_horizontal-multilevel-menu li.jshover
+{
+	/*background:#D6D6D6;*/
+	color:#fff;
+}
+
+/*Child-items selected*/
+#cb_horizontal-multilevel-menu li.item-selected
+{
+	background:#D6D6D6;
+	color:#fff;
+}
+
+/*Sub-menu box*/
+#cb_horizontal-multilevel-menu li ul
+{
+	position:absolute;
+	/*top:-999em;*/
+	top:auto;
+	display:none;
+	z-index:500;
+
+	height:auto;
+	/*width:12em;*/
+	min-width:135px;
+	background:#fff;
+	border:1px solid #fd923a;
+	padding: 10px 0;
+}
+
+/*Sub-menu item box*/
+#cb_horizontal-multilevel-menu li li
+{
+	width: auto;
+	float: none;
+}
+
+/*Item link*/
+#cb_horizontal-multilevel-menu li ul a
+{
+	text-align:left;
+}
+
+/*Items text color & size */
+#cb_horizontal-multilevel-menu li a,
+#cb_horizontal-multilevel-menu li:hover li a,
+#cb_horizontal-multilevel-menu li.jshover li a,
+#cb_horizontal-multilevel-menu li:hover li:hover li a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover li a,
+#cb_horizontal-multilevel-menu li:hover li:hover li:hover li a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover li.jshover li a,
+#cb_horizontal-multilevel-menu li:hover li:hover li:hover li:hover li a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li a,
+#cb_horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover li a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li a
+{
+	color:#000;
+}
+
+/*Items text color & size: hover*/
+#cb_horizontal-multilevel-menu li:hover li:hover a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover a,
+#cb_horizontal-multilevel-menu li:hover li:hover li:hover a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover li.jshover a,
+#cb_horizontal-multilevel-menu li:hover li:hover li:hover li:hover a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover a
+#cb_horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover a
+#cb_horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover li:hover a,
+#cb_horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li.jshover a
+{
+	color:#fd923a;
+}
+
+#cb_horizontal-multilevel-menu li ul ul
+{
+	margin:-27px 0 0 132px;
+	/*margin:-1.93em 0 0 11.6em;*/
+}
+
+#cb_horizontal-multilevel-menu li:hover ul ul,
+#cb_horizontal-multilevel-menu li.jshover ul ul,
+#cb_horizontal-multilevel-menu li:hover ul ul ul,
+#cb_horizontal-multilevel-menu li.jshover ul ul ul,
+#cb_horizontal-multilevel-menu li:hover ul ul ul ul,
+#cb_horizontal-multilevel-menu li.jshover ul ul ul ul,
+#cb_horizontal-multilevel-menu li:hover ul ul ul ul ul,
+#cb_horizontal-multilevel-menu li.jshover ul ul ul ul ul
+{
+	/*top:-999em;*/
+	display:none;
+}
+
+#cb_horizontal-multilevel-menu li:hover ul,
+#cb_horizontal-multilevel-menu li.jshover ul,
+#cb_horizontal-multilevel-menu li li:hover ul,
+#cb_horizontal-multilevel-menu li li.jshover ul,
+#cb_horizontal-multilevel-menu li li li:hover ul,
+#cb_horizontal-multilevel-menu li li li.jshover ul,
+#cb_horizontal-multilevel-menu li li li li:hover ul,
+#cb_horizontal-multilevel-menu li li li li.jshover ul,
+#cb_horizontal-multilevel-menu li li li li li:hover ul,
+#cb_horizontal-multilevel-menu li li li li li.jshover ul
+{
+	/*z-index:1000;
+	top:auto;*/
+	display:block;
+}
+
+div.menu-clear-left
+{
+	clear:left;
+}
+
+div.header_main_menu {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+div.robot_img{
+	position: absolute;
+	left: -140px;
+	top: -93px;
+	width: 186px;
+	height: 316px;
+	z-index: 5;
+	background: url('../../../../../../../images/robot-header.png') no-repeat 50% 50% transparent;
+}
+div.robot_hand_img {
+	position: absolute;
+	left: 9px;
+	top: -10px;
+	width: 35px;
+	height: 29px;
+	z-index: 10;
+	background: url('../../../../../../../images/hand.png') no-repeat 50% 50% transparent;
+}

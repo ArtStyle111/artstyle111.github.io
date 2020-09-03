@@ -1,0 +1,1153 @@
+var checkout = ckt = {};
+var id_selected_option = '';
+var id_selected_type = '';
+var identificators = [];
+
+checkout.settings_default = {
+    cityname: '',
+    streetname: '',
+    old_id_place_fias: '',
+    old_prod_weight: 0,
+    old_prod_count: 0,
+    old_prod_price: 0,
+    old_prod_assessed_price: 0,
+
+    index: '#index',
+    city: '#city',
+    street: '#street',
+    house: '#house',
+    flat: '#flat',
+    id_place_fias: '#id_place_fias',
+    id_street_fias: '#id_street_fias',
+    delivery_cost: '#delivery_cost',
+    min_term: '#min_term',
+    max_term: '#max_term',
+    address_1: '#address_1',
+    delivery_id: '#delivery_id',
+    place_input: 'body',
+    place_map: '',
+    prod_weight: 0,
+    prod_count: 0,
+    prod_price: 0,
+    creators: true,
+    prod_assessed_price: 0,
+    carriers: '',
+    select_postamat_name: 'address_postamat',
+    select_pvz_name: 'address_pvz',
+    id_selected_postomat: 0,
+    id_selected_pvz: 0,
+    selector_radio: '',
+    selected_radio: '',
+    use_map: true,
+    autorun: false,
+    city_val: '',
+    street_val: '',
+    autodetection_city: true,
+    map_body: '#mapBody',
+    isset_carriers_body: '#isset_carriers',
+    selected_punkt: '#selected_punkt',
+    address_pvz: '#address_pvz',
+};
+
+checkout.init = function(e){
+    this.setting = $.extend({},this.settings_default,e);
+
+    this.saved_var = {cityname:'', streetname: ''};
+    this.ajax_que = 0;
+    var selected_type_on_map = {postamat:false, pvz:false};
+    var last_selected_type_on_map = '';
+    var isset_open_baloon = false;
+    var ppMap = '';
+    var select_name = '';
+    var block_city = false;
+    var myCollection = '';
+    var isset_run = false;
+    var show_filter;
+    ymaps = '';
+    $(ckt.setting.city).attr('autocomplete', 'off');
+    $(ckt.setting.street).attr('autocomplete', 'off');
+    if ($(this.setting.id_place_fias).val() == ''){
+        $(this.setting.city).val('');
+        $(this.setting.street).val('');
+        $(this.setting.id_steet_fias).val('');
+        $(this.setting.house).val('');
+        $(this.setting.flat).val('');
+        $(this.setting.index).val('');
+    }
+
+
+
+
+    create_inputs_on_map = function(obj) {
+        $.each(obj, function(e, i) {
+            if (i == 'city'){
+                input = '<input type="text" id="city" name="city" class="input_city_on_map">';
+                $('#mapBody').prepend(input);
+            }
+            if (i == 'isset_carriers'){
+                isset_carriers_block = '<div id="isset_carriers"></div>';
+                $('#mapBody').prepend(isset_carriers_block);
+            }
+        });
+    }
+
+    if (this.setting.use_map){
+        if (!ckt.setting.autodetection_city){$.getScript("https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU");}
+        if (ckt.setting.place_map == ''){
+                    if(!$('#copblock_widget').length) {
+                        $('body').append('<div id="copblock_widget" style="display:none;"><div class="copshadow" onclick="ckt.close_map();"></div><div class="copcontent"><span id="closecop" onclick="ckt.close_map();"></span><div  id="copIframe"><div class="map-left"><div class="map-body" id="mapBody"></div></div></div></div></div>');
+                    }
+        } else {
+            $(ckt.setting.place_map).append('<div id="mapBody"></div>');
+            $(ckt.setting.place_map).css('position', 'relative');
+            create_inputs_on_map(['city','isset_carriers']);
+        }
+    }
+
+    if (ckt.setting.autodetection_city){
+        $.getScript("https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU", function(){
+            ymaps.ready(ckt.get_place_by_ip);
+        });
+    }
+
+    if($(ckt.setting.city).val() !='' && $(ckt.setting.city).length && $(ckt.setting.id_place_fias).length && $(ckt.setting.id_place_fias).val() !='') {
+        ckt.get_place_by_city($(ckt.setting.city).val(), false, true);
+    }
+
+    this.in_array = function (value, array)
+    {
+        for(var i = 0; i < array.length; i++)
+        {
+            if(array[i] == value) return true;
+        }
+        return false;
+    }
+
+
+
+    this.close_map = function() {
+        $('#copblock_widget').hide();
+        selected_type_on_map = {postamat:false, pvz:false};
+        $(ckt.setting.map_body).find('.img_pvz').parents('div').removeClass('selected');
+        $(ckt.setting.map_body).find('.img_postamat').parents('div').removeClass('selected');
+        ckt.close_additional_info_block('#additional_info');
+        ckt.clear_map();
+        isset_open_baloon = false;
+    }
+
+    this.clear_map = function(){
+        if (myCollection != ''){
+            myCollection.removeAll();
+        }
+    }
+
+    this.choice_on_map = function(i, val, cost) {
+        var type = val;
+        //alert($('select[name="'+type+'_select"]  option:eq('+i+')').data('name-point'));
+        $('select[name="'+val+'_select"]  option:eq('+i+')').prop('selected', true).trigger('change');
+        $('input[name="checkout_'+val+'_address"]').val($('select[name="'+type+'_select"]  option:eq('+i+')').data('name-point'));
+        $.each(address_prop_keys, function(index, val){
+            if($('#ORDER_PROP_'+val).length>0){
+                $('#ORDER_PROP_'+val).text($('select[name="'+type+'_select"]  option:eq('+i+')').data('name-point'));
+            }
+        });
+        $('select[name="'+val+'_select"]').parents('.bx_element').find('input[name="DELIVERY_ID"]').click();
+        ckt.close_map();
+    }
+
+    this.show_map = function() {
+        $('#copblock_widget').show();
+    }
+
+    this.get_map_link = function (type, text) {
+        return '<a class="map_link" onclick="ckt.open_map('+"'"+type+"'"+')">'+text+'</a>';
+    }
+
+    this.set_center_map = function(){
+
+        data = ckt.setting.carriers;
+        if (data['pvz'] == undefined && data['postamat'] == undefined) {
+            city = encodeURIComponent($(ckt.setting.city).val());
+            $.get("https://geocode-maps.yandex.ru/1.x/?format=json&geocode=Россия "+city, function(data){
+                pos = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos;
+                pos = pos.split(' ');
+                ppMap.setCenter([pos[1],pos[0]]);
+            }, 'json');
+            return false;
+        }
+        $.each(selected_type_on_map, function(type, is){
+            if ((is == true) && (data[type] != undefined)){
+                carrier = data[type];
+                ppMap.setCenter([carrier['latitudes'][0], carrier['longitudes'][0]]);
+                return false;
+            }
+        });
+    }
+
+    this.update_map = function(){
+        if (ppMap != '' && isset_id_place_fias()){
+            type = [];
+            $.each(selected_type_on_map, function(i, val){
+                if (val){
+                    type.push(i);
+                    $(ckt.setting.map_body).find('.img_'+i).parents('div').toggleClass('selected');
+                }
+            });
+            if ($(ckt.setting.map_body).is(':visible')){
+                ckt.open_map(type, true, true);
+            }
+            ckt.set_center_map();
+        }
+        if (ppMap == '' && ymaps != ''){
+            ppMap = new ymaps.Map ("mapBody", {
+                center: [0, 0],
+                zoom: 11,
+                behaviors: ['default', 'scrollZoom']
+            });
+            ppMap.controls.add('zoomControl');
+            ckt.set_center_map();
+        }
+    }
+
+    this.get_additional_info = function(type, id){
+        info = ckt.setting.carriers[type]['additionalInfo'][id];
+        return info;
+    }
+
+    this.open_additional_info_block = function(info, block){
+        if (block){
+            $(block).html(info);
+            $(block).show();
+        } else {
+            place = '<div id="additional_info"><span id="closecop" class="additional_close"></span><div></div></div>';
+            shadow = '<div id="shadov_inner_map"></div>';
+            $(ckt.setting.map_body).prepend(place);
+            $(ckt.setting.map_body).prepend(shadow);
+            $('#additional_info div').append(info);
+        }
+    }
+
+    this.close_additional_info_block = function(){
+        $('#additional_info').remove();
+        $('#shadov_inner_map').remove();
+    }
+
+    this.get_future_date = function(old){
+        today = new Date();
+        dd = today.getDate();
+        mm = today.getMonth();
+        yyyy = today.getYear()+1800;
+        date = new Date(yyyy, mm, dd+old);
+        date_dd = date.getDate();
+        date_mm = date.getMonth()+1;
+        date_yyyy = date.getYear();
+        if(date_dd<10) {date_dd='0'+date_dd}
+        if(date_mm<10) {date_mm='0'+date_mm}
+
+        return date_dd+'.'+date_mm+'.'+date_yyyy;
+    }
+
+    this.get_delivery_date = function(type, i){
+        carrier = ckt.setting.carriers[type];
+        if (carrier['minTerms'][i] == carrier['maxTerms'][i]){
+            terms = ckt.get_future_date(carrier['maxTerms'][i]);
+        } else {
+            terms = ckt.get_future_date(carrier['minTerms'][i])+' - '+ckt.get_future_date(carrier['maxTerms'][i]);
+        }
+        return terms;
+    }
+
+    this.get_delivery_dates = function(type, i, cr){
+        if (cr[i]['minTerms'] == cr[i]['maxTerms']){
+            terms = ckt.get_future_date(cr[i]['maxTerms']);
+        } else {
+            terms = ckt.get_future_date(cr[i]['minTerms'])+' - '+ckt.get_future_date(cr[i]['maxTerms']);
+        }
+        return terms;
+    }
+
+    this.getCarriers = function (val) {
+        var carriers = {};
+        $('.checkout_list.'+val+' option').each(function () {
+            var carrier = {};
+            carrier['map_latitudes'] = $(this).data('location').split(',')[0];
+            carrier['map_longitudes'] = $(this).data('location').split(',')[1];
+            carrier['latitudes'] = $(this).data('latitudes');
+            carrier['longitudes'] = $(this).data('longitudes');
+            carrier['addresses'] = $(this).data('name-point');
+            carrier['codes'] = $(this).data('code');
+            carrier['additionalInfo'] = $(this).data('desc-point');
+            carrier['costs'] = $(this).data('price');
+            carrier['price'] = $(this).data('delivery-price-point');
+            carrier['delivery'] = $(this).data('delivery-id');
+            carrier['minTerms'] = $(this).data('minterm');
+            carrier['maxTerms'] = $(this).data('maxterm');
+
+            carriers[$(this).data('id-point')] = carrier;
+            //alert(carrier);
+        });
+
+        return carriers;
+    }
+
+    this.open_map = function(type, hide_select_button, is_update) {
+        zoom = 11;
+        z = 0;
+
+        ckt.show_map();
+        if (!is_update){
+            type = toogle_type_on_map(type);
+            isset_open_baloon = false;
+        }
+
+        $.each(type, function(i, val){
+            display = '';
+            data = ckt.setting.carriers;
+            if (data[val] != undefined) {
+                carrier = data[val];
+                var type_text = 'Постамат';
+                if (val == 'pvz') {
+                    type_text = 'Пункт самовывоза';
+                }
+
+                if (ppMap == '') {
+                    ppMap = new ymaps.Map ("mapBody", {
+                        center: [carrier['latitudes'][0], carrier['longitudes'][0]],
+                        zoom: zoom,
+                        behaviors: ['default', 'scrollZoom']
+                    });
+                    ppMap.controls.add('zoomControl');
+                }
+
+                select_name = ckt.setting['select_'+val+'_name'];
+                if ($('[name="'+select_name+'"] option:selected').attr('id') != undefined) {
+                    id_selected_option = $('[name="'+select_name+'"] option:selected').attr('id');
+                }
+                if (id_selected_option != undefined){
+                    z = id_selected_option;
+                    y = id_selected_type;
+                }
+
+                points = new Array();
+
+                if (myCollection == ''){
+                    myCollection = new ymaps.GeoObjectCollection();
+                }
+
+                for (var i = 0; i < carrier['addresses'].length; i++) {
+                    var address = carrier['addresses'][i];
+                    var codes = carrier['codes'][i];
+                    var additionalInfo = carrier['additionalInfo'][i];
+                    var coord = new Array();
+                    coord[0] = carrier['latitudes'][i];
+                    coord[1] = carrier['longitudes'][i];
+                    var selectedInfo =  (i+1)+'. '+address+' ('+carrier['costs'][i]+' руб.) от '+carrier['minTerms'][i]+' до '+carrier['maxTerms'][i]+' д.';
+                    if (val == 'pvz'){
+                        preset = 'twirl#redDotIcon'
+                    } else {
+                        preset = 'twirl#greenDotIcon';
+                    }
+                    if ((i == z) && (!hide_select_button) && (val == y || y == '')) {
+                        preset = 'twirl#blueDotIcon';
+                    }
+                    if (hide_select_button){
+                        display = 'style="display:none;"';
+                    }
+                    var ppPlacemark = new ymaps.Placemark(
+                        coord,
+                        {
+                            iconContent: '' + (i+1),
+                            balloonContentHeader: '<span style="font-family: \'Open Sans\', sans-serif; font-size: 13px;font-weight: 400;float: left; margin-right: 5px;">'+type_text+'</span><div onclick="ckt.open_additional_info_block(ckt.get_additional_info(\''+val+'\','+i+'));" style="cursor:pointer;font-size: 12px;float: left;width: 14px;height: 13px;border: 1px rgb(37, 128, 255) solid;border-radius: 7px;padding: 0;margin: 0;text-align: center;color: rgb(37, 128, 255);font-weight: 400;line-height: 1.2;">i</div><br>',
+                            balloonContentBody: '<p style="font-family: \'Open Sans\', sans-serif; font-size: 14px; font-weight: 200; margin: 0;">'+address+'</p><div><div style="float: left;"><p style="color: rgb(37, 128, 255); font-size: 12px; padding-top: 5px; margin:0;">Цена: '+carrier['costs'][i]+' руб.</p><p style="color: rgb(37, 128, 255); font-size: 12px; padding-top: 0; margin:0;min-width: 180px;">Ближайшая доставка: '+ckt.get_delivery_date(val, i)+'</p></div><div '+display+'class="choise_button_small" onclick="ckt.choice_on_map();">Выбрать</div></div>',
+                            id: i,
+                            type: val,
+                            additionalInfo: additionalInfo,
+                            address: address,
+                            selectedInfo: selectedInfo,
+                            hintContent: address,
+                        },
+                        {
+                            preset: preset,
+                        }
+                    );
+
+                    points[i] = new YMaps.GeoPoint(carrier['latitudes'][i],carrier['longitudes'][i]);
+
+                    myCollection.add(ppPlacemark);
+                    ppMap.geoObjects.add(myCollection);
+
+                    if (i == z && !isset_open_baloon && (val == y || y == '')){
+                        ppPlacemark.balloon.open();
+                        isset_open_baloon = true;
+                        ppMap.setCenter([carrier['latitudes'][i],  carrier['longitudes'][i]]);
+                    }
+
+                    if (!hide_select_button){
+                        ppPlacemark.events.add('click', function (e) {
+                            myCollection.each(function(e){
+                                if (e.properties.get('type') == 'pvz'){
+                                    e.options.set('preset', 'twirl#redDotIcon');
+                                } else {
+                                    e.options.set('preset', 'twirl#greenDotIcon');
+                                }
+                            });
+                            geoObject = e.get('target');
+                            geoObject.options.set('preset', 'twirl#blueDotIcon');
+                            id_selected_option = geoObject.properties.get('id');
+                            id_selected_type = geoObject.properties.get('type');
+                        });
+                    }
+                }
+            } else {
+                cr = ckt.getCarriers(val);
+                var type_text = 'Постамат';
+                if (val == 'pvz') {
+                    type_text = 'Пункт самовывоза';
+                }
+                if (ppMap == '') {
+                    ppMap = new ymaps.Map ("mapBody", {
+                        center: [cr[0]['map_latitudes'], cr[0]['map_longitudes']],
+                        zoom: zoom,
+                        behaviors: ['default', 'scrollZoom']
+                    });
+                    ppMap.controls.add('zoomControl');
+                }
+                if($('#copIframe #mapBody').html()=='') {
+                    ppMap = new ymaps.Map ("mapBody", {
+                        center: [cr[0]['map_latitudes'], cr[0]['map_longitudes']],
+                        zoom: zoom,
+                        behaviors: ['default', 'scrollZoom']
+                    });
+                    ppMap.controls.add('zoomControl');
+                }
+				if (cr[0]) ppMap.setCenter([cr[0]['map_latitudes'], cr[0]['map_longitudes']]);
+                select_name = ckt.setting['select_'+val+'_name'];
+                if ($('[name="'+select_name+'"] option:selected').attr('id') != undefined) {
+                    id_selected_option = $('[name="'+select_name+'"] option:selected').attr('id');
+                }
+                if (id_selected_option != undefined){
+                    z = id_selected_option;
+                    y = id_selected_type;
+                }
+
+                points = new Array();
+
+                if (myCollection == ''){
+                    myCollection = new ymaps.GeoObjectCollection();
+                }
+
+                                    for(var i in cr) {
+
+                    var address = cr[i]['addresses'];
+                    var codes = cr[i]['codes'];
+                    var additionalInfo = cr[i]['additionalInfo'];
+                    var coord = new Array();
+                    coord[0] = cr[i]['latitudes'];
+                    coord[1] = cr[i]['longitudes'];
+                    var selectedInfo =  (i+1)+'. '+address+' ('+cr[i]['costs']+' руб.) от '+cr[i]['minTerms']+' до '+cr[i]['maxTerms']+' д.';
+                    if (val == 'pvz'){
+                        preset = 'twirl#redDotIcon'
+                    } else {
+                        preset = 'twirl#greenDotIcon';
+                    }
+                    if ((i == z) && (!hide_select_button) && (val == y || y == '')) {
+                        preset = 'twirl#blueDotIcon';
+                    }
+                    if (hide_select_button){
+                        display = 'style="display:none;"';
+                    }
+                    var ppPlacemark = new ymaps.Placemark(
+                        coord,
+                        {
+                            iconContent: '' + (i+1),
+                            balloonContentHeader: '<span style="font-family: \'Open Sans\', sans-serif; font-size: 13px;font-weight: 400;float: left; margin-right: 5px;">'+type_text+'</span><br>',
+                            balloonContentBody: '<p style="font-family: \'Open Sans\', sans-serif; font-size: 14px; font-weight: 200; margin: 0;">'+address+'</p><p>'+cr[i]['additionalInfo']+'</p><div><div style="float: left;"><p style="color: rgb(37, 128, 255); font-size: 12px; padding-top: 5px; margin:0;">Цена: '+cr[i]['costs']+' руб.</p><p style="color: rgb(37, 128, 255); font-size: 12px; padding-top: 0; margin:0;min-width: 180px;">Ближайшая доставка: '+ckt.get_delivery_dates(val, i, cr)+'</p></div><div '+display+'class="choise_button_small" data-id="'+i+'" data-type="'+val+'" onclick="ckt.choice_on_map('+i+', \''+val+'\', \''+cr[i]['price']+'\');">Выбрать</div></div>',
+                            id: i,
+                            type: val,
+                            additionalInfo: additionalInfo,
+                            address: address,
+                            selectedInfo: selectedInfo,
+                            hintContent: address,
+                        },
+                        {
+                            preset: preset,
+                        }
+                    );
+
+                    points[i] = new YMaps.GeoPoint(cr[i]['latitudes'], cr[i]['longitudes']);
+
+
+
+                    myCollection.add(ppPlacemark);
+                    ppMap.geoObjects.add(myCollection);
+
+                    if (i == z && !isset_open_baloon && (val == y || y == '')){
+                        ppPlacemark.balloon.open();
+                        isset_open_baloon = true;
+                        ppMap.setCenter([cr[i]['latitudes'],  cr[i]['longitudes']]);
+                    }
+
+                    if (!hide_select_button){
+                        ppPlacemark.events.add('click', function (e) {
+                            myCollection.each(function(e){
+                                if (e.properties.get('type') == 'pvz'){
+                                    e.options.set('preset', 'twirl#redDotIcon');
+                                } else {
+                                    e.options.set('preset', 'twirl#greenDotIcon');
+                                }
+                            });
+                            geoObject = e.get('target');
+                            geoObject.options.set('preset', 'twirl#blueDotIcon');
+                            id_selected_option = geoObject.properties.get('id');
+                            id_selected_type = geoObject.properties.get('type');
+                        });
+                    }
+                }
+            }
+        });
+    }
+
+    this.get_id_fias_from_postcode = function(){
+        $.ajax({
+            type: "GET",
+            url: "/checkoutru/checkout.php?"+"postIndex="+$(ckt.setting.index).val(),
+            dataType: "html",
+            success: function(msg){
+                request = JSON.parse(msg);
+                if (request["fullName"] != "") {
+                    ckt.saved_var.cityname = request["fullName"];
+                    $(ckt.setting.city).val(request["fullName"]);
+                    $(ckt.setting.id_place_fias).val(request["id"]);
+                    if (ckt.setting.autorun)
+                    {
+                        ckt.run(false, function(){$(ckt.setting.city).trigger('change');});
+                    }
+                } else {
+                    $(ckt.setting.index).val("");
+                    $(ckt.setting.city).val("");
+                    $(ckt.setting.city).focus();
+                }
+            }
+        });
+    }
+
+    this.get_place_by_city = function(e, keyCode, selectFirst, que) {
+        $.ajax({
+            type: "GET",
+            url: "/checkoutru/checkout.php?"+"place="+encodeURIComponent(e),
+            dataType: "html",
+            success: function(msg){
+
+                request = JSON.parse(msg);
+                if (request['suggestions'].length > 0) {
+                    var items = '';
+                    if ($(".checkout_popup").html() == null && !isset_run) {
+                        $(ckt.setting.city).after("<div id='checkout_popup' class='checkout_popup' que='0'></div>");
+                    }
+                    if (((request['suggestions'].length == 1) && (keyCode != 8)) || (selectFirst === true)){
+                        autoselect('cityname', request['suggestions'], ckt.setting.city, ckt.setting.id_place_fias);
+                    } else {
+                        if (ckt.ajax_que == que || $('.checkout_popup').attr('que') < que) {
+                            $('.checkout_popup').attr('que', que);
+                            selected = 'selected';
+                            for (var i in request['suggestions']) {
+                                items += "<div id='"+request['suggestions'][i]["id"]+"' class='item_city "+selected+"' style='padding: 2px 8px;'>"+request['suggestions'][i]["fullName"]+"</div>";
+                                selected = '';
+                            }
+                            $(".checkout_popup").html(items);
+                        }
+                    }
+                } else {
+                    if (ckt.ajax_que == que) {
+                        $(".checkout_popup").remove();
+                    }
+                }
+            }
+        });
+    }
+
+    this.get_street = function(e, keyCode, selectFirst) {
+        $.ajax({
+            type: "GET",
+            url: "/checkoutru/checkout.php?"+"placeId="+$(ckt.setting.id_place_fias).val()+"&street="+encodeURIComponent(e),
+            dataType: "html",
+            success: function(msg){
+                request = JSON.parse(msg);
+                                if(request['suggestions']!=undefined) {
+                                    if (request['suggestions'].length > 0) {
+                                            var items = '';
+                                            if ($(".checkout_popup").html() == null) {
+                                                    $(ckt.setting.street).after("<div id='checkout_popup' class='checkout_popup'></div>");
+                                            }
+                                            if (((request['suggestions'].length == 1) && (keyCode != '8')) || (selectFirst === true)){
+                                                    autoselect('streetname', request['suggestions'], ckt.setting.street, ckt.setting.id_street_fias);
+                                            } else {
+                                                    selected = 'selected';
+                                                    for (var i in request['suggestions']) {
+                                                            items += "<div id='"+request['suggestions'][i]["id"]+"' class='item_street "+selected+"' style='padding: 2px 8px;'>"+request['suggestions'][i]["type"]+". "+request['suggestions'][i]["name"]+"</div>";
+                                                            selected = '';
+                                                    }
+                                                    $(".checkout_popup").html(items);
+                                            }
+                                    } else {
+                                            if (selectFirst == true){
+                                                    var data = {
+                                                            suggestions: {
+                                                                    0: {
+                                                                            name: ckt.setting.street_val,
+                                                                            type: '',
+                                                                    },
+                                                            },
+                                                    };
+                                                    data['suggestions'][0]['name'] = ckt.setting.street_val;
+                                                    autoselect('streetname', data['suggestions'], ckt.setting.street, ckt.setting.id_street_fias);
+                                            }
+                                            $(".checkout_popup").remove();
+                                    }
+                                }
+            }
+        });
+    }
+
+    this.get_postcode = function() {
+        $.ajax({
+            type: 'GET',
+            url: "/checkoutru/checkout.php?"+'streetId='+$(ckt.setting.id_street_fias).val()+'&house='+$(ckt.setting.house).val(),
+            dataType: 'html',
+            success: function(msg){
+                request = JSON.parse(msg);
+                if (request['postindex'] > 0) {
+                    $(ckt.setting.index).val(request['postindex']);
+                } else {
+                    $(ckt.setting.index).val('');
+                }
+            }
+        });
+    }
+
+    this.get_address_val = function() {
+        if (ckt.setting.city_val != ''){
+            ckt.get_place_by_city(ckt.setting.city_val, false, true);
+        }
+        if (ckt.setting.street_val != ''){
+            ckt.get_street(ckt.setting.street_val, false, true);
+        }
+    }
+
+    this.run = function(first, callback, disable_render) {
+        create_input();
+        if ($(ckt.setting.id_place_fias).val() != '' || first){
+            if (!ckt.compare() || first) {
+                isset_run = true;
+                ckt.before_carrier_ready();
+                $.ajax({
+                    type: "GET",
+                    url: "/checkoutru/checkout.php?"+"weight="+ckt.setting.prod_weight+"&price="+ckt.setting.prod_price+"&count="+ckt.setting.prod_count+"&assessed_price="+ckt.setting.prod_assessed_price+"&placeId="+$(ckt.setting.id_place_fias).val(),
+                    dataType: "html",
+                    success: function(msg){
+                        request = JSON.parse(msg);
+                        ckt.setting.carriers = request;
+                        if (disable_render != true){
+                            ckt.carrier_ready(ckt.setting.carriers);
+                        }
+                        ckt.compare();
+                        ckt.choice_radio();
+                        if (callback){
+                            callback();
+                        }
+                        ckt.after_carrier_ready();
+                    }
+                });
+            } else {
+                if (disable_render != true){
+                    ckt.carrier_ready(ckt.setting.carriers);
+                }
+                ckt.choice_radio();
+                if (callback){
+                    callback();
+                }
+            }
+        } else {
+            ckt.carrier_ready('');
+            if (callback){
+                callback();
+            }
+        }
+    }
+
+    this.compare = function(){
+
+        ckt.get_product();
+
+        if ((ckt.setting.old_id_place_fias) != ($(ckt.setting.id_place_fias).val())){
+            ckt.setting.old_id_place_fias = $(ckt.setting.id_place_fias).val();
+            ckt.clean_choice_input();
+            return false;
+        }
+
+        if ((ckt.setting.old_prod_weight != ckt.setting.prod_weight) || (ckt.setting.old_prod_count != ckt.setting.prod_count) || (ckt.setting.old_prod_price != ckt.setting.prod_price) || (ckt.setting.old_prod_assessed_price != ckt.setting.prod_assessed_price)) {
+            ckt.setting.old_prod_weight = ckt.setting.prod_weight;
+            ckt.setting.old_prod_count = ckt.setting.prod_count;
+            ckt.setting.old_prod_price = ckt.setting.prod_price;
+            ckt.setting.old_prod_assessed_price = ckt.setting.prod_assessed_price;
+            ckt.clean_choice_input();
+            return false;
+        }
+
+        return true;
+    }
+
+    this.get_select = function(carrier) {
+        i = 0;
+        selected_id = ckt.setting['id_selected_'+carrier];
+        select = '<select class="carrier_address" id="'+carrier+'" name="'+ckt.setting['select_'+carrier+'_name']+'">';
+        $.each(ckt.setting.carriers[carrier]['addresses'],function(ind, val){
+            selected = '';
+            if (i == selected_id) {
+                selected = 'selected';
+            }
+            select += '<option id="'+i+'" value="'+val+'" min_cost="от '+ckt.setting.carriers[carrier]['cost']+'" cost="'+ckt.setting.carriers[carrier]['costs'][i]+'" deliveries="'+ckt.setting.carriers[carrier]['deliveries'][i]+'" minTerms="'+ckt.setting.carriers[carrier]['minTerms'][i]+'" maxTerms="'+ckt.setting.carriers[carrier]['maxTerms'][i]+'" '+selected+'>'+val+' ('+ckt.setting.carriers[carrier]['costs'][i]+' р.) от '+ckt.setting.carriers[carrier]['minTerms'][i]+' до '+ckt.setting.carriers[carrier]['maxTerms'][i]+' д.</option>';
+            i = i+1;
+        });
+        select += '</select>';
+        return select;
+    }
+
+    this.get_isset_delivery = function(block, sf){
+        html = '';
+        isset_block = true;
+        hide_select_button = true;
+        if (block === undefined || block == false){
+            block = ckt.setting.isset_carriers_body;
+            isset_block = false;
+        }
+        if (sf !== undefined){
+            show_filter = sf;
+        }
+        if (show_filter == true)
+            hide_select_button = false;
+        html += '<div>';
+        $(block).hide();
+        if (ckt.setting.carriers['express_own'] != undefined){
+            if (ckt.setting.carriers['express_own']['minDeliveryTerm'] == ckt.setting.carriers['express_own']['maxDeliveryTerm'] || ckt.setting.carriers['express_own']['minDeliveryTerm'] == 0){
+                terms = '<p id="term"><span>до '+ckt.setting.carriers['express_own']['minDeliveryTerm']+' д.</span></p>'
+            } else {
+                terms = '<p id="term"><span>от '+ckt.setting.carriers['express_own']['minDeliveryTerm']+' до '+ckt.setting.carriers['express_own']['maxDeliveryTerm']+' д.</span></p>'
+            }
+            html += '<div class="first">';
+            html += '<img src="https://www.checkout.ru/images/right-icon-1.png">';
+            html += '<h4>Курьером</h4>';
+            html += '<p><span>'+ckt.setting.carriers['express_own']['cost']+' руб.</span></p>';
+            html += terms;
+            html += '</div>';
+        } else if (ckt.setting.carriers['express'] != undefined){
+            if (ckt.setting.carriers['express']['minDeliveryTerm'] == ckt.setting.carriers['express']['maxDeliveryTerm'] || ckt.setting.carriers['express']['minDeliveryTerm'] == 0){
+                terms = '<p id="term"><span>до '+ckt.setting.carriers['express']['minDeliveryTerm']+' д.</span></p>'
+            } else {
+                terms = '<p id="term"><span>от '+ckt.setting.carriers['express']['minDeliveryTerm']+' до '+ckt.setting.carriers['express']['maxDeliveryTerm']+' д.</span></p>'
+            }
+            html += '<div class="first">';
+            html += '<img src="https://www.checkout.ru/images/right-icon-1.png">';
+            html += '<h4>Курьером</h4>';
+            html += '<p><span>'+ckt.setting.carriers['express']['cost']+' руб.</span></p>';
+            html += terms;
+            html += '</div>';
+        }
+        if (ckt.setting.carriers['postamat'] != undefined){
+            if (ckt.setting.carriers['postamat']['minDeliveryTerm'] == ckt.setting.carriers['postamat']['maxDeliveryTerm'] || ckt.setting.carriers['postamat']['minDeliveryTerm'] == 0){
+                terms = '<p id="term"><span>до '+ckt.setting.carriers['postamat']['minDeliveryTerm']+' д.</span></p>'
+            } else {
+                terms = '<p id="term"><span>от '+ckt.setting.carriers['postamat']['minDeliveryTerm']+' до '+ckt.setting.carriers['postamat']['maxDeliveryTerm']+' д.</span></p>'
+            }
+            html += '<div class="second" onclick="ckt.open_map(\'postamat\', true);">';
+            html += '<img class="img_postamat" src="https://www.checkout.ru/images/right-icon-2.png">';
+            html += '<h4>Постамат</h4>';
+            html += '<p><span>от '+ckt.setting.carriers['postamat']['cost']+' руб.</span></p>';
+            html += terms;
+            html += '</div>';
+        }
+        if (ckt.setting.carriers['pvz'] != undefined){
+            if (ckt.setting.carriers['pvz']['minDeliveryTerm'] == ckt.setting.carriers['pvz']['maxDeliveryTerm'] || ckt.setting.carriers['pvz']['minDeliveryTerm'] == 0){
+                terms = '<p id="term"><span>до '+ckt.setting.carriers['pvz']['minDeliveryTerm']+' д.</span></p>'
+            } else {
+                terms = '<p id="term"><span>от '+ckt.setting.carriers['pvz']['minDeliveryTerm']+' до '+ckt.setting.carriers['pvz']['maxDeliveryTerm']+' д.</span></p>'
+            }
+            html += '<div class="third" onclick="ckt.open_map(\'pvz\', true);">';
+            html += '<img class="img_pvz" src="https://www.checkout.ru/images/right-icon-3.png">';
+            html += '<h4>Пункт выдачи</h4>';
+            html += '<p><span>от '+ckt.setting.carriers['pvz']['cost']+' руб.</span></p>';
+            html += terms;
+            html += '</div>';
+        }
+        if (ckt.setting.carriers['mail'] != undefined){
+            if (ckt.setting.carriers['mail']['minDeliveryTerm'] == ckt.setting.carriers['mail']['maxDeliveryTerm'] || ckt.setting.carriers['mail']['minDeliveryTerm'] == 0){
+                terms = '<p id="term"><span>до '+ckt.setting.carriers['mail']['minDeliveryTerm']+' д.</span></p>'
+            } else {
+                terms = '<p id="term"><span>от '+ckt.setting.carriers['mail']['minDeliveryTerm']+' до '+ckt.setting.carriers['mail']['maxDeliveryTerm']+' д.</span></p>'
+            }
+            html += '<div class="last">';
+            html += '<img class="img_post" src="https://www.checkout.ru/images/package.png">';
+            html += '<h4>Почтой России</h4>';
+            html += '<p><span>'+ckt.setting.carriers['mail']['cost']+' руб.</span></p>';
+            html += terms;
+            html += '</div>';
+        }
+        html += '</div>';
+        $(block).html(html);
+        if (isset_block){
+            if (($(ckt.setting.city).attr('type') == 'hidden') && ($('#city_header').length <= 0)){
+                create_inputs_on_map(['city','isset_carriers']);
+                $(block).before('<div id="city_header"></div>');
+                $('#city_header').append('<span>Доставка в </span>');
+                $('#city_header').append('<a id="city_link" onclick="ckt.open_map(\'all\', true);">[выбрать]</a>');
+            }
+            $(block+'>div>div').css({'float':'left','width':'100','margin-top': '10px','text-align':'center'});
+        } else if (show_filter == true) {
+            create_inputs_on_map(['isset_carriers']);
+            $(block).html(html);
+            $('div.first').remove();
+            $(block).css({'margin-top': '15px', 'width': 'initial', 'padding': '15px 25px'});
+        }
+        $(block+'>div').css({'overflow':'hidden','max-width': '430px', /*'margin': '0 auto'*/});
+        $(block).show();
+    }
+
+    this.change_select = function(e) {
+        select_id = $(e).attr('id');
+        ckt.setting['id_selected_'+select_id] = $(e).find('option:selected').attr('id');
+    }
+
+    this.change_radio = function(e) {
+        ckt.setting.selected_radio =  $(e).attr('id');
+    }
+
+    this.choice_radio = function() {
+        $("[id='"+ckt.setting.selected_radio+"']").attr('checked','checked');
+        $("[id='"+ckt.setting.selected_radio+"']").trigger('change');
+    }
+
+    this.clean_choice_input = function() {
+        ckt.setting.id_selected_postomat = 0;
+        ckt.setting.id_selected_pvz = 0;
+        ckt.setting.selected_radio = '';
+    }
+
+    this.saveToStoradge = function(name, data) {
+                d1 = data.replace(/\. /g, " ");
+                d2 = d1.replace(/\(/g,"");
+                d3 = d2.replace(/\)/g,"");
+                d4 = d3.replace(/\//g,"");
+        window.localStorage['_chkt_'+name] =  d4;
+    }
+
+    this.getFromStoradge = function(name) {
+        data = window.localStorage.getItem('_chkt_'+name);
+        return data;
+    }
+
+    this.removeFromStoradge = function(name) {
+        window.localStorage.removeItem('_chkt_'+name);
+    }
+
+    this.get_place_by_ip = function(){
+        st_city = ckt.getFromStoradge('city');
+        st_id_place_fias = ckt.getFromStoradge('id_place_fias');
+
+        if ($(ckt.setting.city).val() == ''){
+            if (st_city != undefined){
+                ckt.setting.city_val = st_city;
+            } else {
+                ckt.setting.city_val = ymaps.geolocation.city;
+            }
+        } else if ($(ckt.setting.id_place_fias).val() == ''){
+            ckt.setting.city_val = $(ckt.setting.city).val();
+        }
+        ckt.get_address_val();
+    }
+
+        this.begin = function () {
+
+            if($('input[name="'+ckt.setting.id_place_fias+'"]').val()=='' && ckt.setting.autodetection_city) {
+                if ($('input[name="'+ckt.setting.city+'"]').val() == ''){
+                    ckt.setting.city_val = ckt.city_ip;
+                } else if ($('input[name="'+ckt.setting.id_place_fias+'"]').val() == ''){
+                        ckt.setting.city_val = $('input[name="'+ckt.setting.city+'"]').val();
+                }
+                ckt.get_address_val();
+            }
+        }
+
+    click_popup = function(savedname, suggestions, targetInput, targetFias) {
+        if (savedname == 'streetname') {
+            targetStoradge = 'street';
+            targetStoradgeFias = 'id_street_fias';
+        } else {
+            targetStoradge = 'city';
+            targetStoradgeFias = 'id_place_fias';
+        }
+        $(targetInput).val($(suggestions).html());
+        $(targetFias).val($(suggestions).attr("id"));
+        ckt.saved_var[savedname] = $(suggestions).html();
+        $('.checkout_popup').remove();
+        if (ckt.setting.autorun && savedname != 'streetname')
+        {
+           ckt.run(false, function(){
+			    $(ckt.setting.city).trigger('change');
+			});
+        }
+        ckt.saveToStoradge(targetStoradge, $(suggestions).html());
+        ckt.saveToStoradge(targetStoradgeFias, $(suggestions).attr("id"));
+        ckt.after_select_city();
+    }
+
+    autoselect = function(savedname, suggestions, targetInput, targetFias){
+        nameType = 'fullName';
+        type_pace = '';
+        type_pace_for_input = '';
+        if (savedname == 'streetname') {
+            nameType = 'name';
+            type_pace = suggestions[0]['type']+' ';
+            type_pace_for_input = suggestions[0]['type']+'. ';
+            targetStoradge = 'street';
+            targetStoradgeFias = 'id_street_fias';
+            $(ckt.setting.house).focus();
+        } else {
+            targetStoradge = 'city';
+            targetStoradgeFias = 'id_place_fias';
+            $(ckt.setting.street).focus();
+        }
+        $(targetInput).val(type_pace_for_input+suggestions[0][nameType]);
+        $(targetFias).val(suggestions[0]["id"]);
+        ckt.saved_var[savedname] = type_pace+suggestions[0][nameType];
+        $('.checkout_popup').remove();
+        if (ckt.setting.autorun && savedname != 'streetname')
+        {
+            ckt.run(false, function(){$(ckt.setting.city).trigger('change');});
+        }
+        ckt.saveToStoradge(targetStoradge, type_pace+suggestions[0][nameType]);
+        ckt.saveToStoradge(targetStoradgeFias, suggestions[0]["id"]);
+        ckt.after_select_city();
+    }
+
+    create_input = function() {
+            if(ckt.setting.creators) {
+        $.each(ckt.setting, function(i, val){
+            if (!($(val).length > 0) && (val != '') && (val != 0) && (i != 'urlsite') && (i != 'select_postamat_name' ) && (i != 'select_pvz_name') && (i != 'old_id_place_fias') && (i != 'id_selected_postamat') && (i != 'selected_radio') && (i != 'id_selected_pvz') && (i != 'selector_radio') && (i != 'city_val') && (i != 'place_input') && (i != 'isset_carriers_body') && (i != 'prod_assessed_price') && (i != 'prod_price') && (i != 'prod_weight') && (i != 'old_prod_assessed_price') && (i != 'old_prod_price') && (i != 'old_prod_weight')){
+                if ($(ckt.setting.city).length > 0) {
+                    $(ckt.setting.city).after('<input type="hidden" id="'+i+'" name="'+i+'"/>');
+                } else {
+                    $(ckt.setting.place_input).append('<input type="hidden" id="'+i+'" name="'+i+'"/>');
+                }
+            }
+            $(val).attr("autocomplete", "off");
+        });
+            }
+    }
+
+    toogle_type_on_map = function(type){
+        last_selected_type_on_map = type;
+        if (type == 'all'){
+            selected_type_on_map['pvz'] = true;
+            selected_type_on_map['postamat'] = true;
+            type_to_show = ['pvz', 'postamat'];
+            $(ckt.setting.map_body).find('.img_pvz').parents('div').addClass('selected');
+            $(ckt.setting.map_body).find('.img_postamat').parents('div').addClass('selected');
+        } else {
+            if (selected_type_on_map[type] == false){
+                selected_type_on_map[type] = true;
+                type_to_show = [type];
+                $(ckt.setting.map_body).find('.img_'+type).parents('div').toggleClass('selected');
+            } else {
+                selected_type_on_map[type] = false;
+                if (myCollection != ''){
+                    myCollection.each(function(e){
+                        if (e.properties.get('type') == type){
+                            myCollection.remove(e);
+                        }
+                    });
+                }
+                $(ckt.setting.map_body).find('.img_'+type).parents('div').toggleClass('selected');
+                type_to_show = '';
+            }
+        }
+        return type_to_show;
+    }
+
+    isset_id_place_fias = function(){
+        if ($(ckt.setting.id_place_fias).val() != ''){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    set_watch = function(){
+        $('body').on('keyup', ckt.setting.index, function(){
+            if ($(this).val().length == 6) {
+                ckt.get_id_fias_from_postcode();
+            }
+        });
+        $('body').on('keyup', ckt.setting.city, function(event){
+            if (($.trim($(ckt.setting.city).val()) != ckt.saved_var.cityname) && (event.keyCode != 16) && (event.keyCode != 40) && (event.keyCode != 38) && (event.keyCode != 13) && (event.keyCode != 9) && (event.keyCode != 37) && (event.keyCode != 39) && (event.keyCode != 91)) {
+                isset_run = false;
+                ckt.ajax_que = ckt.ajax_que+1;
+                $(ckt.setting.id_place_fias).val('');
+                $(ckt.setting.id_place_fias).trigger('change');
+                $.queue(ckt.get_place_by_city($(this).val(), event.keyCode, false, ckt.ajax_que));
+            }
+        });
+        $('body').on('keyup', ckt.setting.street, function(event){
+            if ((event.keyCode != 16) && (event.keyCode != 40) && (event.keyCode != 38) && (event.keyCode != 13) && (event.keyCode != 9) && (event.keyCode != 37) && (event.keyCode != 39) && (event.keyCode != 91)) {
+                $(ckt.setting.id_street_fias).val('');
+                $.queue(ckt.get_street($(this).val(), event.keyCode));
+            }
+        });
+        $('body').on('change', ckt.setting.house, function(){
+            ckt.get_postcode();
+        });
+        $('body').on('click', '.item_street', function(){
+            click_popup('streetname', this, ckt.setting.street, ckt.setting.id_street_fias);
+        });
+        $('body').on('click', '.item_city', function(){
+            click_popup('cityname', this, ckt.setting.city, ckt.setting.id_place_fias);
+        });
+        $('body').on('change', ckt.setting.id_place_fias, function(){
+            $(ckt.setting.street).val('');
+            $(ckt.setting.id_steet_fias).val('');
+            $(ckt.setting.house).val('');
+            $(ckt.setting.flat).val('');
+            $(ckt.setting.index).val('');
+            if (ckt.setting.autorun)
+            {
+               ckt.run(false, function(){$(ckt.setting.city).trigger('change');});
+            }
+        });
+        $('body').on('change', '.carrier_address', function(){
+            ckt.change_select(this);
+        });
+        $('body').on('change', ckt.setting.selector_radio, function(){
+            if (ckt.setting.selector_radio != ''){
+                id_selected_type = '';
+                ckt.change_radio(this);
+            }
+        });
+        $('body').on('keydown', function(event){
+            if ($('#checkout_popup').length > 0){
+                if (event.keyCode == 13){
+                    $('#checkout_popup div.selected').trigger('click');
+                }
+                if (event.keyCode == 40){
+                    selected = $('#checkout_popup .selected');
+                    selected.removeClass('selected');
+                    selected.next().addClass('selected');
+                    if (selected.length <= 0) {
+                        $('#checkout_popup div').first().addClass('selected');
+                    }
+                }
+                if (event.keyCode == 38){
+                    selected = $('#checkout_popup .selected');
+                    selected.removeClass('selected');
+                    selected.prev().addClass('selected');
+                }
+            }
+        });
+        $('body').on('mouseover', '#checkout_popup div', function(){
+            $(this).parent().find('div').removeClass('selected');
+            $(this).addClass('selected');
+        });
+        $('body').on('change', ckt.setting.city, function(){
+            ckt.clear_map();
+            isset_open_baloon = false;
+                        if(ckt.setting.creators) {
+                            ckt.update_map();
+                        }
+			if ($(ckt.setting.city).val()) 
+				$('#city_link').html($(ckt.setting.city).val());
+			else 
+				$('#city_link').html("[выбрать]");
+        });
+
+        $('body').on('keyup', ckt.setting.street+', '+ckt.setting.house+', '+ckt.setting.flat+', '+ckt.setting.city, function(){
+            var address = '';
+            if($(ckt.setting.street).val()!='')
+                address += $(ckt.setting.street).val();
+            if($(ckt.setting.house).val()!='')
+                address += ', д.'+$(ckt.setting.house).val();
+            if($(ckt.setting.flat).val()!='')
+                address += ', кв.'+$(ckt.setting.flat).val();
+            $(ckt.setting.address_1).val(address);
+        });
+
+        $('body').on('change', ckt.setting.street+', '+ckt.setting.house+', '+ckt.setting.flat+', '+ckt.setting.city, function(){
+            var address = '';
+            if($(ckt.setting.street).val()!='')
+                address += $(ckt.setting.street).val();
+            if($(ckt.setting.house).val()!='')
+                address += ', д.'+$(ckt.setting.house).val();
+            if($(ckt.setting.flat).val()!='')
+                address += ', кв.'+$(ckt.setting.flat).val();
+            $(ckt.setting.address_1).val(address);
+        });
+
+
+        $('body').on('click', '.additional_close, #shadov_inner_map', function(){
+            ckt.close_additional_info_block();
+        });
+    }
+
+    if (ckt.get_product == undefined){
+        this.get_product = function(){}
+    }
+    if (ckt.carrier_ready == undefined){
+        this.carrier_ready = function(){}
+    }
+    if (ckt.before_carrier_ready == undefined){
+        this.before_carrier_ready = function(){}
+    }
+    if (ckt.after_click_pop == undefined){
+        this.after_click_pop = function(){}
+    }
+    if (ckt.after_select_city == undefined){
+        this.after_select_city = function(){}
+    }
+    if (ckt.after_carrier_ready == undefined){
+        this.after_carrier_ready = function(){}
+    }
+
+    create_input();
+    ckt.get_address_val();
+
+    if(!ckt.in_array(this.setting.city, identificators))
+    {
+        identificators.push(this.setting.city);
+        set_watch();
+    }
+
+    if (ckt.setting.autorun)
+    {
+        ckt.run(false, function(){$(ckt.setting.city).trigger('change');});
+    }
+
+}
+
+$(document).delegate('input[name="DELIVERY_ID"]', 'click', function (e) {
+    var address = $(this).parents('.bx_element').find('select.checkout_list option:selected').data('name-point');
+    $(this).parents('.bx_element').find('input.checkout_hidden_type').val(address);
+    $.each(address_prop_keys, function(index, val){
+        if($('#ORDER_PROP_'+val).length>0){
+            $('#ORDER_PROP_'+val).text(address).val(address);
+        }
+    });
+});
+
+$(document).delegate('.checkout_list', 'change', function () {
+    var type = $(this).find('option[value="'+$(this).val()+'"]').data('type');
+    var address = $(this).find('option[value="'+$(this).val()+'"]').data('name-point');
+    $('input[name="checkout_'+type+'_address"]').val(address);
+    $.each(address_prop_keys, function(index, val){
+        if($('#ORDER_PROP_'+val).length>0){
+            $('#ORDER_PROP_'+val).text(address).val(address);
+        }
+    });
+    $('select[name="'+type+'_select"]').parents('.bx_element').find('input[name="DELIVERY_ID"]').click();
+});

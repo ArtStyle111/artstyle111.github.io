@@ -1,0 +1,70 @@
+.brand-list {
+    display:  flex;
+    flex-wrap:  wrap;
+    justify-content:  space-between;
+    margin-top: 50px;
+}
+
+.brand-item {
+    display:  flex;
+    flex-direction:  column;
+    width: 24%;
+    margin-left: 1%;
+    margin-bottom: 70px;
+}
+
+a.brand-name-logo {
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 30px;
+    height: 180px;
+}
+
+img.brand-list-logo {
+    max-width: 90%;
+    height: auto;
+}
+
+a.brand-list-name {
+    font-size: 20px!important;
+    font-weight:  bold!important;
+    color: #000!important;
+    margin-bottom: 20px!important;
+}
+.brand-item a {
+    margin-bottom: 5px;
+    font-size: 14px;
+        color: #336699;
+            width: 90%;
+}
+.brand-item a:first-child {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+}
+span.open-brand {
+    position:  relative;
+    cursor:  pointer;
+    color: #336699;
+    font-size: 14px;
+    margin-top: 10px
+}
+span.open-brand::after {
+    content: "";
+    display:  inline-block;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #336699;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+}
+.hidden-brand a {
+    height: auto!important;
+    display: block;
+}
+.hidden-brand {
+    display: none;
+}

@@ -1,0 +1,18 @@
+.sert-list .flexbox {
+	margin: 15px 0px;
+}
+.sert-list .flexbox > div {
+	margin: 0px 15px 12px 0;
+	padding: 5px;
+	border: 1px solid #bbb;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+	min-width: 160px;
+	border-radius: 4px;
+}
+.sert-list .flexbox > div:hover {
+	border: 1px solid #fd923a;
+}

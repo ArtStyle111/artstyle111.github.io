@@ -1,0 +1,10 @@
+$(document).ready(function() {
+	$('.fancybox-buttons').fancybox({
+		helpers     : {
+			overlay : {
+				locked: false
+			},
+			buttons	: {}
+		}
+	}); 
+}); 

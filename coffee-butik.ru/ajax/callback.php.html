@@ -1,0 +1,80 @@
+<div style="max-width: 400px; position: relative;" >
+	<div style="padding: 15px 15px 0px;">
+	<div class="h1">Заказать обратный звонок</div><br>
+	<form role="form" name="CALL_BACK_FORM" method="post" role="form" action="callback.php.html" onsubmit="yaCounter10779040.reachGoal('Callbacksend'); ga('send', 'event', 'Callback', 'send'); return true;">
+	  <div class="mess-result"></div>
+	  <div class="form-group">
+		<label for="callback_name" class="control-label">Имя:<span class='redstarz'>*</span></label>
+		<input type="text" class="form-control" name="callback_name" placeholder="">
+	  </div>
+	  <div class="form-group">
+		<label for="callback_phone" class="control-label">Телефон:<span class='redstarz'>*</span></label>
+		<input type="text" class="form-control inp_phone_ajax" name="callback_phone" placeholder="">
+	  </div>
+	  <div class="form-group">
+		<label for="callback_time" class="control-label">Время звонка:</label>
+		<input type="text" class="form-control" name="callback_time" placeholder="">
+	  </div>
+	  <div class="form-group">
+		<label for="callback_text" class="control-label">Цель звонка:</label>
+		<input type="text" class="form-control" name="callback_text" placeholder="">
+	  </div>
+	  <button type="submit" class="btn orang_btn">Отправить</button> <span class="loader_in_form"><i class="fa fa-spinner fa-pulse fa-lg fa-fw"></i>&nbsp;Подождите...</span>
+	  <input type="hidden" name="callback_submit" value="N">
+	</form>
+	<p style="color: rgb(129, 129, 129);"><span class='redstarz'>*</span> — обязательно для заполнения</p>
+	</div>
+
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('input.inp_phone_ajax').mask('+7 (999) 999-99-99');
+
+	$("form[name=CALL_BACK_FORM] .form-group input").focus(function(){
+        $(this).closest(".form-group").removeClass('has-error');
+    });
+});
+
+/*
+ * Валидация и отправка Формы Обратной связи
+ */
+$("form[name=CALL_BACK_FORM]").submit(function(event){
+	$(this).find('.loader_in_form').fadeIn();
+    var canSend = true;
+	var errorMessage = "";
+    event.preventDefault(); //запрет отправки формы обычным методом (с перезагрузкой)
+
+	if(!$("input[name=callback_name]").val()){
+		canSend = false;
+		$("input[name=callback_name]").attr('placeholder', 'Введите Ваше имя').closest(".form-group").addClass('has-error');
+	}
+	if(!$("input[name=callback_phone]").val()){
+		canSend = false;
+		$("input[name=callback_phone]").attr('placeholder', 'Введите Ваш телефон').closest(".form-group").addClass('has-error');
+	}
+
+    if (canSend) {
+        $('div.loader_in_fancybox').fadeIn();
+		$(this).find('input[name=callback_submit]').val("Y");
+		
+        var data = $(this).serialize();// сериализация всех полей формы
+        //сформированные тем или иным способом данные можно передавать в $.ajax
+        $.ajax({
+            type: "POST",
+            url: "/ajax/callback.php",
+            data: data,
+            success: function(data) {			
+				if (data.indexOf('Error') != -1) {
+                    $("form[name=CALL_BACK_FORM]").find('.mess-result').html('<div class="alert alert-danger"><b>Ошибка:</b> ' + data + "</div>");
+                } else {
+                    $("form[name=CALL_BACK_FORM]").trigger( 'reset' ).find('.mess-result').html('<div class="alert alert-success"><b>Спасибо!</b> Ваша заявка успешно отправлена.<br><br>Это окно закроется через несколько секунд.</div>');
+					
+                    setTimeout(function() { $.fancybox.close(); }, 7000);
+                }
+            }
+        });
+    }
+	$(this).find('.loader_in_form').fadeOut();
+});
+</script>
+ 
