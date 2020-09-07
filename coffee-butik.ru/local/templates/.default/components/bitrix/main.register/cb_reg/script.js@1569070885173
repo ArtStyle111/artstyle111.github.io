@@ -1,7 +1,0 @@
-$(document).ready(function() {
-	$('form[name=regform]').submit(function(event) {
-		if (!checkConfidentiality("form[name=regform]")) {
-			event.preventDefault();
-		}
-	});
-});
