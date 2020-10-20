@@ -1,0 +1,133 @@
+.meta .rating > div.disabled {
+    background: url(../images/starna.png) no-repeat center / contain;
+}
+.meta .rating > div {
+    width: 12px;
+    display: inline-block;
+    height: 12px;
+    background: url(../images/star.svg) no-repeat center / contain;
+    margin: 0 0 0 6px;
+}
+#a2csuccess .popupform .add-cart-result > .title {
+    font-size: 32px;
+    font-family: 'Lisa';
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 0 25px;
+}
+.cart-h2{
+    font-size: 24px!important;
+    font-weight: 600;
+    margin: 0 0 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.bootstrap-datetimepicker-widget{
+    text-align: center!important;
+}
+.mfilter-counter {
+    background: #428bca;
+    color: #ffffff;
+
+}
+.mfilter-counter:after {
+    border-right-color: #428bca;
+
+}
+.mfilter-direction-rtl .mfilter-counter:after {
+    left: 100%;
+    right: auto;
+    border-right-color: none;
+    border-left-color: #428bca;
+
+}
+
+                .mfilter-search #mfilter-opts-search_button {
+                    background-color: #428bca;
+                }
+            
+.mfilter-box-1 .mfilter-counter {
+    background: #428bca;
+    color: #ffffff;
+
+}
+.mfilter-box-1 .mfilter-counter:after {
+    border-right-color: #428bca;
+
+}
+.mfilter-box-1.mfilter-direction-rtl .mfilter-counter:after {
+    left: 100%;
+    right: auto;
+    border-right-color: none;
+    border-left-color: #428bca;
+
+}
+
+.mfilter-box-1 .mfilter-search #mfilter-opts-search_button {
+    background-color: #428bca;
+}
+.filter-boxes-color .mfilter-tb{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.favourite-active{
+    background: url(../images/love.svg) no-repeat center / 18px 18px!important;
+}
+.mfilter-checked-label:before{
+    background: #ff4638;
+    border-color: #ff4638;
+}
+.mfilter-col-count{
+    display: none;
+}
+.hidden-pagination{
+    display: none;
+}
+.scroll-y{
+    display: none;
+}
+.product.product-in-wishlist .inner .remove-wishlist{
+    position:absolute;
+    right:15px;
+    top:15px;
+}
+.product.product-in-wishlist .inner .remove-wishlist button{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    border:none;
+    background:#ff4638 url(../images/close-white.svg) no-repeat center;
+    cursor:pointer;
+    transition:0.5s all ease;
+    -webkit-transition:0.5s all ease;
+    -moz-transition:0.5s all ease-;
+    -ms-transition:0.5s all ease;
+    -o-transition:0.5s all ease;
+    outline:none;
+}
+
+.product.product-in-wishlist .inner .remove-wishlist button:hover,
+.product.product-in-wishlist .inner .remove-wishlist button:focus{
+    box-shadow:0 10px 25px rgba(255, 67, 67, 0.35);
+}
+.wish_empty{
+
+}
+.wish_empty > div{
+    padding: 0;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.product-info{
+    display: none;
+}
+.star-slider img{
+    object-fit: cover;
+}
