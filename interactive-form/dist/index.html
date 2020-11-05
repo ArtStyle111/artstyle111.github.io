@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Document</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <div class="wizard card-like">
+          <form action="#">
+            <div class="wizard-header">
+              <div class="row">
+                <div class="col-xs-12">
+                  
+                  <div class="steps text-center">
+                    <div class="wizard-step active"></div>
+                    <div class="wizard-step"></div>
+                    <div class="wizard-step"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wizard-body">
+              <div class="step initial active">
+                <h2>KROK 1</h2>
+                <p>Dane klienta:</p>
+                <p></p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="firstname">Imię*:</label>
+                      <input type="text" class="form-control" id="firstname" required>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="lastname">Nazwisko*:</label>
+                      <input type="text" class="form-control" id="lastname" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="company">Nazwa firmy:</label>
+                      <input type="text" class="form-control" id="company">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="address">Adres*:</label>
+                      <input type="text" class="form-control" id="address" placeholder="Ulica" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="house" placeholder="Numer domu / Mieszkanie" required>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="city" placeholder="Miasto">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="index" placeholder="Indeks">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="email">
+                        Adres e-mail*:</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="tel">
+                        Numer telefonu*:</label>
+                      <input type="tel" class="form-control" id="tel" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <h2>KROK 2</h2>
+                <p>Dane urządzenia:</p>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="model">Model urządzenia*:</label>
+                      <input type="text" class="form-control" id="model">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="number-seria">Numer seryjny:</label>
+                      <input type="text" class="form-control" id="number-seria">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="pass">Odblokuj hasło:</label>
+                      <input type="text" class="form-control" id="pass">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="cost">Koszt urządzenia (do ubezpieczenia):</label>
+                      <input type="text" class="form-control" id="cost">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="textarea">Opis awarii:</label>
+                      <textarea type="text" class="form-control" id="textarea" cols="30" rows="10"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <h2>KROK 3</h2>
+                <p>Wzbogacenie:</p>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">
+                        Czy potrzebuję faktury VAT:</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Tak</option>
+                          <option>Nie</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect2">Która opcja dostawy jest dla Ciebie wygodna?</label>
+                        <select class="form-control" id="exampleFormControlSelect2">
+                          <option>
+                            Odbierz kurierem</option>
+                          <option>Dostarcz do najbliższej maszyny pakującej</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <div class="form-group mb-4">
+                        <div class="datepicker date input-group p-0 shadow-sm">
+                            <label for="reservationDate">
+                              Wybierz datę i godzinę przybycia kuriera:</label>
+                            <input type="text" placeholder="Choose a reservation date" class="form-control py-4 px-4" id="reservationDate">
+                            <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-clock-o"></i></span></div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-check">
+                      <input class="form-check-input position-static" type="checkbox" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      <label for="reservationDate">
+                        Zgoda na przetwarzanie podanych danych</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-check">
+                      <input class="form-check-input position-static" type="checkbox" name="blankRadio" id="blankRadio2" value="option2" aria-label="...">
+                      <label for="reservationDate1">
+                        Zgoda na warunki korzystania z usługi Helppa</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wizard-footer">
+              <div class="row">
+                <div class="col-xs-6 pull-left block-center">
+                  <button id="wizard-prev" style="display:none" type="button" class="btn btn-irv btn-irv-default">
+                    
+Poprzedni
+                  </button>
+                </div>
+                <div class="col-xs-6 pull-right text-center">
+                  <button id="wizard-next" type="button" class="btn btn-irv">
+                    
+Kolejny
+                  </button>
+                </div>
+                <div class="col-xs-6 pull-right block-center">
+                  <button id="wizard-subm" style="display:none" type="button" class="btn btn-irv">
+                    Zatwierdź
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./datapicer.js"></script>
+<script src="./script.js"></script>
+</html>
