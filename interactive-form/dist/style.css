@@ -8,7 +8,7 @@
 
 .btn-irv {
   width: 100%;
-  background: #038dab;
+  background: #329bfd;
   color: #fff !important;
   font-weight: bold;
   padding: 10px 0;
@@ -51,14 +51,14 @@ textarea {
   color: #bbb;
 }
 .wizard .wizard-header hr {
-  border-color: #038dab;
+  border-color: #329bfd;
   border-top-width: 2px;
 }
 .wizard .wizard-header .steps {
   height: 15px;
 }
 .wizard .wizard-header .steps .wizard-step {
-  background: #038dab;
+  background: #329bfd;
   width: 15px;
   height: 15px;
   display: inline-block;
