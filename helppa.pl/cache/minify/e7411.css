@@ -9,8 +9,11 @@
 .shipping-repair-timeline__step {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px; */
+    padding: 10px 0;
+    /* margin-bottom: 20px; */
+    width: 700px;
+    margin: 0 auto;
 }
 
 .shipping-repair-timeline__step-left{
@@ -33,6 +36,7 @@
 .shipping-repair__step-top-content {
     flex-basis: 70%;
     place-self: flex-start;
+    padding: 0px 40px;
 }
 .shipping-repair-timeline__step-right-img {
     flex-basis: 30%;
@@ -42,11 +46,13 @@
     flex-basis: 80%;
     align-self: center;
     line-height: 1rem;
+    text-align: initial;
 }
 .shipping-btn {
-    padding: 0 15px;
+    padding: 50px 15px;
     width: 160px;
-    height: 155px;
+    /* height: 155px; */
+    /* padding: 50px 0; */
     line-height: 1.4;
     letter-spacing: .8px;
     font-size: 19px;
