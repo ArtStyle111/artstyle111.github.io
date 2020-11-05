@@ -27,6 +27,9 @@
 .btn-irv-default:hover {
   background: #aaa;
 }
+textarea {
+  resize: none;
+}
 /* .step>p {
   color: #111;
 }
