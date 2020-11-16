@@ -1,0 +1,52 @@
+.order_form {
+                    padding: 20px 15px;
+                    background-color: transparent;
+                    border-color: rgb(242, 47, 5);
+                    border-style: none;
+                    border-width: 2px;
+                    border-radius: 5px;
+                    box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                }
+.order_form form{
+  text-align: center;
+  width: 100%;
+}                
+.order_form form input{
+  vertical-align: middle;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: 90%;
+  max-width: 280px;
+  background-color: rgba(255,255,255, 0);
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom-width: thin;
+}
+
+.order_form form .btn{
+background-color: rgb(242, 47, 5);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: rgb(194, 38, 4);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    font-family: "Arial";
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.7);  
+}
