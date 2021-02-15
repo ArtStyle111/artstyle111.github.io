@@ -1,0 +1,14 @@
+/* ----- Font-Fase ----- */
+
+@font-face {
+  font-family: 'Riffic-700';
+  src: url('../fonts/Riffic-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Riffic-Bold.eot@') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Riffic-Bold.woff2.html') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Riffic-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Riffic-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Riffic-Bold.svg') format('svg'); /* Legacy iOS */
+
+    font-weight: bold;
+    font-style: normal;
+}
