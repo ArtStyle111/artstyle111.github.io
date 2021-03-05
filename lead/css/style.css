@@ -1228,3 +1228,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer .footer-links a:hover {
   color: #1dc8cd;
 }
+@media screen and (max-width: 576px) {
+  #advanced-features .advanced-feature-img-right {
+    width: 100%;
+  }
+}
