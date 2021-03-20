@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+  <link rel="stylesheet" href="css/jquery.rateyo.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+
+  <header class="header">
+
+    <div class="header-top">
+      <div class="container">
+
+        <div class="header-top__menu">
+
+
+
+
+          <div class="header-top__menu-mobile-btn">
+            Меню
+          </div>
+
+
+
+          <ul class="header-top__list">
+            <li class="header-top__item"><a class="header-top__link" href="index.html#"> Оплата и доставка</a></li>
+            <li class="header-top__item"><a class="header-top__link" href="index.html#"> Гарантия</a></li>
+            <li class="header-top__item"><a class="header-top__link" href="index.html#"> Новости</a></li>
+            <li class="header-top__item"><a class="header-top__link" href="index.html#"> Контаткы</a></li>
+          </ul>
+          <div class="header-top__feedback">
+
+            <a href="index.html#" class="header-top__feedback-link"><span>Написать руководителю</span> </a>
+            <a href="index.html#" class="header-top__feedback-link"><span>Обратный звонок</span></a>
+          </div>
+          <div class="header-top__time">
+            <span>Пн-Пт: 08:00-18:00</span>
+            <span>Cб-Нд: 08:00-18:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-bottom__inner">
+          <a href="index.html#""><img class=" logo" href="index.html#" src="img/logo.png" alt=""></a>
+          <div class="header-bottom__phone">
+
+            <a href="tel:+38064207070">(068) 420 70 70</a>
+            <a href="tel:+380634165033">(063) 416 50 33</a>
+            <a href="tel:+380994167044">(099) 416 70 44</a>
+          </div>
+          <div class="header-bottom__inner">
+            <div class="header-bottom__search">
+              <form class="search__content-form">
+                <label class="search__content-label">
+
+                  <input class="search__content-input" type="text"
+                    placeholder="Поиск, например 175/70 R13 или cordiant">
+                </label>
+
+                <button class="search__content-button" type="submit"></button>
+              </form>
+
+
+            </div>
+            <div class="header-bottom__basket">
+
+
+              <a href="index.html#" class="header__bottom-basket-img"></a>
+              <div class="header-bottom__basket-num">
+                Товаров <span> 0 <span> (0)</span></span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </header>
+
+
+
+
+
+
+
+  <section class="choice">
+    <div class="container">
+
+      <div class="choice__link-mobile-menu">
+        <div class="choice__link-mobile-inner">
+          <div class="choice__link-mobile">
+            <a href="index.html#" class="choice__item-btn">
+              <div class="choice__item-btn-line"></div>
+              <div class="choice__item-btn-line"></div>
+              <div class="choice__item-btn-line"></div>
+            </a>
+            <a href="catalog.html" class="choice__item-text-mobile">Каталог товаров</a>
+
+          </div>
+          <button class="choice__link-mobile-btn">
+            <img class="choice__link-mobile-img" src="img/search-mobile.png" alt="">
+          </button>
+        </div>
+        <div class="search__content-mobile">
+          <form class="search__content-form search__content-form-mobile">
+            <label class="search__content-label">
+
+              <input class="search__content-input search__content-input-mobile" type="text"
+                placeholder="Поиск, например 175/70 R13 или cordiant">
+            </label>
+
+            <button class="search__content-button" type="submit"></button>
+          </form>
+        </div>
+
+
+
+
+      </div>
+      <nav class="choice__menu">
+
+        <ul class="choice__list">
+
+          <div class="choice__link">
+            <a href="catalog.html" class="choice__item-text">Каталог товаров</a>
+            <a href="index.html#" class="choice__item-btn">
+              <div class="choice__item-btn-line"></div>
+              <div class="choice__item-btn-line"></div>
+              <div class="choice__item-btn-line"></div>
+            </a>
+
+
+          </div>
+
+
+
+
+
+
+          <li class="choice__item choice__item--active" data-tab="tab-1"><span>Подбор шин по размеру</span></li>
+          <li class="choice__item" data-tab="tab-2"><span> Подбор дисков по размеру</span></li>
+          <li class="choice__item" data-tab="tab-3"><span>Подбор по авто</span></li>
+        </ul>
+    </div>
+
+
+    </nav>
+
+    <div class="selection-size tab-content-active" data-tab="tab-1">
+      <div class="container">
+        <div class="selection-size__inner">
+          <div class="selection-size__img">
+            <img src="img/img.jpg" alt="">
+          </div>
+          <div class="selection-size__content">
+            <div class="selection-size__top">
+              <ul class="selection-size__list">
+                <li class="selection-size__item">
+
+
+                  <p class="selection-size__item-title">
+                    Ширина
+                  </p>
+                  <select class="filter-style aside-filter__item-select selection-size__item-select">
+                    <option>195</option>
+                    <option>175</option>
+                    <option>165</option>
+                    <option>140</option>
+                  </select>
+
+
+
+
+                </li>
+                <li class="selection-size__item">
+
+                  <p class="selection-size__item-title">
+                    Профиль
+                  </p>
+                  <select class="filter-style aside-filter__item-select">
+                    <option>65</option>
+                    <option>65</option>
+                    <option>65</option>
+                    <option>65</option>
+                  </select>
+                </li>
+                <li class="selection-size__item">
+
+                  <p class="selection-size__item-title">
+                    Диаметр
+                  </p>
+                  <select class="filter-style aside-filter__item-select">
+                    < <option>R13</option>
+                      <option>R13</option>
+                      <option>R13</option>
+                      <option>R13</option>
+                  </select>
+                </li>
+                <li class="selection-size__item selection-size__item-margin">
+
+                  <a href="index.html#" class="selection-size__item-link">Популярные типоразмеры шин</a>
+                  <a href="index.html#" class="selection-size__item-link">Популярные бренды</a>
+
+                </li>
+              </ul>
+
+
+
+
+
+
+            </div>
+            <div class="selection-size__bottom">
+              <ul class="selection-size__list selection-size__list-bottom">
+                <li class="selection-size__item">
+
+
+                  <p class="selection-size__item-title">
+                    Тип автомобиля
+                  </p>
+                  <select
+                    class="filter-style aside-filter__item-select selection-size__item-select selection-size__item-bottom">
+                    <option>Легковой</option>
+                    <option>Легковой</option>
+                    <option>Легковой</option>
+                    <option>Легковой</option>
+                  </select>
+
+
+
+
+                </li>
+                <li class="selection-size__item">
+
+                  <p class="selection-size__item-title">
+                    Производитель
+                  </p>
+                  <select class="filter-style aside-filter__item-select selection-size__item-bottom">
+                    <option>Выбрано : Hankok</option>
+                    <option>Выбрано : Hankok</option>
+                    <option>Выбрано : Hankok</option>
+                    <option>Выбрано : Hankok</option>
+                  </select>
+                </li>
+                <li class="selection-size__item">
+
+                  <p class="selection-size__item-title">
+                    Сезоность
+                  </p>
+                  <select class="filter-style aside-filter__item-select selection-size__item-bottom">
+                    <option>Все</option>
+                    <option>Все</option>
+                    <option>Все</option>
+                    <option>Все</option>
+                  </select>
+                </li>
+
+                <button class="btn">Подобрать</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="selection-size " data-tab="tab-2">
+      <div class="container"> content- 2</div>
+    </div>
+
+
+    <div class="selection-size " data-tab="tab-3">
+      <div class="container"> content- 3</div>
+    </div>
+
+    <div class="choice-info">
+      <div class="container">
+        <div class="choice-info__inner">
+          <ul class="choice-info__list">
+            <li class="choice-info__item">
+              <img src="img/doc.png" class="info__doc" alt="">
+              <div class="choice-info__text">
+                <div class="choice-info__text-title">Оплата</div>
+                <div class="choice-info__text-p">Наложеный платеж, Безналичный, VISA / Mastercard</div>
+              </div>
+            </li>
+            <li class="choice-info__item">
+              <img src="img/car.png" class="info__car" alt="">
+              <div class="choice-info__text">
+                <div class="choice-info__text-title">Доставка</div>
+                <div class="choice-info__text-p">Новая почта, Деливери</div>
+              </div>
+            </li>
+            <li class="choice-info__item">
+              <img src="img/star.png" class="info__star" alt="">
+              <div class="choice-info__text">
+                <div class="choice-info__text-title">Гарантия</div>
+                <div class="choice-info__text-p">От производителя - 12 месяцев</div>
+              </div>
+            </li>
+            <li class="choice-info__item">
+              <img src="img/return.png" class="info__return" alt="">
+              <div class="choice-info__text">
+                <div class="choice-info__text-title">Возврат</div>
+                <div class="choice-info__text-p">100% гарантия возврата!</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <div class="container">
+        <img href="index.html#" class="banner__1" src="img/banner-1.jpg" alt="">
+      </div>
+    </div>
+    <div class="container">
+      <div class="menu-tabs">
+        <nav class="menu-tab">
+
+          <ul class=" menu-tab__list">
+
+
+            <li class="menu-tab__item menu-tab__item--active" data-tab-menu="tab-1">Популярные типоразмеры шин</li>
+            <li class="menu-tab__item" data-tab-menu="tab-2">Популярные бренды шин</li>
+            <li class="menu-tab__item menu-tab__item--hidden" data-tab-menu="tab-3">Популярные бренды дисков</li>
+            <li class="menu-tab__item" data-tab-menu="tab-4">Подбор по классу шин</li>
+          </ul>
+
+
+
+        </nav>
+
+        <div class=" menu-tab__select menu-tab-content-active " data-tab-menu="tab-1">
+          <div class="container">
+            <div class="menu-tab__select-content">
+              content - 1
+            </div>
+          </div>
+        </div>
+
+
+        <div class=" menu-tab__select " data-tab-menu="tab-2">
+          <div class="container">
+            <div class="menu-tab__select-content">
+              content- 2
+            </div>
+          </div>
+        </div>
+
+
+        <div class="  menu-tab__select " data-tab-menu="tab-3">
+          <div class="container">
+            <div class="menu-tab__select-content">
+              content- 3</div>
+          </div>
+        </div>
+
+
+        <div class="  menu-tab__select " data-tab-menu="tab-4">
+          <div class="container">
+            <div class="menu-tab__select-content">
+              content- 4
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </section>
+
+
+
+  <section class="bestseller">
+    <div class="container">
+      <div class="bestseller__title">
+        Хиты Продаж
+      </div>
+      <div class="bestseller__inner">
+
+
+        <a href="product-page.html" class="bestseller__item">
+          <div class="bestseller__img">
+
+            <img src="img/content/product-1.jpg" alt="" class="bestseller-img">
+          </div>
+
+          <div class="bestseller__wrapper">
+            <div class="bestseller__product-title">Летняя шина Sunful SF-05 185/75 R16C 104/102R PR8</div>
+            <div class="bestseller__price">1200 <span>грн</span></div>
+            <button class="bestseller__btn">
+              Купить
+            </button>
+          </div>
+        </a>
+
+        <a href="product-page.html" class="bestseller__item">
+          <div class="bestseller__img">
+            <img src="img/content/product-1.jpg" alt="" class="bestseller-img">
+          </div>
+
+          <div class="bestseller__wrapper">
+            <div class="bestseller__product-title">Летняя шина Sunful SF-05 185/75 R16C 104/102R PR8</div>
+            <div class="bestseller__price">1200 <span>грн</span></div>
+            <button class="bestseller__btn">
+              Купить
+            </button>
+          </div>
+        </a>
+
+        <a href="product-page.html" class="bestseller__item">
+          <div class="bestseller__img">
+            <img src="img/content/product-1.jpg" alt="" class="bestseller-img">
+          </div>
+
+          <div class="bestseller__wrapper">
+            <div class="bestseller__product-title">Летняя шина Sunful SF-05 185/75 R16C 104/102R PR8</div>
+            <div class="bestseller__price">1200 <span>грн</span></div>
+            <button class="bestseller__btn">
+              Купить
+            </button>
+          </div>
+        </a>
+
+        <a href="product-page.html" class="bestseller__item">
+          <div class="bestseller__img">
+            <img src="img/content/product-1.jpg" alt="" class="bestseller-img">
+          </div>
+
+          <div class="bestseller__wrapper">
+            <div class="bestseller__product-title">Летняя шина Sunful SF-05 185/75 R16C 104/102R PR8</div>
+            <div class="bestseller__price">1200 <span>грн</span></div>
+            <button class="bestseller__btn">
+              Купить
+            </button>
+          </div>
+        </a>
+
+        <a href="product-page.html" class="bestseller__item">
+          <div class="bestseller__img">
+            <img src="img/content/product-1.jpg" alt="" class="bestseller-img">
+          </div>
+
+          <div class="bestseller__wrapper">
+            <div class="bestseller__product-title">Летняя шина Sunful SF-05 185/75 R16C 104/102R PR8</div>
+            <div class="bestseller__price">1200 <span>грн</span></div>
+            <button class="bestseller__btn">
+              Купить
+            </button>
+          </div>
+        </a>
+      </div>
+  </section>
+
+
+
+  <section class="news">
+    <div class="container">
+      <div class="news__title">
+        Новости
+      </div>
+      <div class="news__inner">
+        <div class="news__item">
+          <a href="index.html#" class="news__img">
+            <img src="img/news-img.jpg" alt="">
+          </a>
+          <div class="news__text">
+            Коронавирус и Китайские шины. Что мы знаем о вирусе.
+          </div>
+        </div>
+
+        <div class="news__item">
+          <a href="index.html#" class="news__img">
+            <img src="img/news-img.jpg" alt="">
+          </a>
+          <div class="news__text">
+            Коронавирус и Китайские шины. Что мы знаем о вирусе.
+          </div>
+        </div>
+
+        <div class="news__item">
+          <a href="index.html#" class="news__img">
+            <img src="img/news-img.jpg" alt="">
+          </a>
+          <div class="news__text">
+            Коронавирус и Китайские шины. Что мы знаем о вирусе.
+          </div>
+        </div>
+
+        <div class="news__item">
+          <a href="index.html#" class="news__img">
+            <img src="img/news-img.jpg" alt="">
+          </a>
+          <div class="news__text">
+            Коронавирус и Китайские шины. Что мы знаем о вирусе.
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="comment">
+    <div class="container">
+      <div class="comment__inner">
+        <div class="comment__body">
+          <div class="comment__menu">
+            <div class="comment__menu-title">Отзывы Клиентов</div>
+            <a class="comment__menu-link">Все отзывы</a>
+          </div>
+          <ul class="comment__list">
+            <li class="comment__item">
+              <div class="comment__item-name">Микола</div>
+              <div class="comment__item-text">Купив лiтнi шини Белшина. По балансу все добре. Прийшло вчасно</div>
+            </li>
+            <li class="comment__item">
+              <div class="comment__item-name">Валентин</div>
+              <div class="comment__item-text">Заказали шины пришли через сутки. Спасибо за быструю доставку.Хороший
+                магазин. Резина свежая. Цены отличные. Спасибо!</div>
+            </li>
+            <li class="comment__item">
+              <div class="comment__item-name">Игорь</div>
+              <div class="comment__item-text">Спасибо качество работы и быструю доставку и конечно очень очень
+                профисиональный подбор шин</div>
+            </li>
+          </ul>
+          <button class="comment__btn">Написать отзыв</button>
+        </div>
+        <div class="comment__adviser">
+          <div class="comment__advise-inner">
+            <div class="comment__adviser-title">
+              Персональный консультант
+            </div>
+            <div class="comment__adviser-text">
+              Не нашли что искали если у вас есть вопросы, перезвоните нам, или отпраьте заявку и наши специалисты
+              помогут подобрать шины, диски на любой вкус.
+            </div>
+            <div class="comment__adviser-info">
+              <div class="comment__adviser-tell">
+                <div class="comment__adviser-tell-box">
+                  <a href="tel:+380951243944">(095) 124 39 44</a>
+                  <a href="tel:+380637710273">(063) 771 02 73</a>
+                  <a href="tel:+380683632493">(068) 363 24 93</a>
+                </div>
+                <button class="comment__tell-btn">Перезвоните мне</button>
+              </div>
+              <div class="comment__adviser-social">
+                <div class="comment__adviser-social-text">
+                  Подпишитесь на нас
+                </div>
+                <div class="comment__adviser-social-list">
+                  <a href="index.html#" class="comment__adviser-social-link">
+                    <img src="img/instagram.svg" alt="" class="comment__adviser-social-img">
+                  </a>
+                  <a href="index.html#" class="comment__adviser-social-link">
+                    <img src="img/facebook.svg" alt="" class="comment__adviser-social-img">
+                  </a>
+                  <a href="index.html#" class="comment__adviser-social-link">
+                    <img src="img/youtube.svg" alt="" class="comment__adviser-social-img">
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__wrapper">
+          <div class="footer__connect">
+            <div class="footer__tell">
+              <a class="footer__tell-vodafone" href="tel:+380951243944">(095) 124 39 44</a>
+              <a class="footer__tell-life" href="tel:+380637710273">(063) 771 02 73</a>
+              <a class="footer__tell-kiyiv" href="tel:+380683632493">(068) 363 24 93</a>
+            </div>
+            <div class="footer__email">
+              <p>Для заказов:<span>zakaz@autorezina.kh.ua</span></p>
+              <p>Для вопросов:<span>info@autorezina.kh.ua</span></p>
+            </div>
+          </div>
+          <div class="footer__time">
+            <p>Время роботы:</p>
+            <span>Пн-Пт: 08:00-18:00</span>
+            <span>Cб-Нд: 08:00-18:00</span>
+
+          </div>
+        </div>
+        <div class="footer__catalog-wrapper">
+          <div class="footer__catalog">
+            <div class="footer__catalog-title">Каталог</div>
+            <ul class="footer__catalog-list">
+              <li class="footer__catalog-item"><a href="index.html#">Летние шины</a></li>
+              <li class="footer__catalog-item"><a href="index.html#">Зимние шины</a></li>
+              <li class="footer__catalog-item"><a href="index.html#">Грузовые шины</a></li>
+              <li class="footer__catalog-item"><a href="index.html#">Диски</a></li>
+
+            </ul>
+          </div>
+          <div class="footer__info">
+            <div class="footer__info-title">Информация</div>
+            <ul class="footer__info-list">
+              <li class="footer__info-item"><a href="index.html#">Оплата и доставка</a></li>
+              <li class="footer__info-item"><a href="index.html#">Договор публичной офреты</a></li>
+              <li class="footer__info-item"><a href="index.html#">Новости</a></li>
+              <li class="footer__info-item"><a href="index.html#">Контакты</a></li>
+
+            </ul>
+          </div>
+
+          <div class="footer__social">
+            <div class="footer__subscription">
+              <div class="footer__subscription-text">Подписаться на рассылку</div>
+              <div class="footer__subscription-form">
+                <form class="footer__content-form">
+                  <label class="footer__content-label">
+
+                    <input class="footer__content-input" type="text" placeholder="Введите e-mail">
+                  </label>
+
+                  <button class="footer__content-button" type="submit">Подписаться</button>
+                </form>
+              </div>
+            </div>
+            <div class="comment__adviser-social-list footer__social-list">
+              <a href="index.html#" class="comment__adviser-social-link">
+                <img src="img/instagram.svg" alt="" class="comment__adviser-social-img">
+              </a>
+              <a href="index.html#" class="comment__adviser-social-link">
+                <img src="img/facebook.svg" alt="" class="comment__adviser-social-img">
+              </a>
+              <a href="index.html#" class="comment__adviser-social-link">
+                <img src="img/youtube.svg" alt="" class="comment__adviser-social-img">
+              </a>
+
+            </div>
+            <div class="footer__card">
+              <div class="footer__card-text">Мы принимаем:</div>
+
+              <a href="index.html"><img src="img/mastercard.svg" alt="" class="footer__card-img"></a>
+              <a href="index.html"><img src="img/visa.svg" alt="" class="footer__card-img"></a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="js/ion.rangeSlider.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.formstyler.min.js"></script>
+  <script src="js/jquery.rateyo.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
