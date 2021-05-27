@@ -43,6 +43,10 @@ aside {
     border-radius: 0 0 100px 0;
 }
 
+.footer__link {
+    color: #fff;
+}
+
 .banner__bottom {
     color: #000;
     position: relative;
