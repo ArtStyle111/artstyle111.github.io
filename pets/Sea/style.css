@@ -305,3 +305,9 @@ aside {
         font-size: 35px;
     }
 }
+
+@media screen and (height: 1200px) {
+    aside {
+        height: 260%;
+    }
+}
