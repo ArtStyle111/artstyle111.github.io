@@ -311,3 +311,8 @@ aside {
         height: 260%;
     }
 }
+@media screen and (height: 900px) {
+    aside {
+        height: 296%;
+    }
+}
