@@ -113,7 +113,7 @@ h4 {
 	box-sizing: border-box;
 	padding: 0 0 0 10px;
 	z-index: -1;
-	margin-top: 70px;
+	margin-top: 40px;
 	width: 90%;
 }
 
@@ -123,7 +123,7 @@ h4 {
 	/* transform: rotate(-10deg); */
 	padding: 0 0 0 20px;
 	width: 90%;
-	line-height: 1.5em;
+	line-height: 2em;
 }
 
 .card .details h4 {
