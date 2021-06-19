@@ -33,6 +33,7 @@ h4 {
 	transform: translate(-50%,-50%) perspective(2000px);
 	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
 	transition: 1s;
+	min-width: 600px;
 }
 
 .card:hover {
