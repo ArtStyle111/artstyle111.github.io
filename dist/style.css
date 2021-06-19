@@ -88,8 +88,8 @@ h4 {
 }
 
 .card .imgBox img {
-	min-width: 250px;
-	max-height: 400px;
+	width: 100%;
+	height: inherit;
 }
 
 .card:hover .imgBox {
