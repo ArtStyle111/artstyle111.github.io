@@ -133,3 +133,75 @@ h4 {
 .text-right {
 	text-align: right;
 }
+.parrot {
+	position: absolute;
+	width: 60px;
+	text-align: center;
+	animation: blink 0.8s infinite;
+	color: transparent;
+}
+
+.parrot:before {
+	content: "Click Me!";
+}
+
+.parrot:nth-child(1) {
+	right: -40px;
+    top: -20px;
+	font: 12px/1 "Margarine", sans-serif;
+	transform: rotate(-20deg);
+	animation-duration: 0.5s;
+}
+
+.parrot:nth-child(2) {
+	font: 12px/1 "Margarine", sans-serif;
+	right: -40px;
+	top: -20px;
+	transform: rotate(15deg);
+	animation-duration: 0.3s;
+}
+
+.parrot:nth-child(3) {
+	font: 16px/1 "Margarine", sans-serif;
+	top: -60px;
+	left: 15px;
+	transform: rotate(10deg);
+	animation-duration: 1s;
+}
+
+.parrot:nth-child(4) {
+	font: 18px/1 "Margarine", sans-serif;
+	top: -70px;
+	left: 95px;
+	transform: rotate(2deg);
+	animation-duration: 0.7s;
+}
+
+.parrot:nth-child(5) {
+	font: 14px/1 "Margarine", sans-serif;
+	top: 80px;
+	left: 105px;
+	transform: rotate(-20deg);
+	animation-duration: 0.8s;
+}
+
+.parrot:nth-child(6) {
+	font: 12px/1 "Margarine", sans-serif;
+	top: 80px;
+	left: 5px;
+	transform: rotate(10deg);
+	animation-duration: 1.2s;
+}
+
+@keyframes blink {
+
+	25%,
+	75% {
+		color: transparent;
+	}
+
+	40%,
+	60% {
+		color: #fff;
+	}
+}
