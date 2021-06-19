@@ -127,7 +127,7 @@ h4 {
 	text-align: right;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 	.card .imgBox img {
 		min-width: 500px;
 		max-height: 600px;
@@ -136,7 +136,7 @@ h4 {
 		width: 90%;
 	}
 	.card {
-		width: 500px;
-		height: 600px;
+		width: 800px;
+		height: 1000px;
 	}
 }
