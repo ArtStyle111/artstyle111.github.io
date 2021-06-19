@@ -46,9 +46,13 @@ h4 {
 	box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
 }
 
+/* .card .imgBox {
+	transform: rotate(0deg);
+}
+
 .card-open .imgBox {
 	transform: rotateY(-135deg);
-}
+} */
 
 .card:before {
 	content:'';
