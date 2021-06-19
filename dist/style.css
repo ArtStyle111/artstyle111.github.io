@@ -36,14 +36,18 @@ h4 {
 	min-width: 600px;
 }
 
-.card:hover {
+/* .card:hover {
 	transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2);
 	box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
-}
+} */
 
 .card-open {
 	transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
 	box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card-open .imgBox {
+	transform: rotateY(-135deg);
 }
 
 .card:before {
@@ -92,9 +96,9 @@ h4 {
 	height: inherit;
 }
 
-.card:hover .imgBox {
+/* .card:hover .imgBox {
 	transform: rotateY(-135deg);
-}
+} */
 
 .card:hover .bark {
 	opacity: 1;
