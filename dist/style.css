@@ -46,13 +46,9 @@ h4 {
 	box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
 }
 
-/* .card .imgBox {
-	transform: rotate(0deg);
-}
-
 .card-open .imgBox {
 	transform: rotateY(-135deg);
-} */
+}
 
 .card:before {
 	content:'';
@@ -104,7 +100,7 @@ h4 {
 	transform: rotateY(-135deg);
 } */
 
-.card:hover .bark {
+.card-open .bark {
 	opacity: 1;
 	transition: .6s;
   box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
