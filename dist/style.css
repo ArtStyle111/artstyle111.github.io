@@ -180,7 +180,7 @@ h4 {
 .parrot:nth-child(5) {
 	font: 14px/1 "Margarine", sans-serif;
 	top: 80px;
-	left: 105px;
+	left: 675px;
 	transform: rotate(-20deg);
 	animation-duration: 0.8s;
 }
@@ -188,7 +188,14 @@ h4 {
 .parrot:nth-child(6) {
 	font: 12px/1 "Margarine", sans-serif;
 	top: 80px;
-	left: 5px;
+	left: -65px;
+	transform: rotate(10deg);
+	animation-duration: 1.2s;
+}
+.parrot:nth-child(7) {
+	font: 12px/1 "Margarine", sans-serif;
+	top: 100px;
+	left: -65px;
 	transform: rotate(10deg);
 	animation-duration: 1.2s;
 }
