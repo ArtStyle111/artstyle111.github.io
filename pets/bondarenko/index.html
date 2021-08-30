@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- МЕТА -->
+  <title>Bondarenko</title>
+  <meta name="description" content="описание не длиннее 155 символов">
+  <meta name="keywords" content="мета-теги, шаблон, html, css">
+
+  <!-- Контролирует поведение поисковых систем при индексации страницы -->
+  <meta name="robots" content="index,follow,noodp"><!-- Все поисковые системы -->
+  <meta name="googlebot" content="index,follow"><!-- Указание отдельно для Google -->
+
+  <!-- Позволяет указать Google не показывать в поисковой выдаче поле для поиска по сайту -->
+  <meta name="google" content="nositelinkssearchbox">
+  <!-- Позволяет указать Google не предлагать перевести эту страницу -->
+  <meta name="google" content="notranslate"><!-- Подтверждает авторство страницы в Google Search Console -->
+  <meta name="google-site-verification" content="verification_token">
+  <!-- Тег указания ПО, которое сгенерировало эту страницу -->
+  <meta name="generator" content="program"><!-- Короткое описание тематики вашего сайта -->
+  <meta name="subject" content="тематика вашего сайта"><!-- open graph Facebook-->
+  <meta content="Bondarenko">
+  <meta content="website">
+
+  <!-- если сайт многоязычный -->
+  <!-- <meta property="og:locale" content="ru_RU"> -->
+  <meta content="http://localhost.my">
+
+  <!-- не меньше 600х315, не более 8Мб -->
+  <meta content="http://localhost.my/img/og_cover.jpg">
+  <meta content="описание не длиннее 155 символов">
+  <meta content="Facebook ID">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ник_компании_в_твиттере">
+  <meta name="twitter:title" content="Заголовок">
+  <meta name="twitter:description" content="описание не длиннее 155 символов">
+  <meta name="twitter:creator" content="@ник_в_твиттере">
+
+  <!-- картинка не меньше 280х150, не более 1Мб -->
+  <meta name="twitter:image" content="http://localhost.my/img/tw_cover.jpg">
+
+  <!-- G+ / Pinterest -->
+  <meta content="Заголовок">
+  <meta content="описание не длиннее 155 символов">
+  <meta content="http://localhost.my/img/g_cover.jpg">
+
+  <!-- Google authorship -->
+  <link rel="author" href="https://plus.google.com/[Google+_Profile]/posts"
+    data-mce-href="https://plus.google.com/[Google+_Profile]/posts">
+  <link rel="publisher" href="https://plus.google.com/[Google+_Page_Profile]"
+    data-mce-href="https://plus.google.com/[Google+_Page_Profile]">
+
+  <!-- Фавиконы и иконки сайта -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"
+    data-mce-href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png"
+    data-mce-href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png"
+    data-mce-href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png"
+    data-mce-href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png"
+    data-mce-href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png"
+    data-mce-href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png"
+    data-mce-href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png"
+    data-mce-href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png"
+    data-mce-href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="./img/Favicon 64x64.svg" sizes="32x32" data-mce-href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192"
+    data-mce-href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" data-mce-href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" data-mce-href="/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#4285f4">
+
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#4285f4">
+
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Яндекс.Браузер -->
+  <meta name="viewport" content="ya-title=#4e69a2,ya-dock=fade">
+
+  <!-- Шрифт -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div class="header-container">
+        <div class="header-container__left">
+          <div class="logo">
+            <img src="./img/logo.svg" alt="logo">
+          </div>
+
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li><a href="#" class="header__link active">обо мне</a></li>
+              <li><a href="#" class="header__link">для кого</a></li>
+              <li><a href="#" class="header__link">программы</a></li>
+              <li><a href="#" class="header__link">результаты</a></li>
+              <li><a href="#" class="header__link">контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-contact">
+          <a href="#" class="header-contact__phone">(093) 236 78 04</a>
+          <img class="header-contact__icon" src="./img/instagram 3.svg" alt="instagram">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <section class="main">
+    <div class="wrap">
+      <div class="main-content">
+        <div class="main-content__left">
+          <h1 class="main-content__title">Создайте здоровое тело
+            своей мечты благодаря
+            моим авторским тренировкам
+          </h1>
+          <div class="main-content__left-play">
+            <img class="main-content__left-play__img" src="./img/play-button 1.svg" alt="play">
+            <p class="main-content__left-play__desc">
+              Программа курса содержит множество упражнений и видеороликов, которые помогут Вам достичь поставленных
+              целей, тренируясь как в зале, на улице и даже дома
+            </p>
+          </div>
+          <p class="main-content__desc">
+            Если вы готовы меняться, чувствуете себя не в своём теле или просто хотите улучшить здоровье и самочувствие
+            - выбирайте программу
+          </p>
+          <div class="main-content__block-btn">
+            <a href="#" class="btn-red">
+              Выбрать программу
+            </a>
+            <a href="#" class="btn-gray">
+              Подробнее
+            </a>
+          </div>
+        </div>
+        <div class="main-content__right">
+          <img src="./img/man-with-red.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="wrap">
+      <h2 class="about-title">
+        ОБО мне
+      </h2>
+      <img src="./img/Rectangle 623.png" alt="" class="about-img">
+    </div>
+
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="programs">
+    <div class="wrap">
+      <h3 class="about-title">
+        Программы для Вас, если Вы:
+      </h3>
+      <div class="programs-item__wrap">
+        <div class="programs-item">
+          <img src="./img/1-item.png" alt="" class="programs-item__img">
+          <p class="programs-item__desc">
+            Хотите повысить общую выносливость организма, укрепить сердечно- сосудистую и дыхательную систему и сжечь
+            жир
+          </p>
+        </div>
+        <div class="programs-item">
+          <img src="./img/2-item.png" alt="" class="programs-item__img">
+          <p class="programs-item__desc">
+            Стремитесь нарастить мышечную массу, поработать над отстающими группами мышц или улучшить рельеф тела
+          </p>
+        </div>
+        <div class="programs-item">
+          <img src="./img/3-item.png" alt="" class="programs-item__img">
+          <p class="programs-item__desc">
+            Желаете восстановится после травмы или же паузы в спорте
+          </p>
+        </div>
+        <div class="programs-item">
+          <img src="./img/4-item.png" alt="" class="programs-item__img">
+          <p class="programs-item__desc">
+            Готовитесь к соревнованиям и хотите улучшить пропорции своего тела
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PROGRAMS PLAN-->
+  <section class="programs-plan">
+    <div class="wrap">
+      <h3 class="about-title">
+        Программы тренировок
+      </h3>
+      <div class="programs-plan__wrap">
+        <div class="programs-plan__item">
+          <div class="programs-plan__item-content">
+            <div class="programs-plan__item-content-text">
+              <h4 class="programs-plan__item-title">
+                Набор массы
+              </h4>
+              <p class="programs-plan__item-desc">
+                Наращивание сухой мышечной массы
+              </p>
+              <ul class="programs-plan__item-list">
+                <li class="programs-plan__item-adv">
+                  Программа из базовых и изоляционных упражнений
+                </li>
+                <li class="programs-plan__item-adv">
+                  Составление циклов тренировочного процесса
+                </li>
+                <li class="programs-plan__item-adv">
+                  БАДы для правильного набора массы
+                </li>
+                <li class="programs-plan__item-adv">
+                  Разбор питания по КБЖУ, подбор меню
+                </li>
+              </ul>
+            </div>
+            <img src="./img/man-2.png" alt="man">
+          </div>
+          <div class="programs-plan__item-price">
+            <div class="programs-plan__item-price__content">
+              <p class="programs-plan__item-price__content-price">
+                399 грн
+              </p>
+              <p class="programs-plan__item-price__content-time">
+                3 месяца
+              </p>
+              <p class="programs-plan__item-price__content-desc">
+                из расчета тренировок
+                через день
+              </p>
+              <a href="#" class="btn-red programs-plan__item-price-btn">
+                Подробнее
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="programs-plan__item">
+          <div class="programs-plan__item-content">
+            <div class="programs-plan__item-content-text">
+              <h4 class="programs-plan__item-title">
+                Тело фитоняшки
+              </h4>
+              <p class="programs-plan__item-desc">
+                Программа для девушек с акцентом на ягодицы
+              </p>
+              <ul class="programs-plan__item-list">
+                <li class="programs-plan__item-adv">
+                  Улучшение пропорций
+                </li>
+                <li class="programs-plan__item-adv">
+                  Лучшие упражнения для ягодиц
+                </li>
+                <li class="programs-plan__item-adv">
+                  БАДы для правильного набора массы
+                </li>
+                <li class="programs-plan__item-adv">
+                  Разбор питания по КБЖУ, подбор меню
+                </li>
+              </ul>
+            </div>
+            <img src="./img/girl-1.png" alt="girl">
+          </div>
+          <div class="programs-plan__item-price">
+            <div class="programs-plan__item-price__content">
+              <p class="programs-plan__item-price__content-price">
+                399 грн
+              </p>
+              <p class="programs-plan__item-price__content-time">
+                3 месяца
+              </p>
+              <p class="programs-plan__item-price__content-desc">
+                из расчета тренировок
+                через день
+              </p>
+              <a href="#" class="btn-red programs-plan__item-price-btn">
+                Подробнее
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="programs-plan__item">
+          <div class="programs-plan__item-content">
+            <div class="programs-plan__item-content-text">
+              <h4 class="programs-plan__item-title">
+                Набор массы
+              </h4>
+              <p class="programs-plan__item-desc">
+                Наращивание сухой мышечной массы
+              </p>
+              <ul class="programs-plan__item-list">
+                <li class="programs-plan__item-adv">
+                  Программа из базовых и изоляционных упражнений
+                </li>
+                <li class="programs-plan__item-adv">
+                  Составление циклов тренировочного процесса
+                </li>
+                <li class="programs-plan__item-adv">
+                  БАДы для правильного набора массы
+                </li>
+                <li class="programs-plan__item-adv">
+                  Разбор питания по КБЖУ, подбор меню
+                </li>
+              </ul>
+            </div>
+            <img src="./img/man-2.png" alt="man">
+          </div>
+          <div class="programs-plan__item-price">
+            <div class="programs-plan__item-price__content">
+              <p class="programs-plan__item-price__content-price">
+                399 грн
+              </p>
+              <p class="programs-plan__item-price__content-time">
+                3 месяца
+              </p>
+              <p class="programs-plan__item-price__content-desc">
+                из расчета тренировок
+                через день
+              </p>
+              <a href="#" class="btn-red programs-plan__item-price-btn">
+                Подробнее
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="programs-plan__testiminial">
+        <img src="./img/testemonial.png" alt="testemonial">
+        <p class="programs-plan__testiminial-desc">
+          В этом процессе главное – понимать, что всё это вы делаете для себя.<br><br>
+          Мой многолетний опыт - для Вас! Теперь вам доступны подборки лучших упражнений собранные в программу для вашей
+          цели.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+    version="1.1">
+    <defs>
+      <filter id="round">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo">
+        </feColorMatrix>
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+      </filter>
+    </defs>
+  </svg>
+</body>
+
+</html>
