@@ -1,0 +1,26 @@
+.carousel {
+    overflow: hidden;
+}
+
+.m-padding a {
+    margin: 5px;
+    background: #ccc;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-content,
+.card-content .title,
+.card-content .subtitle {
+    background-color: #3f3f3f;
+    color: #ccc;
+}
+
+.slider-navigation-previous {
+    left: 10px;
+}
+
+.slider-navigation-next {
+    right: 10px;
+}
