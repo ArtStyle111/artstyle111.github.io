@@ -218,7 +218,7 @@ select {
 /* PRIMERY */
 
 .primery {
-    background: url(./img/main-bg.png) center center/cover no-repeat;
+    background: url(../img/main-bg.png) center center/cover no-repeat;
     height: 1010px;
 }
 
@@ -266,7 +266,7 @@ select {
 
 .about-us {
     padding: 55px 0;
-    background: url(./img/bg-second.png) center center/contain no-repeat;
+    background: url(../img/bg-second.png) center center/contain no-repeat;
 }
 
 .about-us__container {
@@ -327,7 +327,7 @@ select {
 /* projects */
 
 .projects {
-    background: url(./img/current-projects-bg.png) center top/contain no-repeat;
+    background: url(../img/current-projects-bg.png) center top/contain no-repeat;
     height: 720px;
 }
 
