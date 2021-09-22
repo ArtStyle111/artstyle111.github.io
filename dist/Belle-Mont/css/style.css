@@ -470,6 +470,14 @@ select {
     color: #FFFFFF;
 }
 
+.footer__menu>li {
+    margin-right: 50px;
+}
+
+.footer__menu>li:last-child {
+     margin-right: 0px;
+}
+
 .footer__text {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
