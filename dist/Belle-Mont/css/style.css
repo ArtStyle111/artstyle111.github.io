@@ -460,6 +460,7 @@ select {
 }
 
 .footer__menu {
+    display: flex;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -481,7 +482,7 @@ select {
 .footer__container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .footer__location,
