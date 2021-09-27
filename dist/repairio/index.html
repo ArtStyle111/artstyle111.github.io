@@ -519,8 +519,7 @@
             width: 100%;
             padding-top: 10px;
             padding-bottom: 10px;
-            z-index: 9999;
-            background-color: #000
+            z-index: 9999; 
         }
 
         .lx-main-menu .menu-item .sub-menu a {
@@ -558,7 +557,7 @@
             font-family: "PT Sans Caption", sans-serif;
             font-size: 15px;
             font-weight: 400;
-            line-height: 45px;
+            line-height: 20px;
             color: #bfbab0;
             position: relative
         }
@@ -689,13 +688,9 @@
         }
 
         .computers.lx-button {
-            background-color: #fba529;
-            padding: 15px 72px 15px
-        }
-
-        .computers.lx-button.b_bottom {
-            -webkit-box-shadow: 0px 6px 0px 0px #41434d;
-            box-shadow: 0px 6px 0px 0px #9a6f37
+            background-color: #116bb2 !important;
+            padding: 15px 72px 15px;
+            border-radius: 5px;
         }
 
         .repairio_heading .title {
@@ -1611,7 +1606,7 @@
     <style type="text/css" data-type="vc_shortcodes-custom-css">
         .vc_custom_1504533979675 {
             background-image: url(./img/workmen-installing-television-at-home-KSL54E9.jpeg) !important;
-            background-position: center !important;
+            background-position: top !important;
             background-repeat: no-repeat !important;
             background-size: cover !important
         }
@@ -1713,12 +1708,17 @@
     <style>
         .header-phone {
             padding: 10px;
-            border: 1px solid orange;
+            border: 1px solid #ec4545;
+            border-radius: 5px;
+        }
+        .header-phone>p {
+            color: #ec4545;
+            text-align: center;
         }
 
         .lx-main-menu .menu-item a {
             font-size: 20px;
-            color: orange;
+            color: #ec4545;
         }
 
         .header-phone>img {
@@ -2802,6 +2802,7 @@
         }
         .about_details .hero-section-title h4 {
         padding: 20px 0 10px 0;
+        color: #e6eaeb;
         }
         .about_with_contact_form .col-md-4.pl_12 {
         padding-left: 15px;
@@ -4083,7 +4084,18 @@
         right: -60px;
         }
         }
-
+        body {
+            background: #e6eaeb !important;
+        }
+    </style>
+    <style>
+        #menu-menu-1 {
+            display: flex;
+            align-items: center;
+        }
+        p {
+            opacity: 1 !important;
+        }
     </style>
 </head>
 
@@ -4093,10 +4105,15 @@
     <header class="lx-header ">
         <div class="container no-padd-h">
             <div class="lx-btn-menu hidden-md hidden-lg"> <i class="burger-button"></i></div>
-            <div class="lx-logo"> <a href="index.html"> <img src=wp-content/uploads/2017/09/logo-repario.png alt="">
-                </a></div>
+            <!-- <div class="lx-logo"> <a href="index.html"> <img src="./img/logo-new-done.jpg" alt="">
+                </a></div> -->
             <nav class="lx-main-menu">
                 <ul id="menu-menu-1" class="menu">
+                    <li
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-383 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-4994 page-scroll">
+                        <a href="index.html"> <img style="max-width: 189px; border-radius: 5px;" src="./img/logo-new-done.jpg" alt="">
+                        </a>
+                    </li>
                     <li id="menu-item-4994"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-383 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-4994 page-scroll">
                         <a data-toggle="dropdown" class="anchor-scroll" href="#home-main"><img class="header-link"
@@ -4108,9 +4125,11 @@
                                 src="img/thumbtack-rating.png"></a></li>
 
                     <li id="menu-item-4704"
-                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4704 page-scroll">
-                        <a class="header-phone" href="#"><img
-                                src="https://cdn0.iconfinder.com/data/icons/flat-color-1/100/sqi2016-flat-go-41-512.png">(628)
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4704 page-scroll"
+                        style="margin-left: 200px;">
+                        <a class="header-phone" href="#">
+                            <p>Call now</p>
+                            (628)
                             246-4693
                         </a>
                     </li>
@@ -4121,25 +4140,25 @@
     <div id="home-main" class="container one-page-wrapper">
         <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
             class="vc_row wpb_row vc_row-fluid vc_custom_1504533979675 vc_row-has-fill vc_row-no-padding fixed_bg">
-            <div class="wpb_column vc_column_container vc_col-sm-6 ">
-                <div class="vc_column-inner vc_custom_1493381241725 "><span class="enable_overlay"
-                        style="background-color:rgba(10,51,107,0.95)"></span>
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner vc_custom_1493381241725 "><span class="enable_overlay"></span>
                     <div class="wpb_wrapper">
                         <div class="lx-main-wrapper left-space-container marg-md-t150 marg-md-b150 marg-sm-t60marg-sm-b60 marg-xs-t25 marg-xs-b25 padd-md-t150 padd-md-b150 padd-sm-t30 padd-sm-b0 padd-xs-t105 padd-xs-b30 "
-                            style=" box-shadow: 0 3px px ; " data-aos="fade-up" data-aos-duration="1000">
-                            <div class="lx_mobiles lx_repairio repairio_heading light " data-aos="fade-up"
+                             data-aos="fade-up" data-aos-duration="1000">
+                            <div class="lx_mobiles lx_repairio repairio_heading light " style="margin-left: 300px;"
+                                data-aos="fade-up"
                                 data-aos-duration="1000">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class=" col-xs-12 ">
                                             <h3 class="title custom" style=" font-size:43px !important; line-height:58px !important;
                                                 ">Professional Tv Mounting<br>And Installation Service</h3>
-                                            <p class="subtitle small">Safe, Clean, Fast and Reliable</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="lx-btn-wrap text-left vc_custom_1497699491855" data-aos="fade-up"
+                            <div class="lx-btn-wrap text-left vc_custom_1497699491855" style="margin-left: 400px;"
+                                data-aos="fade-up"
                                 data-aos-duration="1000"><a href="#" class="lx-button computers b_bottom "
                                     style=" ">BOOK APPOINTMENT</a></div>
                         </div>
@@ -4186,7 +4205,8 @@
                             <div class="card is-shadowless is-slightly-rounded">
                                 <div class="card-image">
                                     <figure class="image">
-                                        <img src="https://via.placeholder.com/480x280/353D96/FFFFFF/?text=Slider 1">
+                                        <img
+                                            src="https://tvmounting.us/wp-content/uploads/2020/07/tv-installation-services-min-scaled-e1594217735786.jpg">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -4195,9 +4215,7 @@
                                             <span class="title is-6 is-capitalized">
                                                 TV Installation Service</span>
                                         </p>
-                                        <p>
-                                            <span class="subtitle is-7">Lorem</span>
-                                        </p>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -4211,7 +4229,8 @@
                             <div class="card is-shadowless is-slightly-rounded">
                                 <div class="card-image">
                                     <figure class="image">
-                                        <img src="https://via.placeholder.com/480x280/353D96/FFFFFF/?text=Slider 2">
+                                        <img
+                                            src="https://tvmounting.us/wp-content/uploads/2020/07/dismount-remouunt-min-scaled-e1594217746423.jpg">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -4220,9 +4239,7 @@
                                             <span class="title is-6 is-capitalized">
                                                TV Dismount & Remount</span>
                                         </p>
-                                        <p>
-                                            <span class="subtitle is-7">Lorem</span>
-                                        </p>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -4236,7 +4253,8 @@
                             <div class="card is-shadowless is-slightly-rounded">
                                 <div class="card-image">
                                     <figure class="image">
-                                        <img src="https://via.placeholder.com/480x280/353D96/FFFFFF/?text=Slider 3">
+                                        <img style="min-height: 200px;"
+                                            src="https://tvmounting.us/wp-content/uploads/2020/07/sound-bar-min-scaled-e1594217678321.jpg">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -4246,9 +4264,7 @@
                                                 Sound Bar Mounting
                                                </span>
                                         </p>
-                                        <p>
-                                            <span class="subtitle is-7">Lorem</span>
-                                        </p>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -4262,19 +4278,18 @@
                             <div class="card is-shadowless is-slightly-rounded">
                                 <div class="card-image">
                                     <figure class="image">
-                                        <img src="https://via.placeholder.com/480x280/353D96/FFFFFF/?text=Slider 4">
+                                        <img style="max-height: 200px;"
+                                            src="https://tvmounting.us/wp-content/uploads/2020/07/led-light-min-scaled-e1594217665536.jpg">
                                     </figure>
                                 </div>
                                 <div class="card-content">
                                     <div class="content">
                                         <p class="nowrap is-marginless">
                                             <span class="title is-6 is-capitalized">
-                                                 LED<br> Lights
+                                                 LED Lights
                             </span>
                                         </p>
-                                        <p>
-                                            <span class="subtitle is-7">Lorem</span>
-                                        </p>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -4288,7 +4303,8 @@
                             <div class="card is-shadowless is-slightly-rounded">
                                 <div class="card-image">
                                     <figure class="image">
-                                        <img src="https://via.placeholder.com/480x280/353D96/FFFFFF/?text=Slider 5">
+                                        <img
+                                            src="https://tvmounting.us/wp-content/uploads/2020/07/shutterstock_756427855-2-min-scaled-e1594217621569.jpg">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -4296,34 +4312,6 @@
                                         <p class="nowrap is-marginless">
                                             <span class="title is-6 is-capitalized">
                                                 HDMI And Extension Cords</span>
-                                        </p>
-                                        <p>
-                                            <span class="subtitle is-7">Lorem</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </a>
-
-                    </div>
-                    <div class="item-6 m-padding">
-
-                        <a href="#">
-                            <div class="card is-shadowless is-slightly-rounded">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img src="https://via.placeholder.com/480x280/353D96/FFFFFF/?text=Slider 6">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="content">
-                                        <p class="nowrap is-marginless">
-                                            <span class="title is-6 is-capitalized">
-                                                The <br> Twist </span>
-                                        </p>
-                                        <p>
-                                            <span class="subtitle is-7">Florham Park, NJ</span>
                                         </p>
                                     </div>
                                 </div>
@@ -4359,15 +4347,21 @@
                             <li><i class="fa fa-check"></i> PROFESSIONAL TECHNICIANS</li>
                             <li><i class="fa fa-check"></i> BEST PRICES IN LOS ANGELES</li>
                         </ul>
-                    </div>
-                    <!--end .about_details-->
-                    <div class="about_support">
                         <div class="about_support_flex">
 
                             <a href="#">
                                 <p>BOOK APPOINTMENT</p>
                             </a>
                         </div>
+                    </div>
+                    <!--end .about_details-->
+                    <div class="about_support">
+                        <!-- <div class="about_support_flex">
+
+                            <a href="#">
+                                <p>BOOK APPOINTMENT</p>
+                            </a>
+                        </div> -->
                         <!--end .about_support_flex-->
                     </div>
                     <!--end .about_support-->
@@ -4625,7 +4619,7 @@
         }
 
         .gray_bg {
-            background-color: rgba(10, 51, 107, 0.95);
+            background-color: #116bb2;
         }
 
         .mb_30 {
@@ -4670,13 +4664,14 @@
         }
 
         .btn-orange {
-            background: #fda700;
+            background: #116bb2;
             color: #ffffff;
             padding: 16px 25px;
             display: inline-block;
             text-decoration: none;
             font-weight: 700;
             border: none;
+            border-radius: 5px;
         }
 
         .btn-orange:hover {
@@ -5397,7 +5392,9 @@
             float: right;
         }
 
-
+        .finder-page .steps .step.completed, .finder-page .steps .step.current {
+            border-top: 0px !important;
+        }
 
         /* about */
         .about_area {
@@ -5412,7 +5409,7 @@
             position: absolute;
             right: 0;
             top: 0;
-            width: 45%;
+            width: 50%;
             height: 100%;
             z-index: -1;
         }
@@ -5594,7 +5591,8 @@
         }
 
         .about_details ul li {
-            color: #7f8386;
+            color: #e6eaeb;
+            font-size: 24px
         }
 
         .about_details ul li i {
@@ -5663,6 +5661,8 @@
         .about_support_flex a p {
             transition: 0.5s;
             background: #fda700;
+            padding: 15px 30px;
+            border-radius: 5px;
         }
 
         .about_support_flex a:hover p {
@@ -8130,6 +8130,8 @@
             padding: 60px;
             background: #fff;
             align-items: center;
+            border: 1px solid;
+            margin-bottom: 50px;
         }
 
         .contact_area_div .text_div {
@@ -8192,6 +8194,16 @@
         .finder-page ul.mount-type-headers li .btn-full-motion:before {
             display: none;
         }
+        .finder-page .mount-types .step-option
+        p:before {
+            display: none;
+        }
+        .finder-page .mount-types .step-option p {
+            padding-left: 10px;
+        }
+        .finder-page .button{
+            background: #116bb2;
+        } 
     </style>
     <section class="check-our-infographic bg-com">
         <div class="container wow fadeInUp" data-wow-delay=".2s"
@@ -8202,58 +8214,33 @@
                         <div id="toolSections" class="steps site-centered">
                             <div class="step step-mount-types current active" id="step1">
                                 <div class="step-area">
-                                    <ul class="mount-type-headers clearfix">
-                                        <li class="mount-type-heading">
-                                            <h5>Which type of wall TV mount is right for you?</h5>
-                                        </li>
-                                        <li>
-                                            <div class="video-container btn-full-motion btn-video">
-                                                <a class="vimeo-video mfp-iframe lightbox-added" data-fancybox=""
-                                                    href="https://www.youtube.com/watch?v=lIOcVhiYt24" target="_blank">
-                                                    <img class="video-thumbnail img-responsive"
-                                                        src="https://tvmounting.us/wp-content/themes/itod/assets/img/tv-mounting-video1.jpg"
-                                                        alt="Is a SANUS Full Motion Mount Right For You?" loading="lazy"
-                                                        decoding="async" itemprop="thumbnailUrl" data-qazy="true">
-                                                    <span class="image-overlay overlay-type-video">
-                                                        <span class="image-overlay-inside"></span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <button class="button mobile-btn" type="button">Select Full-Motion</button>
-                                        </li>
-                                        <li>
-                                            <div class="video-container btn-tilting btn-video">
-                                                <a class="vimeo-video mfp-iframe lightbox-added" data-fancybox=""
-                                                    href="https://www.youtube.com/watch?v=o9I9aVV-BAc" target="_blank">
-                                                    <img class="video-thumbnail img-responsive"
-                                                        src="https://tvmounting.us/wp-content/themes/itod/assets/img/tv-mounting-video2.jpg"
-                                                        alt="Is a SANUS Tilting Mount Right For You?" loading="lazy"
-                                                        decoding="async" itemprop="thumbnailUrl" data-qazy="true">
-                                                    <span class="image-overlay overlay-type-video">
-                                                        <span class="image-overlay-inside"></span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <button class="button mobile-btn" type="button">Select Tilting</button>
-                                        </li>
-                                        <li>
-                                            <div class="video-container btn-fixed-position btn-video">
-                                                <a class="vimeo-video mfp-iframe lightbox-added" data-fancybox=""
-                                                    href="https://www.youtube.com/watch?v=ZwguaLznVT4" target="_blank">
-                                                    <img class="video-thumbnail img-responsive"
-                                                        src="https://tvmounting.us/wp-content/themes/itod/assets/img/tv-mounting-video3.jpg"
-                                                        alt="Is a SANUS Fixed Position Mount Right For You?"
-                                                        loading="lazy" decoding="async" itemprop="thumbnailUrl"
-                                                        data-qazy="true">
-                                                    <span class="image-overlay overlay-type-video">
-                                                        <span class="image-overlay-inside"></span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <button class="button mobile-btn" type="button">Select
-                                                Fixed-Position</button>
-                                        </li>
-                                    </ul>
+                                    
+                                      <div
+                                          class="vc_row wpb_row vc_row-fluid marg-md-t60 marg-md-b10 marg-sm-t55 marg-sm-b5 marg-xs-t35 marg-xs-b0 ">
+                                          <div class="wpb_column vc_column_container vc_col-sm-12 ">
+                                              <div class="vc_column-inner ">
+                                                  <div class="wpb_wrapper">
+                                                      <div class="lx_mobiles lx_repairio repairio_heading dark text-center aos-init aos-animate"
+                                                          style="background-color:;" data-aos="fade-up"
+                                                          data-aos-duration="1000">
+                                                          <div class="container-fluid">
+                                                              <div class="row">
+                                                                  <div class=" col-xs-12 ">
+                                                                      <h3 class="title medium">Which type of wall TV
+                                                                          mount is right for you?</h3>
+                                                                      <div class="lx-divider "><span
+                                                                              class="icon icon-mobile-repairio_divider"></span>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                        
+                                   
                                     <ul class="mount-types clearfix" id="mountTypes">
                                         <li class="step-option">
                                             <ul>
