@@ -276,7 +276,6 @@ a {
 
 * {
     outline: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -296,7 +295,8 @@ body {
     left: 50%;
     font-size: 5rem;
     transform: translateX(-50%);
-    animation-name: bounce;
+    -webkit-animation-name: bounce;
+            animation-name: bounce;
 }
 
 .header {
@@ -381,8 +381,6 @@ body {
     z-index: 99999;
     background: #fff;
     padding: 15px 0;
-    -webkit-box-shadow: 1px 5px 5px -4px rgba(17, 17, 17, 0.2);
-    -moz-box-shadow: 1px 5px 5px -4px rgba(17, 17, 17, 0.2);
     box-shadow: 1px 5px 5px -4px rgba(17, 17, 17, 0.2);
 }
 
@@ -1096,11 +1094,13 @@ body {
         margin-right: 0;
         line-height: 121px;
     }
-    .about__content-left__content-title {
+    .about__content-left__content-title,
+    .about__content-right__content-title {
         font-size: 18px;
         line-height: 21px;
     }
-    .about__content-left__content-desc {
+    .about__content-left__content-desc,
+    .about__content-right__content-desc {
         font-size: 14px;
         line-height: 16px;
     }
@@ -1113,5 +1113,11 @@ body {
     }
     .contact__content-text-icon>img {
         max-width: 20px;
+    }
+    .advantages-content__item-desc {
+        margin-top: 10px;
+    }
+    .advantages-content__item {
+        margin-top: 35px;
     }
 }
