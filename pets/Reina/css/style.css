@@ -731,7 +731,7 @@ body {
 
 @media screen and (max-width: 1520px) {
     .wrap {
-        width: 1320px;
+        max-width: 1320px;
     }
     .partners-item,
     .prices-item1,
@@ -754,7 +754,7 @@ body {
 
 @media screen and (max-width: 1440px) {
     .wrap {
-        width: 1140px;
+        max-width: 1140px;
     }
     .main-detail {
         display: none;
@@ -769,13 +769,13 @@ body {
 
 @media screen and (max-width: 1200px) {
     .wrap {
-        width: 960px;
+        max-width: 960px;
     }
 }
 
 @media screen and (max-width: 992px) {
     .wrap {
-        width: 720px;
+        max-width: 720px;
     }
     .header {
         height: 100px;
@@ -970,12 +970,148 @@ body {
 
 @media screen and (max-width: 768px) {
     .wrap {
-        width: 540px;
+        max-width: 540px;
+        padding: 0 20px;
+    }
+    
+    #main-logo {
+        width: 150px;
+    }
+    .main-screen {
+        padding-top: 250px;
+    }
+    .main-screen__title {
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+    .main-screen__time {
+        margin: 5px 0 0 0;
+    }
+    .mobile-detail {
+        margin-top: 50px;
+    }
+    .advantages-content__item-img {
+        max-width: 200px;
+    }
+    .advantages-content__item {
+        flex-basis: 48%;
+    }
+    .advantages-content__item-desc {
+        max-width: 100%;
+        font-size: 22px;
+    }
+    .partners__content {
+        display: block;
+        text-align: center;
+    }
+    .partners__content>img {
+        margin-bottom: 50px;
+    }
+    .partners__content>img:last-child {
+        margin-bottom: 0;
+    }
+    .contact__content-text {
+        font-size: 24px;
+    }
+    .contact__content>.services-title {
+        margin-bottom: 25px;
+        font-size: 42px;
     }
 }
 
 @media screen and (max-width: 576px) {
     .wrap {
-        width: 100%;
+        max-width: 100%;
+    }
+    .advantages-title,
+    .main-screen__title,
+    .services-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .partners .advantages-title,
+    .prices .advantages-title {
+        margin-bottom: 30px;
+    }
+
+    .about .advantages-title {
+        margin-top: 50px;
+    }
+    
+    .prices,
+    .services,
+    .advantages {
+        padding: 50px 0;
+    }
+
+
+    .main-screen {
+        padding-top: 200px;
+    }
+
+    .main-screen__time {
+        font-size: 18px;
+        line-height: 14px;
+    }
+
+    .mobile-detail {
+        width: 260px;
+    }
+
+    .contact__content {
+        padding: 0 20px;
+    }
+
+    .contact-item,
+    .services-item {
+        display: none;
+    }
+
+    .advantages-content__item-img {
+        max-width: 140px;
+    }
+
+    .advantages-content__item-desc {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .services-content__item-desc {
+        font-size: 14px;
+        line-height: 16px;
+        width: 60%;
+        max-width: 100%;
+    }
+    
+    .services-content__item-count {
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .btn-price {
+        margin: 10px 0;
+    }
+    .big-num {
+        font-size: 100px;
+        margin-right: 0;
+        line-height: 121px;
+    }
+    .about__content-left__content-title {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .about__content-left__content-desc {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .contact__content-text {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .contact__content-text-icon {
+        text-align: left;
+    }
+    .contact__content-text-icon>img {
+        max-width: 20px;
     }
 }
