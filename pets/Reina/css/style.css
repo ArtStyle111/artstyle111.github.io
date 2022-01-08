@@ -278,6 +278,9 @@ a {
     outline: 0;
     box-sizing: border-box
 }
+p {
+    margin: 0;
+}
 
 body {
     /* height: 1000vh; */
@@ -529,7 +532,7 @@ body {
 
 .services-content__item {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -689,16 +692,16 @@ body {
 
 .contact__content>.services-title {
     text-align: left;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .contact__content-text {
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 28px;
     color: #FFFFFF;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
  
 .contact__content-text-icon {
@@ -983,7 +986,7 @@ body {
         margin-bottom: 0;
     }
     .main-screen__time {
-        margin: 5px 0 0 0;
+        margin: 20px 0 0 0;
     }
     .mobile-detail {
         margin-top: 50px;
@@ -1025,7 +1028,7 @@ body {
     .main-screen__title,
     .services-title {
         font-size: 32px;
-        line-height: 42px;
+        line-height: 38px;
     }
 
     .partners .advantages-title,
@@ -1050,11 +1053,11 @@ body {
 
     .main-screen__time {
         font-size: 18px;
-        line-height: 14px;
+        line-height: 24px;
     }
 
     .mobile-detail {
-        width: 260px;
+        width: 290px;
     }
 
     .contact__content {
@@ -1092,7 +1095,7 @@ body {
     .big-num {
         font-size: 100px;
         margin-right: 0;
-        line-height: 121px;
+        line-height: 80px;
     }
     .about__content-left__content-title,
     .about__content-right__content-title {
@@ -1119,5 +1122,30 @@ body {
     }
     .advantages-content__item {
         margin-top: 35px;
+    }
+    .about__content-right {
+        margin-top: 35px;
+    }
+    .call-btn {
+        font-size: 18px;
+        line-height: 17px;
+        padding: 20px 30px;
+    }
+    .call-btn__img {
+        width: 20px;
+    }
+    .mobile-detail {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .main-screen__title {
+        font-size: 27px;
+    }
+    .advantages-content__item-img {
+        max-width: 125px;
+    }
+    .main-screen {
+        padding-top: 160px;
     }
 }
