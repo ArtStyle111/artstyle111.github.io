@@ -1,0 +1,632 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,900" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat&family=Raleway:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'DIN Condensed';
+            src: url('DINCondensed-Light.eot');
+            src: local('DIN Condensed Light'), local('DINCondensed-Light'),
+                url('DINCondensed-Light.eot?#iefix') format('embedded-opentype'),
+                url('DINCondensed-Light.woff2') format('woff2'),
+                url('DINCondensed-Light.woff') format('woff'),
+                url('DINCondensed-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'DIN Condensed';
+            src: url('DINCondensed-Regular.eot');
+            src: local('DIN Condensed'), local('DINCondensed-Regular'),
+                url('DINCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+                url('DINCondensed-Regular.woff2') format('woff2'),
+                url('DINCondensed-Regular.woff') format('woff'),
+                url('DINCondensed-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "All Round Gothic";
+            src: url("4387b781fdcc752283b72bdc76757065.eot");
+            /* IE9*/
+            src: url("4387b781fdcc752283b72bdc76757065.eot?#iefix") format("embedded-opentype"),
+                /* IE6-IE8 */
+                url("4387b781fdcc752283b72bdc76757065.woff2") format("woff2"),
+                /* chrome、firefox */
+                url("4387b781fdcc752283b72bdc76757065.woff") format("woff"),
+                /* chrome、firefox */
+                url("4387b781fdcc752283b72bdc76757065.ttf") format("truetype"),
+                /* chrome、firefox、opera、Safari, Android, iOS
+        4.2+*/
+                url("4387b781fdcc752283b72bdc76757065.png#All Round Gothic W03 Book") format("svg");
+            /* iOS 4.1- */
+        }
+
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
+
+        [style*="Roboto"] {
+            font-family: 'Roboto', sans-serif !important;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100% !important;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        .menu a {
+            color: #6c6c6c;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.28px;
+            text-decoration: none;
+        }
+
+        .menu td {
+            padding-left: 30px;
+        }
+
+        .header-td {
+            padding-top: 31px;
+            padding-bottom: 31px;
+        }
+
+        .title {
+            border-top: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            color: #F98412;
+        }
+
+        /* .main-content {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        } */
+
+        .main-content h2 {
+            color: #F98412;
+            font-family: 'DIN Condensed';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 28px;
+            line-height: 34px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .main-content p {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+            color: #FFFFFF;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .dots img {
+            margin-right: 57px;
+        }
+
+        .link {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            text-decoration-line: underline;
+            color: #F98412;
+
+        }
+
+        .story-item {
+            padding-top: 12px;
+            padding-bottom: 40px;
+            border-top: 3px solid #F98412;
+        }
+
+        .story-item span {
+            font-family: 'Roboto';
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 33px;
+            letter-spacing: 0em;
+        }
+
+        .story-item p,
+        .cover-story__btn a {
+            font-family: 'Roboto';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 27px;
+            letter-spacing: 0em;
+        }
+
+        .cover-story__title p {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-top: 15px;
+        }
+
+        .cover-story__btn a {
+            text-decoration: none;
+            color: #ffffff;
+            background: #F98412;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 88px;
+            padding-right: 88px;
+        }
+
+        .another-story {
+            padding-top: 90px;
+            padding-bottom: 97px;
+        }
+
+        .block-td p {
+            color: #8c8c8c;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0.28px;
+        }
+
+        .block-table td {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .block-table {
+            border-top: 1px solid #e6e6e6;
+            border-left: 1px solid #e6e6e6;
+            border-right: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .author {
+            padding-top: 20px;
+        }
+
+        .author h3 {
+            margin-top: 20px;
+            color: #686868;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.56px;
+            margin-bottom: 5px;
+        }
+
+        .author p {
+            color: #8c8c8c;
+            font-size: 13px;
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 0.52px;
+            margin: 0;
+        }
+
+        .footer {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .footer__title p {
+            font-family: 'All Round Gothic';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 19.9082px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #FFAD60;
+        }
+
+        .footer__title span {
+            font-weight: 400;
+        }
+
+        .footer__text p {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 150%;
+            /* or 18px */
+
+            text-align: center;
+
+            color: #9D9D9D;
+
+        }
+
+        @media (max-width: 870px) {
+            .table-850 {
+                width: 600px !important;
+            }
+
+            .table-600 {
+                width: 550px !important;
+            }
+
+            .block-table {
+                width: 200px !important;
+            }
+
+            .block-table p br {
+                display: none !important;
+            }
+
+            .features-td td {
+                display: block !important;
+                margin-bottom: 50px !important;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .table-850 {
+                width: 400px !important;
+            }
+
+            .table-600 {
+                width: 320px !important;
+            }
+
+            .block-td {
+                display: block !important;
+                margin-bottom: 50px !important;
+                padding: 0 !important;
+            }
+
+            .blockqoute-td tr {
+                display: block !important;
+            }
+
+            .block-table {
+                width: 320px !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            .author {
+                width: 200px !important;
+            }
+
+            .logo {
+                display: block !important;
+                margin: 0 auto !important;
+                text-align: center !important;
+                width: 200px !important;
+                margin-bottom: 20px !important;
+            }
+
+            .logo img {
+                margin: 0 auto !important;
+            }
+
+            .menu {
+                display: block !important;
+                margin: 0 auto !important;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .table-850 {
+                width: 300px !important;
+            }
+
+            .table-600 {
+                width: 260px !important;
+            }
+
+            .block-table {
+                width: 260px !important;
+            }
+
+            .author {
+                width: 130px !important;
+            }
+
+            .blockqoute-td {
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+            }
+
+            .footer-menu-td table {
+                width: 260px !important;
+            }
+
+            .menu td {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <div style="font-size:0px;color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">
+        Тестовое
+        письмо</div>
+    <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+        <tr>
+            <td>
+                <table class="main-content table-1000" cellpadding="0" cellspacing="0" width="1000" align="center">
+                    <tr>
+                        <td align="center" bgcolor="#000000"
+                            background="https://artstyle111.github.io/blob/master/email/img/main-bg.jpg" width="1000"
+                            valign="top" style="background:
+                        url('https://artstyle111.github.io/email/img/main-bg.jpg') center / cover
+                        no-repeat #000000;" class="header-td">
+                            <table cellpadding="0" cellspacing="0" width="1000" align="center">
+                                <tr>
+                                    <td align="center" class="logo">
+                                        <img src="https://artstyle111.github.io/email/img/main-logo.png" alt="logo" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#08263e" width="580">
+                            <table class="table-580" cellpadding="0" cellspacing="0" width="580" align="center">
+                                <tr>
+                                    <td align="center">
+                                        <h2 class="title">
+                                            top story
+                                        </h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table-580" cellpadding="0" cellspacing="0" width="580" align="center">
+                                <tr>
+                                    <td class="dots">
+                                        <img src="https://artstyle111.github.io/email/img/dots.png" alt="dots" />
+                                    </td>
+                                    <td align="left">
+                                        <p style="font-family: 'Roboto', sans-serif;">
+                                            Should Bitcoin be Seen as an Asset or as Currency?
+                                        </p>
+                                        <a class="link" href="#">Learn more</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40"></td>
+                                </tr>
+                                <tr>
+                                    <td class="dots">
+                                        <img src="https://artstyle111.github.io/email/img/dots.png" alt="dots" />
+                                    </td>
+                                    <td align="left">
+                                        <p style="font-family: 'Roboto', sans-serif;">
+                                            Botox Rival Will Stay on the U.S. Market
+                                        </p>
+                                        <a class="link" href="#">Learn more</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40"></td>
+                                </tr>
+                                <tr>
+                                    <td class="dots">
+                                        <img src="https://artstyle111.github.io/email/img/dots.png" alt="dots" />
+                                    </td>
+                                    <td align="rigth">
+                                        <p style="font-family: 'Roboto', sans-serif;">
+                                            What’s Happening with Palantir Stock?
+                                        </p>
+                                        <a class="link" href="#">Learn more</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40"></td>
+                                </tr>
+                            </table>
+                            <table class="table-580" cellpadding="0" cellspacing="0" width="580" align="center">
+                                <tr>
+                                    <td class="story-item">
+                                        <p style="font-family: 'Roboto', sans-serif;">
+                                            <span class="story-item___title">As smartphones become more and more
+                                                common</span> all over the globe,
+                                            phone
+                                            manufacturers need ways to compete. And one of these way is camera quality.
+                                            This is why South Korea’s LG Group says they will invest almost $500 million
+                                            to increase iPhone camera modules output…<a class="link" href="#">Learn
+                                                more</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="story-item">
+                                        <p style="font-family: 'Roboto', sans-serif;">
+                                            <span class="story-item___title">Airlines really want to get travel back
+                                                again…</span>and they are willing to take
+                                            away our privacy to do it. When he was president, Trump blocked an effort to
+                                            force contact tracing on citizens because it breached their privacy. Now,
+                                            with Biden in office, the airlines are going to institute the same program
+                                            on their own…<a class="link" href="#">Learn
+                                                more</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="story-item">
+                                        <p style="font-family: 'Roboto', sans-serif;">
+                                            <span class="story-item___title">There have been recent claims</span> that a
+                                            company like Citadel takes
+                                            and uses
+                                            personal information from users. Now, Citadel’s CEO is saying that is just
+                                            not true. He says they are not like Big Tech giants who have access to that
+                                            kind of info…<a class="link" href="#">Learn
+                                                more</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table-580" cellpadding="0" cellspacing="0" width="580" align="center">
+                                <tr>
+                                    <td align="center">
+                                        <h2 class="title">
+                                            cover story
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="https://artstyle111.github.io/email/img/sky.jpg" alt="sky">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="cover-story__title">
+                                        <p>
+                                            Qualcomm is Actually Pushing Regulators<br> to Move Against NVIDIA – Why?
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 36px"></td>
+                                </tr>
+                                <tr>
+                                    <td class="cover-story__btn" align="center">
+                                        <a href="#">
+                                            See more
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="another-story" bgcolor="#08263e">
+                            <table class="table-580" cellpadding="0" cellspacing="0" width="580" align="center">
+                                <tr>
+                                    <td align="center">
+                                        <h2 class="title">
+                                            Another news
+                                        </h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table-580" cellpadding="0" cellspacing="0" width="580" align="center">
+                                <tr>
+                                    <td align="left">
+                                        <table class="table-280" cellpadding="0" cellspacing="0" width="280"
+                                            align="left">
+                                            <img src="https://artstyle111.github.io/email/img/mountins.jpg"
+                                                alt="mountins">
+                                            <p>
+                                                Qualcomm is Actually Pushing Regulators to Move Against NVIDIA – Why?
+                                            </p>
+                                            <a href="#">See more</a>
+                                        </table>
+                                    </td>
+                                    <td align="rigth">
+                                        <table class="table-280" cellpadding="0" cellspacing="0" width="280"
+                                            align="right">
+                                            <img src="https://artstyle111.github.io/email/img/mountins.jpg"
+                                                alt="mountins">
+                                            <p>
+                                                Qualcomm is Actually Pushing Regulators to Move Against NVIDIA – Why?
+                                            </p>
+                                            <a href="#">See more</a>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="footer" bgcolor="#08263e">
+                            <table class="table-580" cellpadding="0" cellspacing="0" width="580" align="center">
+                                <tr>
+                                    <td align="center" class="footer__title">
+                                        <p>
+                                            Top Investing<br>
+                                            <span>Today</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 30px"></td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="footer__text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida fames elit
+                                            est sem justo sit maecenas venenatis tincidunt. Eget at dolor facilisis
+                                            sollicitudin. Mi neque, pellentesque interdum vel adipiscing varius pretium.
+                                            Ut vel placerat commodo nulla feugiat porta diam. Egestas cursus integer
+                                            cras hendrerit lacus, in. Nec, vel dictum augue pulvinar orci lorem non
+                                            morbi lacus. Ac vitae, adipiscing odio aenean non. Mollis quam laoreet amet
+                                            ultrices enim, ac ut. Imperdiet purus neque interdum amet porttitor. Elit,
+                                            integer ullamcorper fringilla tempus dui lorem. Sem adipiscing ut gravida
+                                            massa, scelerisque ut fringilla sit. Arcu donec vitae tortor a tellus
+                                            feugiat eu, vestibulum. At eu pellentesque sem nunc, tortor, enim sit.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 30px"></td>
+                                </tr>
+                                <tr>
+                                    <td class="footer-logo" align="center">
+                                        <a href="#">
+                                            <img src="https://artstyle111.github.io/email/img/logo.png"
+                                                alt="footer-logo" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
