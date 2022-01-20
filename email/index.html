@@ -270,12 +270,61 @@
             color: #9D9D9D;
 
         }
-        table {
+        /* table {
             border: 0px !important;
             border-spacing: 0px;
+        } */
+        @media screen and (max-width: 870px) {
+            .table-1000 {
+                width: 870px !important;
+            }
+
+            .table-580 {
+                width: 550px !important;
+            }
         }
-        
-        
+
+        @media (max-width: 620px) {
+            .table-1000 {
+                width: 620px !important;
+            }
+
+            .table-580 {
+                width: 420px !important;
+            }
+
+            .another-news {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .another-news td {
+                padding-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .table-1000 {
+            width: 420px !important;
+            }
+
+            .table-580 {
+            width: 320px !important;
+            }
+        }
+        @media (max-width: 320px) {
+            .table-1000 {
+                width: 320px !important;
+            }
+
+            .table-580 {
+                width: 280px !important;
+            }
+            .cover-story__btn a {
+                padding-left: 85px;
+                padding-right: 85px;
+            }
+        }
     </style>
 </head>
 
@@ -283,17 +332,13 @@
     <div style="font-size:0px;color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">
         Тестовое
         письмо</div>
-    <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+    <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#04263E">
         <tr>
             <td>
-                <table class="main-content table-1000" cellpadding="0" cellspacing="0" width="1000" align="center">
+                <table class="main-content table-1000" cellpadding="0" cellspacing="0"  align="center">
                     <tr>
-                        <td align="center" bgcolor="#000000"
-                            background="https://artstyle111.github.io/blob/master/email/img/main-bg.jpg" width="1000"
-                            valign="top" style="background:
-                        url('https://artstyle111.github.io/email/img/main-bg.jpg') center / cover
-                        no-repeat #000000;" class="header-td">
-                            <table cellpadding="0" cellspacing="0" width="1000" align="center">
+                        <td align="center" bgcolor="#000000" background="https://artstyle111.github.io/blob/master/email/img/main-bg.jpg" width="1000" valign="top" style="background:url('https://artstyle111.github.io/email/img/main-bg.jpg') center / cover no-repeat #000000;" class="header-td">
+                            <table cellpadding="0" cellspacing="0" align="center">
                                 <tr>
                                     <td align="center" class="logo">
                                         <img src="https://artstyle111.github.io/email/img/main-logo.png" alt="logo" />
@@ -444,7 +489,7 @@
                                 </tr>
                             </table>
                             <table class="table-580" cellpadding="0" cellspacing="0" width="580" align="center">
-                                <tr>
+                                <tr class="another-news">
                                     <td align="left">
                                         <table class="table-280" cellpadding="0" cellspacing="0" width="280"
                                             align="left">
