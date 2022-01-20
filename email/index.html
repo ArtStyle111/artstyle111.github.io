@@ -181,6 +181,17 @@
             letter-spacing: 0em;
         }
 
+        .cover-story__btn a, .news a{
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .cover-story__btn img, .news a img {
+            width: 16px;
+            height: 16px;
+            margin-left: 12px;
+        }
+
         .cover-story__title p {
             font-family: 'Roboto', sans-serif;
             font-style: normal;
@@ -193,13 +204,14 @@
         }
 
         .cover-story__btn a {
+            font-family: 'Roboto', sans-serif;
             text-decoration: none;
             color: #ffffff;
             background: #F98412;
             padding-top: 10px;
             padding-bottom: 10px;
-            padding-left: 88px;
-            padding-right: 88px;
+            padding-left: 90px;
+            padding-right: 90px;
         }
 
         .another-story {
@@ -207,48 +219,26 @@
             padding-bottom: 97px;
         }
 
-        .block-td p {
-            color: #8c8c8c;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 30px;
-            letter-spacing: 0.28px;
+        .news a{
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 86px;
+            padding-right: 86px;
+            border: 2px solid #ffffff;
+        }
+        .news a, .news img {
+            border-radius: 5px;
         }
 
-        .block-table td {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-
-        .block-table {
-            border-top: 1px solid #e6e6e6;
-            border-left: 1px solid #e6e6e6;
-            border-right: 1px solid #e6e6e6;
-            border-bottom: 1px solid #e6e6e6;
-        }
-
-        .author {
-            padding-top: 20px;
-        }
-
-        .author h3 {
+        .news p {
             margin-top: 20px;
-            color: #686868;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.56px;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
-
-        .author p {
-            color: #8c8c8c;
-            font-size: 13px;
-            font-weight: 300;
-            font-size: 14px;
-            letter-spacing: 0.52px;
-            margin: 0;
-        }
-
+        
         .footer {
             padding-top: 80px;
             padding-bottom: 80px;
@@ -275,116 +265,17 @@
             font-style: normal;
             font-weight: normal;
             font-size: 12px;
-            line-height: 150%;
-            /* or 18px */
-
+            line-height: 18px;
             text-align: center;
-
             color: #9D9D9D;
 
         }
-
-        @media (max-width: 870px) {
-            .table-850 {
-                width: 600px !important;
-            }
-
-            .table-600 {
-                width: 550px !important;
-            }
-
-            .block-table {
-                width: 200px !important;
-            }
-
-            .block-table p br {
-                display: none !important;
-            }
-
-            .features-td td {
-                display: block !important;
-                margin-bottom: 50px !important;
-            }
+        table {
+            border: 0px !important;
+            border-spacing: 0px;
         }
-
-        @media (max-width: 620px) {
-            .table-850 {
-                width: 400px !important;
-            }
-
-            .table-600 {
-                width: 320px !important;
-            }
-
-            .block-td {
-                display: block !important;
-                margin-bottom: 50px !important;
-                padding: 0 !important;
-            }
-
-            .blockqoute-td tr {
-                display: block !important;
-            }
-
-            .block-table {
-                width: 320px !important;
-                display: block !important;
-                margin: 0 auto !important;
-            }
-
-            .author {
-                width: 200px !important;
-            }
-
-            .logo {
-                display: block !important;
-                margin: 0 auto !important;
-                text-align: center !important;
-                width: 200px !important;
-                margin-bottom: 20px !important;
-            }
-
-            .logo img {
-                margin: 0 auto !important;
-            }
-
-            .menu {
-                display: block !important;
-                margin: 0 auto !important;
-            }
-        }
-
-        @media (max-width: 420px) {
-            .table-850 {
-                width: 300px !important;
-            }
-
-            .table-600 {
-                width: 260px !important;
-            }
-
-            .block-table {
-                width: 260px !important;
-            }
-
-            .author {
-                width: 130px !important;
-            }
-
-            .blockqoute-td {
-                padding-top: 50px !important;
-                padding-bottom: 50px !important;
-            }
-
-            .footer-menu-td table {
-                width: 260px !important;
-            }
-
-            .menu td {
-                padding-left: 10px !important;
-                padding-right: 10px !important;
-            }
-        }
+        
+        
     </style>
 </head>
 
@@ -533,7 +424,8 @@
                                 <tr>
                                     <td class="cover-story__btn" align="center">
                                         <a href="#">
-                                            See more
+                                            See more <img src="https://artstyle111.github.io/email/img/arrow-left.png"
+                                                alt="arrow"/>
                                         </a>
                                     </td>
                                 </tr>
@@ -556,23 +448,37 @@
                                     <td align="left">
                                         <table class="table-280" cellpadding="0" cellspacing="0" width="280"
                                             align="left">
-                                            <img src="https://artstyle111.github.io/email/img/mountins.jpg"
-                                                alt="mountins">
-                                            <p>
-                                                Qualcomm is Actually Pushing Regulators to Move Against NVIDIA – Why?
-                                            </p>
-                                            <a href="#">See more</a>
+                                            <tr>
+                                                <td class="news">
+                                                    <img src="https://artstyle111.github.io/email/img/mountins.jpg"
+                                                        alt="mountins">
+                                                    <p>
+                                                        Qualcomm is Actually Pushing Regulators to Move Against NVIDIA –
+                                                        Why?
+                                                    </p>
+                                                    <a href="#">See more <img
+                                                            src="https://artstyle111.github.io/email/img/arrow-left.png"
+                                                            alt="arrow" /></a>
+                                                </td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td align="rigth">
                                         <table class="table-280" cellpadding="0" cellspacing="0" width="280"
                                             align="right">
-                                            <img src="https://artstyle111.github.io/email/img/mountins.jpg"
-                                                alt="mountins">
-                                            <p>
-                                                Qualcomm is Actually Pushing Regulators to Move Against NVIDIA – Why?
-                                            </p>
-                                            <a href="#">See more</a>
+                                            <tr>
+                                                <td class="news">
+                                                    <img src="https://artstyle111.github.io/email/img/mountins.jpg"
+                                                        alt="mountins">
+                                                    <p>
+                                                        Qualcomm is Actually Pushing Regulators to Move Against NVIDIA –
+                                                        Why?
+                                                    </p>
+                                                    <a href="#">See more <img
+                                                            src="https://artstyle111.github.io/email/img/arrow-left.png"
+                                                            alt="arrow" /></a>
+                                                </td>
+                                            </tr>
                                         </table>
                                     </td>
                                 </tr>
