@@ -138,6 +138,12 @@
     }
 }
 
+@media screen and (max-width: 1780px) {
+    .header-wrap {
+        max-width: 1560px;
+    }
+}
+
 @media screen and (min-height: 1305px) {
     .main-screen {
         height: 100vh;
