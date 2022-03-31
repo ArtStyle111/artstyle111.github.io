@@ -131,3 +131,118 @@
 .social-link:first-child {
     margin-top: 0;
 }
+
+@media screen and (max-width: 1920px) {
+    .main-screen {
+        background-position: bottom -10% right;
+    }
+}
+
+@media screen and (min-height: 1305px) {
+    .main-screen {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .header-wrap {
+        max-width: 1400px;
+    }
+    .main-screen {
+        background-position: center bottom -350px;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .header-wrap {
+        max-width: 1140px;
+    }
+
+    .main-screen {
+        background-position: center bottom -350px;
+        background-size: cover;
+    }
+
+    .social {
+        display: flex;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+    }
+
+    .social-link:first-child {
+        margin-top: auto;
+        margin-left: 0;
+    }
+
+    .social-link {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header-wrap {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+
+    .wrap {
+        max-width: 960px;
+    }
+
+    .box img {
+        margin: 0 auto 50px;
+        max-width: 80%;
+    }
+
+    .box,
+    .form {
+        flex-direction: column;
+    }
+
+    .main-screen {
+        height: fit-content;
+    }
+    
+    .form {
+        margin: 0 20px;
+    }
+    
+    .form-text {
+        max-width: 100%;
+        font-size: 34px;
+    }
+
+    .form-register__form {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .social {
+        padding: 50px 0;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+    .wrap {
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrap {
+        max-width: 100%;
+    }
+    .box {
+        margin-bottom: 0;
+    }
+}
+
+@media screen  and (max-width: 576px) {
+    .form-text {
+        font-size: 24px;
+    }
+}

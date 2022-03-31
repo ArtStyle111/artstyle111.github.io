@@ -1,49 +1,58 @@
 @font-face {
     font-family: ShoraiSansStdN-Black;
-    src: url("/fonts/Shorai/ShoraiSansStdN-Black.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-Black.otf") format("opentype");
+
 }
 
 @font-face {
     font-family: ShoraiSansStdN-Bold;
-    src: url("/fonts/Shorai/ShoraiSansStdN-Bold.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-Bold.otf") format("opentype");
 }
 
 @font-face {
     font-family: ShoraiSansStdN-Demi;
-    src: url("/fonts/Shorai/ShoraiSansStdN-Demi.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-Demi.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: ShoraiSansStdN-ExtraBold;
-    src: url("/fonts/Shorai/ShoraiSansStdN-ExtraBold.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-ExtraBold.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: ShoraiSansStdN-Heavy;
-    src: url("/fonts/Shorai/ShoraiSansStdN-Heavy.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-Heavy.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: ShoraiSansStdN-Light;
-    src: url("/fonts/Shorai/ShoraiSansStdN-Light.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-Light.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: ShoraiSansStdN-Medium;
-    src: url("/fonts/Shorai/ShoraiSansStdN-Medium.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-Medium.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: ShoraiSansStdN-Regular;
-    src: url("/fonts/Shorai/ShoraiSansStdN-Regular.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-Regular.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: ShoraiSansStdN-Thin;
-    src: url("/fonts/Shorai/ShoraiSansStdN-Thin.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-Thin.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: ShoraiSansStdN-UltraLight;
-    src: url("/fonts/Shorai/ShoraiSansStdN-UltraLight.otf") format("opentype");
+    src: url("../fonts/Shorai/ShoraiSansStdN-UltraLight.otf") format("opentype");
+    font-display: swap;
 }
