@@ -1,0 +1,12 @@
+<svg id="Instgram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52.56" height="52.5" viewBox="0 0 52.56 52.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #151515;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="BG" class="cls-1" d="M1828.97,1168.74h0.05a26.26,26.26,0,0,1,0,52.52h-0.05A26.26,26.26,0,0,1,1828.97,1168.74Z" transform="translate(-1802.72 -1168.75)"/>
+  <image id="Insta" x="14.28" y="14.25" width="25" height="25" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAACMUlEQVRIib2Wz0tUURTHPz0vLSYlYqA2DTQJxqwCWwWtgwglglYSiImL/oARZlObWvQHtAiVYGgRgQQSgtAuaBHMpiATZITaKIwttBaBFoe+j473+h5l1ndzePec9/3eH+fcc4+8efkdh35gArgCDAFVYADIfFCEXWAL6AErwCIwB2znYV7kOvBIxH8LE5wC5o0nOIFnmvEO8AJ4DawDX4BvJaJHgWPAKeAicFUTNb4bJmQrsS1ak2MVGAHeJ1S/jwawAAxqRWcynUFVKziogPHcAR5r5SPiM96JoENGW3TQFVwG7rrvcfGNGn+mLEJnUIRhYAZYBjZlZzRu+KQsM3QjvqHgsml9H4E+4D7QjMZPAOeAW8ADoAWcB04DSxFfNagO0F7G8AIfgbZmWgduAjXnnwbeuf9zvoHgCi1O02FH8BwYA746/z3gCXBNcU+BjvPnfFlZJd92K4gF0PeY/D4+QZnIJdn2PgJeqB3FJygTOSnbTTx70Y3iE5SJbMjWE89e1KP4BGUir2QtiyqJ9ycq8vv4BGUiD2VryqJYqKLxWhSfIKhSM92mHh0VWlNpulxQJyiuE/2f8+0GNZzjuq5jtPTdFGErifhV8TFyvq1M1zHqBzF2VMkXgFngA/BZdlbj04qLkfP1glrmWTWcIthWTBb4ipDzrWTqyaijNQp++FM0xGdYzNT0e7pxFw5BKO+MfeKdC3pVTKknW8t8ewg93gQsa413+7+8Vv79uwv4AfowlM20lipoAAAAAElFTkSuQmCC"/>
+</svg>

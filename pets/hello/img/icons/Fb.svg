@@ -1,0 +1,19 @@
+<svg id="Fb" xmlns="http://www.w3.org/2000/svg" width="52.56" height="52.5" viewBox="0 0 52.56 52.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #151515;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #cbbdff;
+      }
+    </style>
+  </defs>
+  <path id="BG" class="cls-1" d="M1828.97,1086.74h0.05a26.26,26.26,0,0,1,0,52.52h-0.05A26.26,26.26,0,0,1,1828.97,1086.74Z" transform="translate(-1802.72 -1086.75)"/>
+  <path id="fa-facebook" class="cls-2" d="M1831.41,1100.43a5.834,5.834,0,0,0-4.3,1.6,6.1,6.1,0,0,0-1.61,4.51v3.41h-3.96v4.63h3.96v11.86h4.75v-11.86h3.94l0.6-4.63h-4.54V1107a2.6,2.6,0,0,1,.46-1.69,2.251,2.251,0,0,1,1.8-.57h2.44v-4.12a24.72,24.72,0,0,0-3.54-.19h0Z" transform="translate(-1802.72 -1086.75)"/>
+</svg>

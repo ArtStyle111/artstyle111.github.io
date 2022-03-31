@@ -1,0 +1,133 @@
+.header {
+    position: absolute; 
+    width: 100%;
+    z-index: 1;
+}
+
+.header-wrap {
+    padding-top: 55px;
+    max-width: 1760px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-screen {
+    position: relative;
+    background-color: #c3b5f7;
+    height: 1305px;
+    padding-top: 280px;
+    background-image: url(../img/wall.png);
+    background-position: bottom -140% right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-screen__overlay {
+    background-image: url(../img/GRAIN.png);
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.box,
+.form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box img {
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+
+.box {
+    margin-bottom: 110px;
+}
+
+.form {
+    margin: 0 50px;
+}
+
+.form-text {
+    font-family: "ShoraiSansStdN-Regular";
+    font-size: 20px;
+    color: #fff;
+    max-width: 420px;
+}
+
+.form-register__form {
+    width: 515px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-register__form input {
+    width: 100%;
+    font-family: "ShoraiSansStdN-Bold";
+    font-size: 22px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-bottom: 18px;
+    height: 60px;
+    border-radius: 2px;
+    padding: 20px 25px;
+}
+
+.form-register__form input::placeholder {
+    color: #fff;
+}
+
+.form-register__form input:last-child {
+    width: 185px;
+    font-family: "ShoraiSansStdN-Bold";
+    font-size: 22px;
+    background-color: #aeff52;
+    border: none;
+    color: #b49dff;
+    height: 60px;
+    border-radius: 2px;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form-register__form input:last-child:hover, 
+.social a:hover {
+    transform: translateY(-3px);
+}
+
+.form-register__form input:last-child:active,
+.social a:active {
+    transform: translateY(-3px)
+    scale(0.9);
+    transition: all ease 0.1s;
+}
+
+.social {
+    position: absolute;
+    right: 85px;
+    bottom: 85px;
+}
+
+.social-link {
+    display: block;
+    margin-top: 40px;
+}
+
+.social-link:first-child {
+    margin-top: 0;
+}
